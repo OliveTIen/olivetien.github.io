@@ -237,7 +237,7 @@
 
     
         <meta property="article:published_time" content="Thu Nov 23 2023 11:16:50 GMT+0800">
-        <meta property="article:modified_time" content="Thu Nov 23 2023 11:28:39 GMT+0800">
+        <meta property="article:modified_time" content="Thu Nov 23 2023 13:52:10 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -260,7 +260,7 @@
     "mainEntityOfPage": "http://olivetien.github.io/2023/11/23/How-to-create-a-personal-homepage/index.html",
     "headline": "How to create a personal homepage",
     "datePublished": "Thu Nov 23 2023 11:16:50 GMT+0800",
-    "dateModified": "Thu Nov 23 2023 11:28:39 GMT+0800",
+    "dateModified": "Thu Nov 23 2023 13:52:10 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Olive Tien",
@@ -479,8 +479,22 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="如何创建个人主页"><a href="#如何创建个人主页" class="headerlink" title="如何创建个人主页"></a>如何创建个人主页</h1><p><a target="_blank" rel="noopener" href="http://tanglab.pku.edu.cn/2022/11/24/R&D/2022/GitHub_pages_tutorial_sequel/">该网站</a>详细讲解了如何创建个人主页<br><a target="_blank" rel="noopener" href="https://easyhexo.com/2-Theme-use-and-config/">该网站</a>有Hexo主题<br><a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-tutorial.html">Markdown教程</a></p>
-
+        <h1 id="如何创建个人主页"><a href="#如何创建个人主页" class="headerlink" title="如何创建个人主页"></a>如何创建个人主页</h1><p><a target="_blank" rel="noopener" href="http://tanglab.pku.edu.cn/2022/11/24/R&D/2022/GitHub_pages_tutorial_sequel/">网站1</a>详细讲解了如何用hexo创建个人主页<br><a target="_blank" rel="noopener" href="https://easyhexo.com/2-Theme-use-and-config/">网站2</a>hexo主题集锦<br><a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-tutorial.html">网站3</a>为Markdown教程</p>
+<p>hexo创建网页的流程是，先写md源码，然后用hexo编译成网页。具体参照网站1。<br>踩坑记录：</p>
+<ol>
+<li>先用hexo生成，再推送到github。因为hexo初始化需要保证是空目录</li>
+<li>发现” <a href="https://olivetien.github.io/">https://olivetien.github.io/</a> “显示404。原因根目录没有index.html。应该将public文件夹推送上去，而不是将整个项目目录推送上去</li>
+</ol>
+<p>为避免丢失，我将源码放在github私有目录中(当作网盘使用了)</p>
+<p>以后的工作流程大概是：</p>
+<ol>
+<li>用vscode打开本地源码目录，编写md</li>
+<li>根目录打开终端，用hexo编译，查看效果</li>
+<li>将代码复制到public，用github客户端推送两个respectory</li>
+</ol>
+<p>其他感受：<br>git作为网盘还挺好用的</p>
+<p>问题：<br>按照网站1的教程，用markdown格式插入图片，好像无法直接显示为图片，只能显示为超链接<br><a href="./How-to-create-a-personal-homepage.md/img.png">img</a> <!--没有“!”则是超链接--><br>或许可以用我的图床(忘记了，好像是raw.github之类的网站，可以直接链接到图片)<br>也可以用hexo格式。</p>
+<img src="/2023/11/23/How-to-create-a-personal-homepage/img.png" class="" title="This is an example image">
         
     
 
@@ -499,6 +513,14 @@
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
+    
+        <a href="/2023/11/23/Welcome/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
     
 
     <!-- Section Spacer -->
@@ -598,7 +620,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2023/11/">十一月 2023<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/archives/2023/11/">十一月 2023<span class="sidebar_archives-count">3</span></a>
             </ul>
         </li>
         
