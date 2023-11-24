@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Thu Nov 23 2023 11:16:50 GMT+0800">
-        <meta property="article:modified_time" content="Thu Nov 23 2023 16:17:12 GMT+0800">
+        <meta property="article:modified_time" content="Thu Nov 23 2023 17:35:22 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://olivetien.github.io/2023/11/23/How-to-create-a-personal-homepage/index.html",
     "headline": "如何创建个人主页",
     "datePublished": "Thu Nov 23 2023 11:16:50 GMT+0800",
-    "dateModified": "Thu Nov 23 2023 16:17:12 GMT+0800",
+    "dateModified": "Thu Nov 23 2023 17:35:22 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Olive Tien",
@@ -506,6 +506,7 @@
 <ol>
 <li>先用hexo生成，再推送到github。因为hexo初始化需要保证是空目录</li>
 <li>发现” <a href="https://olivetien.github.io/">https://olivetien.github.io/</a> “显示404。原因根目录没有index.html。应该将public文件夹推送上去，而不是将整个项目目录推送上去</li>
+<li>我打算直接将源码推送到github.io项目，在外面新建一个重定向的index.html，但是不行，邮件提示报错。因此改回原来的双respectory方式</li>
 </ol>
 <p>为避免丢失，我将源码放在github私有目录中(当作网盘使用了)</p>
 <p>工作流程：</p>
@@ -516,7 +517,11 @@
 <li>将代码复制到public，用github客户端推送两个respectory</li>
 <li>推送完成后，等待2分钟(等网页更新)</li>
 </ol>
-<p>其他感受：<br>git作为网盘还挺好用的</p>
+<p>其他感受：</p>
+<ol>
+<li>git作为网盘还挺好用的</li>
+<li>为什么取名“新篇”“旧篇”啊？我还以为是不同版本的文章呢</li>
+</ol>
 <p>问题：<br>按照网站1的教程，用markdown格式插入图片，好像无法直接显示为图片，只能显示为超链接<br><a href="./How-to-create-a-personal-homepage.md/img.png">img</a> <!--没有“!”则是超链接--><br>或许可以用我的图床(忘记了，好像是raw.github之类的网站，可以直接链接到图片)<br>也可以用hexo格式。</p>
 <img src="/2023/11/23/How-to-create-a-personal-homepage/img.png" class="" title="This is an example image">
         
@@ -538,7 +543,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2023/11/23/Welcome/" id="post_nav-newer" class="prev-content">
+        <a href="/2023/11/23/python01-useful-tricks/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -644,7 +649,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2023/11/">十一月 2023<span class="sidebar_archives-count">3</span></a>
+                <a class="sidebar_archives-link" href="/archives/2077/11/">十一月 2077<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/11/">十一月 2023<span class="sidebar_archives-count">4</span></a>
             </ul>
         </li>
         
@@ -662,7 +667,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/web/">web<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/leetcode/">leetcode<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/web/">web<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
