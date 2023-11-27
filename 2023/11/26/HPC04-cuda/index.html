@@ -48,7 +48,7 @@
     
     <title>
         
-            categories | 
+            HPC04-cuda | 
         
         风起地
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",cuda">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="风起地">
-    <meta name="msapplication-starturl" content="http://olivetien.github.io/categories/">
+    <meta name="msapplication-starturl" content="http://olivetien.github.io/2023/11/26/HPC04-cuda/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="风起地">
@@ -230,13 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://olivetien.github.io/categories/">
+    <meta property="og:url" content="http://olivetien.github.io/2023/11/26/HPC04-cuda/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="categories | 风起地">
+    <meta property="og:title" content="HPC04-cuda | 风起地">
     <meta property="og:image" content="/img/ys/Element/Element_Anemo-%E9%A3%8E.svg">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="cuda"> 
 
+    
+        <meta property="article:published_time" content="Sun Nov 26 2023 21:24:06 GMT+0800">
+        <meta property="article:modified_time" content="Sun Nov 26 2023 21:31:23 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -244,13 +247,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://olivetien.github.io/categories/index.html" />
+        <link rel="canonical" href="http://olivetien.github.io/2023/11/26/HPC04-cuda/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://olivetien.github.io/2023/11/26/HPC04-cuda/index.html",
+    "headline": "HPC04-cuda",
+    "datePublished": "Sun Nov 26 2023 21:24:06 GMT+0800",
+    "dateModified": "Sun Nov 26 2023 21:31:23 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Olive Tien",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/ys/Neuvillette-2.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "风起地",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/ys/Element/Element_Anemo-风.svg"
+        }
+    },
+    "keywords": ",cuda",
+    "description": "",
+}
+</script>
 
 
     
@@ -286,6 +319,39 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#CUDA-with-cmake"><span class="post-toc-number">1.</span> <span class="post-toc-text">CUDA with cmake</span></a></li></ol>
+    </ul>
+    
+
+
+
 
 <!-- Layouts -->
 
@@ -312,7 +378,7 @@
         
     
             <p class="article-headline-p">
-                categories
+                HPC04-cuda
             </p>
         </div>
 
@@ -331,7 +397,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Olive Tien</strong>
-        <span>11月 23, 2023</span>
+        <span>11月 26, 2023</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -348,6 +414,15 @@
     
 
     <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/cuda/" rel="tag">cuda</a>
+    </ul>
     
 
     <!-- Share -->
@@ -374,7 +449,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=categories&url=http://olivetien.github.io/categories/index.html&pic=http://olivetien.github.io/img/ys/Element/Element_Anemo-风.svg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=HPC04-cuda&url=http://olivetien.github.io/2023/11/26/HPC04-cuda/index.html&pic=http://olivetien.github.io/img/ys/Element/Element_Anemo-风.svg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -383,7 +458,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=categories&url=http://olivetien.github.io/categories/index.html&via=Olive Tien" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=HPC04-cuda&url=http://olivetien.github.io/2023/11/26/HPC04-cuda/index.html&via=Olive Tien" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -392,7 +467,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://olivetien.github.io/categories/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://olivetien.github.io/2023/11/26/HPC04-cuda/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -401,7 +476,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://olivetien.github.io/categories/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://olivetien.github.io/2023/11/26/HPC04-cuda/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -426,7 +501,10 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        
+        <p>[TOC]</p>
+<!--use [TOC] to create documentory-->
+<h1 id="CUDA-with-cmake"><a href="#CUDA-with-cmake" class="headerlink" title="CUDA with cmake"></a>CUDA with cmake</h1><p>2023-11-26<br>尝试用CMake和CUDA联合编程。但是由于目前虚拟机不能用GPU，因此不知道运行效果。<br>如果能够用Visual Studio打开CMake项目，并且设置nvcc为编译器就好了。可惜现在还对CMake不熟练，不知如何设置编译器<br>先暂时用VS+CUDA runtime，跨平台的事情以后再说吧。</p>
+<table><tr><td bgcolor=yellow>background yellow</td></tr></table>
         
     
 
@@ -446,11 +524,27 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
+        <a href="/2077/11/23/Welcome/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2023/11/26/HPC03-mpi/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
@@ -618,6 +712,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 

@@ -48,7 +48,7 @@
     
     <title>
         
-            categories | 
+            cpp01-cmake01 | 
         
         风起地
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",c++,cpp,cmake,tricks">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="风起地">
-    <meta name="msapplication-starturl" content="http://olivetien.github.io/categories/">
+    <meta name="msapplication-starturl" content="http://olivetien.github.io/2023/11/26/HPC01-cmake/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="风起地">
@@ -230,13 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://olivetien.github.io/categories/">
+    <meta property="og:url" content="http://olivetien.github.io/2023/11/26/HPC01-cmake/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="categories | 风起地">
+    <meta property="og:title" content="cpp01-cmake01 | 风起地">
     <meta property="og:image" content="/img/ys/Element/Element_Anemo-%E9%A3%8E.svg">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="c++"> <meta property="og:article:tag" content="cpp"> <meta property="og:article:tag" content="cmake"> <meta property="og:article:tag" content="tricks"> 
 
+    
+        <meta property="article:published_time" content="Sun Nov 26 2023 16:43:43 GMT+0800">
+        <meta property="article:modified_time" content="Sun Nov 26 2023 21:23:47 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -244,13 +247,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://olivetien.github.io/categories/index.html" />
+        <link rel="canonical" href="http://olivetien.github.io/2023/11/26/HPC01-cmake/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://olivetien.github.io/2023/11/26/HPC01-cmake/index.html",
+    "headline": "cpp01-cmake01",
+    "datePublished": "Sun Nov 26 2023 16:43:43 GMT+0800",
+    "dateModified": "Sun Nov 26 2023 21:23:47 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Olive Tien",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/ys/Neuvillette-2.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "风起地",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/ys/Element/Element_Anemo-风.svg"
+        }
+    },
+    "keywords": ",c++,cpp,cmake,tricks",
+    "description": "",
+}
+</script>
 
 
     
@@ -286,6 +319,39 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#cmake%E6%96%87%E4%BB%B6%E8%B7%A8%E5%B9%B3%E5%8F%B0%EF%BC%8C%E7%A8%8B%E5%BA%8F%E8%AE%A1%E7%AE%97%E7%BB%93%E6%9E%9C%E4%B8%8D%E5%90%8C"><span class="post-toc-number">1.</span> <span class="post-toc-text">cmake文件跨平台，程序计算结果不同</span></a></li></ol>
+    </ul>
+    
+
+
+
 
 <!-- Layouts -->
 
@@ -312,7 +378,7 @@
         
     
             <p class="article-headline-p">
-                categories
+                cpp01-cmake01
             </p>
         </div>
 
@@ -331,7 +397,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Olive Tien</strong>
-        <span>11月 23, 2023</span>
+        <span>11月 26, 2023</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -348,6 +414,15 @@
     
 
     <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/c/" rel="tag">c++</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/cmake/" rel="tag">cmake</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/cpp/" rel="tag">cpp</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/tricks/" rel="tag">tricks</a>
+    </ul>
     
 
     <!-- Share -->
@@ -374,7 +449,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=categories&url=http://olivetien.github.io/categories/index.html&pic=http://olivetien.github.io/img/ys/Element/Element_Anemo-风.svg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=cpp01-cmake01&url=http://olivetien.github.io/2023/11/26/HPC01-cmake/index.html&pic=http://olivetien.github.io/img/ys/Element/Element_Anemo-风.svg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -383,7 +458,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=categories&url=http://olivetien.github.io/categories/index.html&via=Olive Tien" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=cpp01-cmake01&url=http://olivetien.github.io/2023/11/26/HPC01-cmake/index.html&via=Olive Tien" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -392,7 +467,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://olivetien.github.io/categories/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://olivetien.github.io/2023/11/26/HPC01-cmake/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -401,7 +476,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://olivetien.github.io/categories/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://olivetien.github.io/2023/11/26/HPC01-cmake/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -426,7 +501,22 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        
+        <h1 id="cmake文件跨平台，程序计算结果不同"><a href="#cmake文件跨平台，程序计算结果不同" class="headerlink" title="cmake文件跨平台，程序计算结果不同"></a>cmake文件跨平台，程序计算结果不同</h1><p>我使用Visual Studio创建了一个CMake项目，能成功运行。然而我移植到在Linux上用cmake编译、运行时，程序得到的计算结果却不同。<br>查看log发现，应该是 abs() max()函数定义问题，自己定义abs_() max_() 后，问题解决。</p>
+<p>GPT的回答：</p>
+<ol>
+<li><p>编译器差异：不同的操作系统和编译器可能对代码的处理方式存在差异，特别是在涉及浮点数运算和优化方面。这可能导致在不同平台上得到不同的计算结果。你可以尝试在Linux上使用与Visual Studio中相同的编译器（例如GCC）来编译代码，以确保结果的一致性。</p>
+</li>
+<li><p>依赖项问题：你的项目可能依赖于特定的库或组件，而在Linux上可能缺少这些依赖项或使用了不同的版本。这可能会导致在不同平台上产生不同的结果。确保在Linux上安装和配置了与Visual Studio相同的依赖项版本，并且在CMakeLists.txt文件中正确设置了这些依赖项。</p>
+</li>
+<li><p>CMake配置问题：CMakeLists.txt文件可能在不同平台上有所不同，特别是与编译选项、链接库和宏定义相关的部分。确保在Linux上正确配置了CMakeLists.txt，以便与Visual Studio中的配置保持一致。</p>
+</li>
+<li><p>平台相关行为：某些代码可能依赖于特定平台的行为，而在不同平台上可能表现不同。这可能涉及文件路径、操作系统相关的特性、并发行为等。确保你的代码在移植到Linux时考虑了这些平台相关的差异，并进行了适当的调整。</p>
+</li>
+</ol>
+<p>这是windows前18步文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">  istep = 	0	time = 0.0104167</span><br><span class="line">dvormax/dt = 	8640	dstrmax/dt = 0</span><br><span class="line">calcutate time: 0.005s</span><br><span class="line">  istep = 	1	time = 0.0208333</span><br><span class="line">dvormax/dt = 	2671.78	dstrmax/dt = 9.18258e-07</span><br><span class="line">calcutate time: 0.007s</span><br><span class="line">  istep = 	2	time = 0.03125</span><br><span class="line">dvormax/dt = 	1541.5	dstrmax/dt = 9.44346e-07</span><br><span class="line">calcutate time: 0.014s</span><br><span class="line">...</span><br><span class="line">  istep = 	17	time = 0.1875</span><br><span class="line">dvormax/dt = 	37.8238	dstrmax/dt = 9.18957e-07</span><br><span class="line">calcutate time: 0.042s</span><br><span class="line">  istep = 	18	time = 0.197917</span><br><span class="line">dvormax/dt = 	34.7246	dstrmax/dt = 8.76593e-07</span><br><span class="line">calcutate time: 0.044s</span><br></pre></td></tr></table></figure>
+<p>这是linux文件。它把残差整数化了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">  istep = 	0	time = 0.0104167</span><br><span class="line">dvormax/dt = 	8640	dstrmax/dt = 0</span><br><span class="line">calcutate time: 0.000465s</span><br><span class="line">  istep = 	1	time = 0.0208333</span><br><span class="line">dvormax/dt = 	2400	dstrmax/dt = 0</span><br><span class="line">calcutate time: 0.000647s</span><br><span class="line">  istep = 	2	time = 0.03125</span><br><span class="line">dvormax/dt = 	1824	dstrmax/dt = 0</span><br><span class="line">calcutate time: 0.002803s</span><br><span class="line">  istep = 	3	time = 0.0416667</span><br><span class="line">dvormax/dt = 	1536	dstrmax/dt = 0</span><br><span class="line">calcutate time: 0.002997s</span><br><span class="line">...</span><br><span class="line">  istep = 	17	time = 0.1875</span><br><span class="line">dvormax/dt = 	96	dstrmax/dt = 0</span><br><span class="line">calcutate time: 0.005587s</span><br><span class="line">  istep = 	18	time = 0.197917</span><br><span class="line">dvormax/dt = 	0	dstrmax/dt = 0</span><br><span class="line">calcutate time: 0.00577s</span><br><span class="line">  istep = 	18	time = 0.197917</span><br><span class="line">dvormax/dt = 	0	dstrmax/dt = 0</span><br><span class="line">calcutate time: 0.005823s</span><br></pre></td></tr></table></figure>
         
     
 
@@ -446,11 +536,27 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
+        <a href="/2023/11/26/HPC02-sbatch/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2023/11/25/CFD01-tecplot01/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
@@ -618,6 +724,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
