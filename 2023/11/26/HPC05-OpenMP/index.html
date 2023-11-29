@@ -48,7 +48,7 @@
     
     <title>
         
-            HPC01-cmake01 | 
+            HPC05-OpenMP | 
         
         风起地
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",tricks,c++,cpp,cmake">
+    <meta name="keywords" content=",OpenMP">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="风起地">
-    <meta name="msapplication-starturl" content="http://olivetien.github.io/2023/11/26/HPC01-cmake/">
+    <meta name="msapplication-starturl" content="http://olivetien.github.io/2023/11/26/HPC05-OpenMP/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="风起地">
@@ -230,16 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://olivetien.github.io/2023/11/26/HPC01-cmake/">
+    <meta property="og:url" content="http://olivetien.github.io/2023/11/26/HPC05-OpenMP/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="HPC01-cmake01 | 风起地">
+    <meta property="og:title" content="HPC05-OpenMP | 风起地">
     <meta property="og:image" content="/img/ys/Element/Element_Anemo-%E9%A3%8E.svg">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="tricks"> <meta property="og:article:tag" content="c++"> <meta property="og:article:tag" content="cpp"> <meta property="og:article:tag" content="cmake"> 
+    <meta property="og:article:tag" content="OpenMP"> 
 
     
-        <meta property="article:published_time" content="Sun Nov 26 2023 16:43:43 GMT+0800">
-        <meta property="article:modified_time" content="Tue Nov 28 2023 17:47:17 GMT+0800">
+        <meta property="article:published_time" content="Sun Nov 26 2023 17:50:01 GMT+0800">
+        <meta property="article:modified_time" content="Tue Nov 28 2023 16:32:46 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -247,7 +247,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://olivetien.github.io/2023/11/26/HPC01-cmake/index.html" />
+        <link rel="canonical" href="http://olivetien.github.io/2023/11/26/HPC05-OpenMP/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -259,10 +259,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://olivetien.github.io/2023/11/26/HPC01-cmake/index.html",
-    "headline": "HPC01-cmake01",
-    "datePublished": "Sun Nov 26 2023 16:43:43 GMT+0800",
-    "dateModified": "Tue Nov 28 2023 17:47:17 GMT+0800",
+    "mainEntityOfPage": "http://olivetien.github.io/2023/11/26/HPC05-OpenMP/index.html",
+    "headline": "HPC05-OpenMP",
+    "datePublished": "Sun Nov 26 2023 17:50:01 GMT+0800",
+    "dateModified": "Tue Nov 28 2023 16:32:46 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Olive Tien",
@@ -280,7 +280,7 @@
             "url": "/img/ys/Element/Element_Anemo-风.svg"
         }
     },
-    "keywords": ",tricks,c++,cpp,cmake",
+    "keywords": ",OpenMP",
     "description": "",
 }
 </script>
@@ -346,7 +346,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#VS-%E5%86%8D%E6%AC%A1%E6%89%93%E5%BC%80CMake%E9%A1%B9%E7%9B%AE%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%86%E5%88%AB"><span class="post-toc-number">1.</span> <span class="post-toc-text">VS 再次打开CMake项目时无法识别</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#cmake%E6%96%87%E4%BB%B6%E8%B7%A8%E5%B9%B3%E5%8F%B0%EF%BC%8C%E7%A8%8B%E5%BA%8F%E8%AE%A1%E7%AE%97%E7%BB%93%E6%9E%9C%E4%B8%8D%E5%90%8C"><span class="post-toc-number">2.</span> <span class="post-toc-text">cmake文件跨平台，程序计算结果不同</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#OpenMP%E7%AE%80%E4%BB%8B"><span class="post-toc-number">1.</span> <span class="post-toc-text">OpenMP简介</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">定义</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BD%9C%E7%94%A8"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">作用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%BC%BA%E7%82%B9"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">缺点</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#OpenMP%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="post-toc-number">2.</span> <span class="post-toc-text">OpenMP使用方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Visual-Studio"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Visual Studio</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -378,7 +378,7 @@
         
     
             <p class="article-headline-p">
-                HPC01-cmake01
+                HPC05-OpenMP
             </p>
         </div>
 
@@ -421,7 +421,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-none-link" href="/tags/c/" rel="tag">c++</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/cmake/" rel="tag">cmake</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/cpp/" rel="tag">cpp</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/tricks/" rel="tag">tricks</a>
+        <a class="post_tag-none-link" href="/tags/OpenMP/" rel="tag">OpenMP</a>
     </ul>
     
 
@@ -449,7 +449,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=HPC01-cmake01&url=http://olivetien.github.io/2023/11/26/HPC01-cmake/index.html&pic=http://olivetien.github.io/img/ys/Element/Element_Anemo-风.svg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=HPC05-OpenMP&url=http://olivetien.github.io/2023/11/26/HPC05-OpenMP/index.html&pic=http://olivetien.github.io/img/ys/Element/Element_Anemo-风.svg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -458,7 +458,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=HPC01-cmake01&url=http://olivetien.github.io/2023/11/26/HPC01-cmake/index.html&via=Olive Tien" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=HPC05-OpenMP&url=http://olivetien.github.io/2023/11/26/HPC05-OpenMP/index.html&via=Olive Tien" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -467,7 +467,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://olivetien.github.io/2023/11/26/HPC01-cmake/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://olivetien.github.io/2023/11/26/HPC05-OpenMP/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -476,7 +476,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://olivetien.github.io/2023/11/26/HPC01-cmake/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://olivetien.github.io/2023/11/26/HPC05-OpenMP/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -501,26 +501,11 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="VS-再次打开CMake项目时无法识别"><a href="#VS-再次打开CMake项目时无法识别" class="headerlink" title="VS 再次打开CMake项目时无法识别"></a>VS 再次打开CMake项目时无法识别</h1><p>尝试清理缓存，然后重新生成</p>
-<ul>
-<li>菜单栏-项目-清理缓存并重新配置</li>
-</ul>
-<h1 id="cmake文件跨平台，程序计算结果不同"><a href="#cmake文件跨平台，程序计算结果不同" class="headerlink" title="cmake文件跨平台，程序计算结果不同"></a>cmake文件跨平台，程序计算结果不同</h1><p>我使用Visual Studio创建了一个CMake项目，能成功运行。然而我移植到在Linux上用cmake编译、运行时，程序得到的计算结果却不同。<br>查看log发现，应该是 abs() max()函数定义问题，自己定义abs_() max_() 后，问题解决。</p>
-<p>GPT的回答：</p>
-<ol>
-<li><p>编译器差异：不同的操作系统和编译器可能对代码的处理方式存在差异，特别是在涉及浮点数运算和优化方面。这可能导致在不同平台上得到不同的计算结果。你可以尝试在Linux上使用与Visual Studio中相同的编译器（例如GCC）来编译代码，以确保结果的一致性。</p>
-</li>
-<li><p>依赖项问题：你的项目可能依赖于特定的库或组件，而在Linux上可能缺少这些依赖项或使用了不同的版本。这可能会导致在不同平台上产生不同的结果。确保在Linux上安装和配置了与Visual Studio相同的依赖项版本，并且在CMakeLists.txt文件中正确设置了这些依赖项。</p>
-</li>
-<li><p>CMake配置问题：CMakeLists.txt文件可能在不同平台上有所不同，特别是与编译选项、链接库和宏定义相关的部分。确保在Linux上正确配置了CMakeLists.txt，以便与Visual Studio中的配置保持一致。</p>
-</li>
-<li><p>平台相关行为：某些代码可能依赖于特定平台的行为，而在不同平台上可能表现不同。这可能涉及文件路径、操作系统相关的特性、并发行为等。确保你的代码在移植到Linux时考虑了这些平台相关的差异，并进行了适当的调整。</p>
-</li>
-</ol>
-<p>这是windows前18步文件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">  istep = 	0	time = 0.0104167</span><br><span class="line">dvormax/dt = 	8640	dstrmax/dt = 0</span><br><span class="line">calcutate time: 0.005s</span><br><span class="line">  istep = 	1	time = 0.0208333</span><br><span class="line">dvormax/dt = 	2671.78	dstrmax/dt = 9.18258e-07</span><br><span class="line">calcutate time: 0.007s</span><br><span class="line">  istep = 	2	time = 0.03125</span><br><span class="line">dvormax/dt = 	1541.5	dstrmax/dt = 9.44346e-07</span><br><span class="line">calcutate time: 0.014s</span><br><span class="line">...</span><br><span class="line">  istep = 	17	time = 0.1875</span><br><span class="line">dvormax/dt = 	37.8238	dstrmax/dt = 9.18957e-07</span><br><span class="line">calcutate time: 0.042s</span><br><span class="line">  istep = 	18	time = 0.197917</span><br><span class="line">dvormax/dt = 	34.7246	dstrmax/dt = 8.76593e-07</span><br><span class="line">calcutate time: 0.044s</span><br></pre></td></tr></table></figure>
-<p>这是linux文件。它把残差整数化了</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">  istep = 	0	time = 0.0104167</span><br><span class="line">dvormax/dt = 	8640	dstrmax/dt = 0</span><br><span class="line">calcutate time: 0.000465s</span><br><span class="line">  istep = 	1	time = 0.0208333</span><br><span class="line">dvormax/dt = 	2400	dstrmax/dt = 0</span><br><span class="line">calcutate time: 0.000647s</span><br><span class="line">  istep = 	2	time = 0.03125</span><br><span class="line">dvormax/dt = 	1824	dstrmax/dt = 0</span><br><span class="line">calcutate time: 0.002803s</span><br><span class="line">  istep = 	3	time = 0.0416667</span><br><span class="line">dvormax/dt = 	1536	dstrmax/dt = 0</span><br><span class="line">calcutate time: 0.002997s</span><br><span class="line">...</span><br><span class="line">  istep = 	17	time = 0.1875</span><br><span class="line">dvormax/dt = 	96	dstrmax/dt = 0</span><br><span class="line">calcutate time: 0.005587s</span><br><span class="line">  istep = 	18	time = 0.197917</span><br><span class="line">dvormax/dt = 	0	dstrmax/dt = 0</span><br><span class="line">calcutate time: 0.00577s</span><br><span class="line">  istep = 	18	time = 0.197917</span><br><span class="line">dvormax/dt = 	0	dstrmax/dt = 0</span><br><span class="line">calcutate time: 0.005823s</span><br></pre></td></tr></table></figure>
+        <h1 id="OpenMP简介"><a href="#OpenMP简介" class="headerlink" title="OpenMP简介"></a>OpenMP简介</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>OpenMP是由OpenMP Architecture Review Board牵头提出的，并已被广泛接受，用于共享内存并行系统的多处理器程序设计的一套指导性编译处理方案</p>
+<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>通过调用OpenMP库，能够将程序并行化、多线程化。在最简单的情形，甚至可以只加一行指令，就可以将循环内的程序并行化处理。</p>
+<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>不适合需要复杂的线程间同步和互斥的场合<br>不能在非共享内存系统(如计算机集群)上使用。此时用MPI替代。</p>
+<h1 id="OpenMP使用方法"><a href="#OpenMP使用方法" class="headerlink" title="OpenMP使用方法"></a>OpenMP使用方法</h1><h2 id="Visual-Studio"><a href="#Visual-Studio" class="headerlink" title="Visual Studio"></a>Visual Studio</h2><p>项目-右键-属性，打开项目属性页<br>如图，OpenMP支持选择“是”</p>
+
         
     
 
@@ -540,7 +525,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2023/11/26/HPC02-sbatch/" id="post_nav-newer" class="prev-content">
+        <a href="/2023/11/26/HPC03-mpi/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -554,7 +539,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2023/11/25/CFD01-tecplot01/" id="post_nav-older" class="next-content">
+        <a href="/2023/11/26/HPC02-sbatch/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
