@@ -48,7 +48,7 @@
     
     <title>
         
-            CFD02 CFD&amp;GPU | 
+            CFD02 CFD&amp;GPU&amp;HPC综述 | 
         
         风起地
     </title>
@@ -232,14 +232,14 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://olivetien.github.io/2023/11/27/CFD02-CFD&amp;GPU/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="CFD02 CFD&amp;GPU | 风起地">
+    <meta property="og:title" content="CFD02 CFD&amp;GPU&amp;HPC综述 | 风起地">
     <meta property="og:image" content="/img/ys/Element/Element_Anemo-%E9%A3%8E.svg">
     <meta property="og:description" content="">
     <meta property="og:article:tag" content="CFD"> <meta property="og:article:tag" content="HPC"> <meta property="og:article:tag" content="GPU"> 
 
     
         <meta property="article:published_time" content="Mon Nov 27 2023 21:48:33 GMT+0800">
-        <meta property="article:modified_time" content="Wed Nov 29 2023 22:20:12 GMT+0800">
+        <meta property="article:modified_time" content="Sun Dec 03 2023 21:46:01 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -260,9 +260,9 @@
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "mainEntityOfPage": "http://olivetien.github.io/2023/11/27/CFD02-CFD&GPU/index.html",
-    "headline": "CFD02 CFD&GPU",
+    "headline": "CFD02 CFD&GPU&HPC综述",
     "datePublished": "Mon Nov 27 2023 21:48:33 GMT+0800",
-    "dateModified": "Wed Nov 29 2023 22:20:12 GMT+0800",
+    "dateModified": "Sun Dec 03 2023 21:46:01 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Olive Tien",
@@ -346,7 +346,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E7%A0%94%E7%A9%B6%E7%8E%B0%E7%8A%B6"><span class="post-toc-number">1.</span> <span class="post-toc-text">研究现状</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#GPU%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="post-toc-number">2.</span> <span class="post-toc-text">GPU优缺点</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#GPU%E9%80%82%E7%94%A8%E7%BD%91%E6%A0%BC%E7%B1%BB%E5%9E%8B"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">GPU适用网格类型</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#GPU%E6%84%8F%E4%B9%89"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">GPU意义</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#GPU%E7%A1%AC%E4%BB%B6"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">GPU硬件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#NVIDIA"><span class="post-toc-number">2.3.1.</span> <span class="post-toc-text">NVIDIA</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#GPU%E8%BD%AF%E4%BB%B6"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">GPU软件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#FUN3D"><span class="post-toc-number">2.4.1.</span> <span class="post-toc-text">FUN3D</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#OpenFOAM"><span class="post-toc-number">2.4.2.</span> <span class="post-toc-text">OpenFOAM</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#MPI%E5%92%8COpenMP%E6%B7%B7%E5%90%88%E7%BC%96%E7%A8%8B"><span class="post-toc-number">3.</span> <span class="post-toc-text">MPI和OpenMP混合编程</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#GPU%E5%8A%A0%E9%80%9F%E9%A9%B1%E5%8A%A8%E7%9A%84CFD%E9%9D%A9%E5%91%BD-The-Computational-Fluid-Dynamics-Revolution-Driven-by-GPU-Acceleration-1"><span class="post-toc-number">4.</span> <span class="post-toc-text">GPU加速驱动的CFD革命 - The Computational Fluid Dynamics Revolution Driven by GPU Acceleration ^1</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#GPU%E5%9C%A8CFD%E4%B8%AD%E7%9A%84%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">GPU在CFD中的发展历程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%AB%98%E7%B2%BE%E5%BA%A6%E5%A4%9A%E7%89%A9%E7%90%86%E5%9C%BA%E6%B5%81%E5%8A%A8%E6%A8%A1%E6%8B%9F-2"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">高精度多物理场流动模拟^2</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Fluent%E7%9A%84%E9%9D%9E%E7%BB%93%E6%9E%84%E9%9A%90%E5%BC%8F%E6%B1%82%E8%A7%A3%E5%99%A8-3"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">Fluent的非结构隐式求解器^3</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%A4%96%E6%B5%81%E6%B0%94%E5%8A%A8%E6%A8%A1%E6%8B%9F%E7%9A%84GPGPU%E5%8A%A0%E9%80%9F-4"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">外流气动模拟的GPGPU加速^4</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#NVIDIA%E5%88%9B%E5%A7%8B%E4%BA%BA%E9%BB%84%E4%BB%81%E5%8B%8B-Jensen-Huang"><span class="post-toc-number">4.5.</span> <span class="post-toc-text">NVIDIA创始人黄仁勋(Jensen Huang)</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E9%97%AE%E9%A2%98"><span class="post-toc-number">5.</span> <span class="post-toc-text">问题</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E7%A0%94%E7%A9%B6%E7%8E%B0%E7%8A%B6"><span class="post-toc-number">1.</span> <span class="post-toc-text">研究现状</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#GPU"><span class="post-toc-number">2.</span> <span class="post-toc-text">GPU</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#GPU%E7%9A%84%E7%89%B9%E7%82%B9"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">GPU的特点</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#GPU%E5%92%8CGPGPU%EF%BC%9F"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">GPU和GPGPU？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CUDA%E8%BF%98%E6%98%AFOpenCL%EF%BC%9F"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">CUDA还是OpenCL？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CUDA"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">CUDA</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CUDA%E7%9A%84%E8%83%8C%E6%99%AF-NVIDIA%E7%9A%84GPU%E6%9E%B6%E6%9E%84"><span class="post-toc-number">2.4.1.</span> <span class="post-toc-text">CUDA的背景 - NVIDIA的GPU架构</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CPU-GPU%E7%9A%84%E5%BC%82%E6%9E%84%E8%AE%A1%E7%AE%97"><span class="post-toc-number">2.4.2.</span> <span class="post-toc-text">CPU&amp;GPU的异构计算</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CUDA%E7%9A%84%E5%87%BD%E6%95%B0"><span class="post-toc-number">2.4.3.</span> <span class="post-toc-text">CUDA的函数</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#WebGPU%E4%B8%8EWebGL"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">WebGPU与WebGL</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%EF%BC%8CGPU%EF%BC%8COpenGL%EF%BC%8CUnity3D%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">计算机图形学，GPU，OpenGL，Unity3D的关系</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#GPU%E5%92%8CCFD"><span class="post-toc-number">3.</span> <span class="post-toc-text">GPU和CFD</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#GPU%E9%80%82%E7%94%A8%E7%BD%91%E6%A0%BC%E7%B1%BB%E5%9E%8B"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">GPU适用网格类型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GPU%E6%B1%82%E8%A7%A3%E4%B8%AD%EF%BC%8C%E7%9F%A9%E9%98%B5%E6%B1%82%E8%A7%A3%E4%B8%BA%E4%B8%BB%E8%A6%81%E8%80%97%E6%97%B6%E9%83%A8%E5%88%86-7"><span class="post-toc-number">3.1.1.</span> <span class="post-toc-text">GPU求解中，矩阵求解为主要耗时部分[^7]</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%8F%90%E9%AB%98%E7%BD%91%E6%A0%BC%E7%94%9F%E6%88%90%E6%95%88%E7%8E%87%E7%9A%84%E5%BF%85%E8%A6%81%E6%80%A7"><span class="post-toc-number">3.1.2.</span> <span class="post-toc-text">提高网格生成效率的必要性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ParMETIS"><span class="post-toc-number">3.1.3.</span> <span class="post-toc-text">ParMETIS</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#GPU%E5%9C%A8CFD%E4%B8%AD%E5%BA%94%E7%94%A8"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">GPU在CFD中应用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#GPU%E5%9C%A8CFD%E4%B8%AD%E7%9A%84%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">GPU在CFD中的发展历程</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#HPC"><span class="post-toc-number">4.</span> <span class="post-toc-text">HPC</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#OpenMP%E5%92%8CMPI%E6%B7%B7%E5%90%88%E7%BC%96%E7%A8%8B"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">OpenMP和MPI混合编程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#OpenMP%E7%AE%80%E4%BB%8B"><span class="post-toc-number">4.1.1.</span> <span class="post-toc-text">OpenMP简介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#MPI%E7%AE%80%E4%BB%8B"><span class="post-toc-number">4.1.2.</span> <span class="post-toc-text">MPI简介</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%AB%98%E7%B2%BE%E5%BA%A6%E5%A4%9A%E7%89%A9%E7%90%86%E5%9C%BA%E6%B5%81%E5%8A%A8%E6%A8%A1%E6%8B%9F-2"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">高精度多物理场流动模拟^2</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Fluent%E7%9A%84%E9%9D%9E%E7%BB%93%E6%9E%84%E9%9A%90%E5%BC%8F%E6%B1%82%E8%A7%A3%E5%99%A8-3"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">Fluent的非结构隐式求解器^3</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%A4%96%E6%B5%81%E6%B0%94%E5%8A%A8%E6%A8%A1%E6%8B%9F%E7%9A%84GPGPU%E5%8A%A0%E9%80%9F-4"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">外流气动模拟的GPGPU加速^4</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#NVIDIA%E5%88%9B%E5%A7%8B%E4%BA%BA%E9%BB%84%E4%BB%81%E5%8B%8B-Jensen-Huang"><span class="post-toc-number">4.5.</span> <span class="post-toc-text">NVIDIA创始人黄仁勋(Jensen Huang)</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81%E5%BF%83%E5%BE%97-5"><span class="post-toc-number">5.</span> <span class="post-toc-text">编写代码心得[^5]</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">学习路径</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8A%A8%E7%BD%91%E6%A0%BC"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">动网格</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">核心思想</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E9%97%AE%E9%A2%98"><span class="post-toc-number">6.</span> <span class="post-toc-text">问题</span></a></li></ol>
     </ul>
     
 
@@ -378,7 +378,7 @@
         
     
             <p class="article-headline-p">
-                CFD02 CFD&GPU
+                CFD02 CFD&GPU&HPC综述
             </p>
         </div>
 
@@ -449,7 +449,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=CFD02 CFD&amp;GPU&url=http://olivetien.github.io/2023/11/27/CFD02-CFD&amp;GPU/index.html&pic=http://olivetien.github.io/img/ys/Element/Element_Anemo-风.svg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=CFD02 CFD&amp;GPU&amp;HPC综述&url=http://olivetien.github.io/2023/11/27/CFD02-CFD&amp;GPU/index.html&pic=http://olivetien.github.io/img/ys/Element/Element_Anemo-风.svg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -458,7 +458,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=CFD02 CFD&amp;GPU&url=http://olivetien.github.io/2023/11/27/CFD02-CFD&amp;GPU/index.html&via=Olive Tien" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=CFD02 CFD&amp;GPU&amp;HPC综述&url=http://olivetien.github.io/2023/11/27/CFD02-CFD&amp;GPU/index.html&via=Olive Tien" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -502,30 +502,266 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <p>[TOC]</p>
+<blockquote>
+<p>本文章是综述性的文章，不涉及具体代码实现和使用步骤。如果想要了解某一板块的具体知识，请移步“HPC”系列文章。</p>
+</blockquote>
 <p>组会总结：<br>GPU有优势的地方、不足的地方。<br>与CFD结合起来。<br>用思维导图表示。讲清楚</p>
-<p>编程时，修改FVM_2D代码（非结构网格），贡献到CMake上去。</p>
-<p>对于航空器网格，尾缘边界层有问题，应改一下。。<br>也可以作为毕设的内容的一部分，因此也要做。</p>
-<p>近壁厚度$\Delta s &#x3D; 80&#x2F;Re$。</p>
+<p>编程时，修改FVM_2D代码（非结构网格），贡献到CMake上去。<br>也可以作为毕设的内容的一部分，因此也要做。</p>
+<p>近壁厚度 $ \Delta s &#x3D; 80&#x2F;Re $ 。</p>
 <p>云图和线图的区别：云图定性，线图定量。云图强调整体认识。</p>
 <p>什么是壁函数。子迭代。<br>楼上有Fluent？</p>
-<!--     
-2年半博资考，3年半开题。5~6年毕业，别超过6年。
--->
-
-<h1 id="研究现状"><a href="#研究现状" class="headerlink" title="研究现状"></a>研究现状</h1><h1 id="GPU优缺点"><a href="#GPU优缺点" class="headerlink" title="GPU优缺点"></a>GPU优缺点</h1><h2 id="GPU适用网格类型"><a href="#GPU适用网格类型" class="headerlink" title="GPU适用网格类型"></a>GPU适用网格类型</h2><p>结构化网格需要考虑的难点：负载平衡。<br>非结构网格好处：复杂网格，自适应加密。</p>
-<h2 id="GPU意义"><a href="#GPU意义" class="headerlink" title="GPU意义"></a>GPU意义</h2><p>以下领域的模拟需要超高算力的支持：<a target="_blank" rel="noopener" href="https://developer.nvidia.com/blog/computational-fluid-dynamics-revolution-driven-by-gpu-acceleration/">^1</a></p>
+<h1 id="研究现状"><a href="#研究现状" class="headerlink" title="研究现状"></a>研究现状</h1><h1 id="GPU"><a href="#GPU" class="headerlink" title="GPU"></a>GPU</h1><h2 id="GPU的特点"><a href="#GPU的特点" class="headerlink" title="GPU的特点"></a>GPU的特点</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/625896745">基于WebGL的GPGPU指南 - 概述 - 知乎 (zhihu.com)</a></p>
+</blockquote>
+<p>以图像显示为例，GPU上有许多着色器(shaders)，着色器用来计算屏幕每个像素点的颜色，而且它们是并行运行的。 </p>
+<p>这种并行性的代价是，着色器之间没有通信，它的输出仅取决于事先的输入，与相邻着色器无关。在图像显示中，这无关紧要，但是如果要用于科学计算，必然要涉及到通信的问题。</p>
+<p>研究基于GPU的数值计算，其关键是将计算模型映射到图形硬件上，包括微分方程、金融建模、机器学习、图像处理，甚至数据库等领域。</p>
+<h2 id="GPU和GPGPU？"><a href="#GPU和GPGPU？" class="headerlink" title="GPU和GPGPU？"></a>GPU和GPGPU？</h2><p>GPGPU(General-purpose computing on graphics processing units)，即“通用图形处理器”。</p>
+<p><code>GPGPU</code> &#x3D; <code>General-purpose</code> + <code>GPU</code> ，目前市面上多数GPU都是GPGPU。</p>
+<h2 id="CUDA还是OpenCL？"><a href="#CUDA还是OpenCL？" class="headerlink" title="CUDA还是OpenCL？"></a>CUDA还是OpenCL？</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/360174784">opencl和cuda性能比较 - 知乎 (zhihu.com)</a></p>
+</blockquote>
+<p>OpenCL (Open Compute Language) 是面向异构系统通用并行编程、可以在多个平台和设备上运行的开放标准。</p>
+<p>OpenCL的处理流程和OpenGL类似。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>CUDA</th>
+<th>OpenCL</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>供应商</td>
+<td>NVIDIA</td>
+<td>AMD, NVIDIA, Apple, Radeon等</td>
+</tr>
+<tr>
+<td>适用范围</td>
+<td>仅限NVIDIA硬件</td>
+<td></td>
+</tr>
+<tr>
+<td>性能</td>
+<td></td>
+<td>为CUDA的1&#x2F;4</td>
+</tr>
+<tr>
+<td>库</td>
+<td></td>
+<td>不如CUDA广泛</td>
+</tr>
+<tr>
+<td>技术细节</td>
+<td>在C++上扩展， 使用CUDA关键字</td>
+<td>C和CL脚本语言</td>
+</tr>
+</tbody></table>
+<p>如果主要是学术研究发paper，那大部分的实验室会有N卡，基本上都是CUDA更加方便了。如果是给工业界正式的做项目，考虑到跨平台性，更多的还是openCL。</p>
+<p>因此<strong>选用CUDA</strong>。</p>
+<h2 id="CUDA"><a href="#CUDA" class="headerlink" title="CUDA"></a>CUDA</h2><p>CUDA(Compute Unified Device Architectecture)是 NVIDIA 于 2006 年推出的通用并行计算架构，包含 CUDA 指令集架构(ISA)和 GPU 内部的并行计算引擎。</p>
+<h3 id="CUDA的背景-NVIDIA的GPU架构"><a href="#CUDA的背景-NVIDIA的GPU架构" class="headerlink" title="CUDA的背景 - NVIDIA的GPU架构"></a>CUDA的背景 - NVIDIA的GPU架构</h3><p>在讲解CUDA前，有必要了解其历史和背景。</p>
+<p>随着显卡的发展，GPU越来越强大，而且GPU为显示图像做了优化。在计算上已经超越了通用的CPU。如此强大的芯片如果只是作为显卡就太浪费了，因此NVIDIA推出CUDA，让显卡可以用于图像计算以外的目的。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/394352476?utm_id=0&eqid=c04f0ee500024ebe00000005648ab7c3">NVIDIA GPU 架构梳理 - 知乎 (zhihu.com)</a></p>
+</blockquote>
+<p>截止2021年，发布时间离我们最近的8种NVIDIA GPU微架构是：</p>
+<ul>
+<li><strong>Tesla</strong> <ul>
+<li>第一个实现统一着色器模型的微架构</li>
+<li>G80<ul>
+<li>第一款支持C语言的GPU</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Fermi</strong><ul>
+<li>共享内存和L1 cache</li>
+</ul>
+</li>
+<li><strong>Kepler</strong></li>
+<li><strong>Maxwell</strong></li>
+<li><strong>Pascal</strong></li>
+<li><strong>Volta</strong></li>
+<li><strong>Turing</strong></li>
+<li><strong>Ampere</strong></li>
+</ul>
+<p>NVIDIA一般以历史上一些著名科学家的名字命名自己的GPU微架构，上面8种微架构分别是：<strong>特斯拉</strong>，<strong>费米</strong>，<strong>开普勒</strong>，<strong>麦克斯韦</strong>，<strong>帕斯卡</strong>，<strong>伏打</strong>，<strong>图灵</strong>，<strong>安培</strong>。</p>
+<p>以Fermi架构的GPU为例，它共512 个 CUDA 内核，每个内核划分为 16 个 SM，每个 SM 是一个<strong>垂直的矩形条带</strong>(红框中的内容)，分别位于一个普通的 L2 cache周围，每个 SM 有32 个CUDA 内核。</p>
+<p>每个CUDA 内核为一个线程在每个时钟周期里执行一条浮点或整数指令。</p>
+<blockquote>
+<p>GDDR5：第五版图形用双倍数据传输率存储器<br>DRAM：动态随机存取存储器</p>
+</blockquote>
+<h3 id="CPU-GPU的异构计算"><a href="#CPU-GPU的异构计算" class="headerlink" title="CPU&amp;GPU的异构计算"></a>CPU&amp;GPU的异构计算</h3><p>在CUDA编程模型中，主要有 Host（主机）和 Device（设备）两个概念，Host 包含 CPU 和主机内存，Device 包含 GPU 和显存，两者之间通过 PCI Express 总线进行数据传输。</p>
+<p>在具体的 CUDA 实现中，程序通常划分为两部分，在主机上运行的 Host 代码和在设备上运行的 Device 代码。Host 代码负责程序整体的流程控制和数据交换，而 Device 代码则负责执行具体的计算任务。</p>
+<p>主机和设备协同工作，即异构计算。</p>
+<h3 id="CUDA的函数"><a href="#CUDA的函数" class="headerlink" title="CUDA的函数"></a>CUDA的函数</h3><p>Host函数库</p>
+<ul>
+<li>Libraries<ul>
+<li>常见的数学和科学计算任务运算库</li>
+</ul>
+</li>
+<li>Runtime API<ul>
+<li>自动管理 GPU 资源</li>
+</ul>
+</li>
+<li>Driver API<ul>
+<li>C 函数库，能更底层、更高效地控制 GPU 资源，但相应的开发者需要手动管理模块编译等复杂任务</li>
+</ul>
+</li>
+</ul>
+<p>Device函数，又称内核函数(Kernel)</p>
+<ul>
+<li>并行部分由 K 个不同的 CUDA 线程并行执行 K 次</li>
+<li>一组线程被称为 CUDA 块(block)</li>
+<li>若干block组成一个grid，若干grid被一个Kernel调用</li>
+</ul>
+<p><strong>丰富而成熟的软件生态是 CUDA 被广泛使用的关键原因.</strong></p>
+<p>（1）编程语言：CUDA 12.0 支持 C、C++、Fortran、Python 等多种编程语言.此外，NVIDIA 还支持了如 PyCUDA、ltimesh Hybridizer、OpenACC 等众多第三方工具链，不断提升开发者的使用体验.</p>
+<p>（2）库：NVIDIA 在 CUDA 平台上提供了名为 CUDA-X 的集合层，开发人员可以通过 CUDA-X 快速部署如 cuBLA、NPP、NCCL、cuDNN、TensorRT、OpenCV 等多领域常用库.</p>
+<p>（3）其他：NVIDIA 还为 CUDA 开发人员提供了容器部署流程简化以及集群环境扩展应用程序的工具，让应用程序更易加速，使得CUDA 技术能够适用于更广泛的领域.</p>
+<h2 id="WebGPU与WebGL"><a href="#WebGPU与WebGL" class="headerlink" title="WebGPU与WebGL"></a>WebGPU与WebGL</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/625896745">基于WebGL的GPGPU指南 - 概述 - 知乎 (zhihu.com)</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.vizitsolutions.com/portfolio/webgl/gpgpu/index.html">Unleash Your Inner Supercomputer (vizitsolutions.com)</a></p>
+</blockquote>
+<p>新概念：</p>
+<ul>
+<li>帧缓冲对象(Framebuffer Object, FBO)</li>
+</ul>
+<h2 id="计算机图形学，GPU，OpenGL，Unity3D的关系"><a href="#计算机图形学，GPU，OpenGL，Unity3D的关系" class="headerlink" title="计算机图形学，GPU，OpenGL，Unity3D的关系"></a>计算机图形学，GPU，OpenGL，Unity3D的关系</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/66848391/answer/3050017678?utm_id=0">计算机图形学，GPU，OpenGL，Unity3D什么关系？ - 知乎 (zhihu.com)</a></p>
+</blockquote>
+<p>从顶层到底层可以理解为：</p>
+<p>“Unity”可以通过“OpenGL”告知“驱动”要做什么操作，“驱动”指挥“gpu”做计算并输出内容。</p>
+<p>计算机图形学提供了理论和算法支持，GPU提供了硬件加速，OpenGL提供了图形编程接口，Unity3D则将它们整合在一起，方便开发者进行游戏和虚拟现实应用的开发。</p>
+<p>OpenGL是一种跨平台的图形库。它本身并不是一个API，它仅仅是一个由Khronos组织制定并维护的规范(Specification)。API(Application Programming Interface, 应用程序编程接口)应当包含一系列可以操作图形、图像的函数。</p>
+<p>Unity3D是一个软件（开发平台&#x2F;游戏引擎），它可以使用OpenGL的接口（不一定）。Unity3D不是对接口的封装，它有一系列完备的工具&#x2F;部件，使得你只需要写少量的代码，方便而已。</p>
+<h1 id="GPU和CFD"><a href="#GPU和CFD" class="headerlink" title="GPU和CFD"></a>GPU和CFD</h1><h2 id="GPU适用网格类型"><a href="#GPU适用网格类型" class="headerlink" title="GPU适用网格类型"></a>GPU适用网格类型</h2><p>GPU适用于结构网格和非结构网格</p>
+<ul>
+<li><p>结构网格</p>
+<ul>
+<li>优势<ul>
+<li>算法简单<ul>
+<li>数据结构简单，使得算法简单，且host(CPU)到device(GPU)的数据转移效率高</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>难点<ul>
+<li>负载平衡</li>
+<li>网格<ul>
+<li>自适应网格加密(adaptive mesh refinement, AMR)<ul>
+<li>类似碰撞检测算法中的八叉树。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>复杂外形<ul>
+<li>结构网格一般局限于笛卡尔坐标系或极坐标系<br>负载平衡。<br>非结构网格好处：复杂网格，自适应加密。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>非结构网格</p>
+<ul>
+<li>优势<ul>
+<li>处理复杂外形时，非结构网格可以耗费更少的人力资源。其本质是将人工时间成本转移到计算量上</li>
+</ul>
+</li>
+<li>难点<ul>
+<li>不规则的内存访问模式(Irregular memory access patterns)<ul>
+<li>单元数据通常是非连续的，而降低GPU性能<ul>
+<li>GPUs typically achieve optimal performance with regular memory access patterns</li>
+<li>通常，高速缓存中为了并行处理数据，要求数据连续存储</li>
+<li>对于不连续数据，需要拷贝，造成额外开销</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>负载均衡(Load balancing)<ul>
+<li>非结构网格的每个单元的计算量差异性更大</li>
+</ul>
+</li>
+<li>数据结构和算法(Data structures and algorithms)<ul>
+<li>网格的物理顺序和存储顺序不一致，导致需要增加额外映射</li>
+<li>表示和处理都更加复杂、耗时。需要额外优化<ul>
+<li>数据结构：邻接列表、八叉树(octrees)</li>
+<li>算法：邻居搜索，插值(interpolation)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>内存占用大<ul>
+<li>非结构网格除了存储节点坐标，还要存储节点邻接关系，内存占用更大</li>
+<li>GPU内存有限</li>
+<li>需要更精细的内存管理<ul>
+<li>数据压缩</li>
+<li>分级数据结构(hierarchical data structures)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="GPU求解中，矩阵求解为主要耗时部分-7"><a href="#GPU求解中，矩阵求解为主要耗时部分-7" class="headerlink" title="GPU求解中，矩阵求解为主要耗时部分[^7]"></a>GPU求解中，矩阵求解为主要耗时部分[^7]</h3><p>最主要耗时部分是矩阵求解，矩阵组装占比&lt;10%</p>
+<p>就目前来讲，多快好省地调用GPU的办法，是考虑使用现成的基于GPU架构编写的矩阵解法器，在这些解法器的基础上进行CFD的算法开发。比如Nvidia家的AMGx,、Petsc、Taichi等。不过GPU比CPU计算快在CAE领域并不是恒成立的，这跟CFD算法的计算逻辑、网格域划分的均衡程度、核间通信开销、访存命中率等都有很大的关系。而基于CPU的并行求解，如果对内存机制有比较深入的了解，依然可以获得最高达数十倍的性能提升，某些情况下并不会太逊色于GPU。</p>
+<h3 id="提高网格生成效率的必要性"><a href="#提高网格生成效率的必要性" class="headerlink" title="提高网格生成效率的必要性"></a>提高网格生成效率的必要性</h3><p>减少人工时间也是需要考虑的重要因素。当性能提高到一定程度后，也要考虑网格生成。<br>It is especially important to address this problem because it takes engineering person-time to solve. This is different from other factors, like simulation run time, that leave the researcher free to concentrate on other tasks.<br>三种提高网格生成效率的方式：<a target="_blank" rel="noopener" href="https://www.engineering.com/story/cfd-mesh-generators-top-3-reasons-they-slow-analysis-and-how-to-fix-them">https://www.engineering.com/story/cfd-mesh-generators-top-3-reasons-they-slow-analysis-and-how-to-fix-them</a></p>
+<h3 id="ParMETIS"><a href="#ParMETIS" class="headerlink" title="ParMETIS"></a>ParMETIS</h3><p>ParMETIS(Parallel Graph Partitioning and Fill-reducing Matrix Ordering)</p>
+<ul>
+<li>简介<ul>
+<li>基于MPI的并行库</li>
+<li>是METIS的扩展</li>
+<li>特别适用于并行AMR计算和大规模数值模拟</li>
+<li>由ANSI C和MPI编写</li>
+</ul>
+</li>
+<li>特点<ul>
+<li>网址<ul>
+<li>源网址为 <a target="_blank" rel="noopener" href="http://glaros.dtc.umn.edu/gkhome/metis/parmetis/">http://glaros.dtc.umn.edu/gkhome/metis/parmetis/</a><br>Karypis Lab, University of Minnesota(美国明尼苏达大学)<br>wikipedia也是引用该网站的内容</li>
+<li>其github仓库为 <a target="_blank" rel="noopener" href="https://github.com/KarypisLab/ParMETIS">https://github.com/KarypisLab/ParMETIS</a><br>奇怪的是，仅有88stars</li>
+</ul>
+</li>
+<li>功能<ul>
+<li>Graph Partitioning</li>
+<li>Mesh Partitioning</li>
+<li>Graph Repartitioning</li>
+<li>Partitioning Refinement<ul>
+<li>improve the quality of partitions produced by other partition algorithms</li>
+</ul>
+</li>
+<li>Matrix Reordering</li>
+</ul>
+</li>
+<li>算法<ul>
+<li>稀疏矩阵求解</li>
+<li>非结构网格划分<ul>
+<li>multilevel k-way graph-partitioning</li>
+<li>adaptive repartitioning</li>
+<li>parallel multi-constrained partitioning</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="GPU在CFD中应用"><a href="#GPU在CFD中应用" class="headerlink" title="GPU在CFD中应用"></a>GPU在CFD中应用</h2><p>以下领域的模拟需要高性能计算，常与GPU有关：<a target="_blank" rel="noopener" href="https://developer.nvidia.com/blog/computational-fluid-dynamics-revolution-driven-by-gpu-acceleration/">^1</a></p>
 <ul>
 <li>考虑热传递的湍流</li>
 <li>大涡和燃烧</li>
 <li>磁流体力学</li>
-<li>机器学习<br>Until now, without access to leadership-class supercomputing capabilities, investigations into these areas have been too difficult from both a runtime and a problem-size standpoint:</li>
-<li>Vehicle underhood modeling: Turbulent flow with heat transfer</li>
-<li>Large eddy and combustion: Needed for detailed environmental emissions modeling</li>
-<li>Magneto-hydrodynamics: Flows influenced by magnetic fields important to modeling fusion energy generators, internals of stars and gas giant planets</li>
-<li>Machine learning training: Automatic generation of models and solutions that are used to train machine learning algorithms to estimate flow initial conditions, model turbulence, mixing, and so on</li>
+<li>机器学习在CFD中的应用</li>
 </ul>
-<h2 id="GPU硬件"><a href="#GPU硬件" class="headerlink" title="GPU硬件"></a>GPU硬件</h2><h3 id="NVIDIA"><a href="#NVIDIA" class="headerlink" title="NVIDIA"></a>NVIDIA</h3><h2 id="GPU软件"><a href="#GPU软件" class="headerlink" title="GPU软件"></a>GPU软件</h2><h3 id="FUN3D"><a href="#FUN3D" class="headerlink" title="FUN3D"></a>FUN3D</h3><h3 id="OpenFOAM"><a href="#OpenFOAM" class="headerlink" title="OpenFOAM"></a>OpenFOAM</h3><h1 id="MPI和OpenMP混合编程"><a href="#MPI和OpenMP混合编程" class="headerlink" title="MPI和OpenMP混合编程"></a>MPI和OpenMP混合编程</h1><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/woshibutian/articles/4601551.html">MPI与OpenMP*的混合编程模型介绍</a></p>
-<h1 id="GPU加速驱动的CFD革命-The-Computational-Fluid-Dynamics-Revolution-Driven-by-GPU-Acceleration-1"><a href="#GPU加速驱动的CFD革命-The-Computational-Fluid-Dynamics-Revolution-Driven-by-GPU-Acceleration-1" class="headerlink" title="GPU加速驱动的CFD革命 - The Computational Fluid Dynamics Revolution Driven by GPU Acceleration ^1"></a>GPU加速驱动的CFD革命 - The Computational Fluid Dynamics Revolution Driven by GPU Acceleration <a target="_blank" rel="noopener" href="https://developer.nvidia.com/blog/computational-fluid-dynamics-revolution-driven-by-gpu-acceleration/">^1</a></h1><h2 id="GPU在CFD中的发展历程"><a href="#GPU在CFD中的发展历程" class="headerlink" title="GPU在CFD中的发展历程"></a>GPU在CFD中的发展历程</h2><p>2021年末至2022年初，两大CFD软件供应商Ansys和Siemens(西门子)推出支持GPU加速的CFD工具旗舰版。<br>如今已经使用GPU加速的商业软件：</p>
+<h2 id="GPU在CFD中的发展历程"><a href="#GPU在CFD中的发展历程" class="headerlink" title="GPU在CFD中的发展历程"></a>GPU在CFD中的发展历程</h2><p>2021年末至2022年初，两大CFD软件供应商<em><strong>Ansys</strong></em>和Siemens(西门子)推出支持GPU加速的CFD工具旗舰版。<a target="_blank" rel="noopener" href="https://developer.nvidia.com/blog/computational-fluid-dynamics-revolution-driven-by-gpu-acceleration/">^1</a></p>
+<blockquote>
+<p>文章来源：GPU加速驱动的CFD革命 - The Computational Fluid Dynamics Revolution Driven by GPU Acceleration </p>
+</blockquote>
+<p>如今已经使用GPU加速的商业<strong>软件</strong>有：</p>
 <ul>
 <li>Altair CFD, nanoFluidX, ultraFluidX, and Acusolve</li>
 <li>Cascade Technologies, CharLES</li>
@@ -534,28 +770,148 @@
 <li>Numeric Systems, pacefish </li>
 <li>Prometec, Particleworks</li>
 <li>M-Star CFD</li>
-<li>NASA, FUN3D</li>
+<li><em><strong>NASA, FUN3D</strong></em></li>
 </ul>
 <p>Resolved Analytics统计了当今CFD计算所用线程数量，其中以9<del>32线程(34.0%)、33</del>256线程(29.0%)居多，共占比63.0%。</p>
 <img src="/2023/11/27/CFD02-CFD&GPU/1-survey.png" class="" title="survey">
+
 <center style="font-size:14px;color:#C0C0C0;">
 Resolved Analytics survey of CFD users
 </center>
-GPU和CPU效率对比(Ansys Fluent)
+
+<p>GPU和CPU效率对比(Ansys Fluent)</p>
 <img src="/2023/11/27/CFD02-CFD&GPU/4-ansys.png" class="" title="ansys">
+
 <center style="font-size:14px;color:#C0C0C0;">
 Performance of Ansys FLUENT 2022 beta1 for a 105M cell car model server vs. CPU-only servers
 </center>
-GPU和CPU效率对比(FUN3D)
+
+<p>GPU和CPU效率对比(FUN3D)</p>
 <img src="/2023/11/27/CFD02-CFD&GPU/5-fun3d.png" class="" title="fun3d">
+
 <center style="font-size:14px;color:#C0C0C0;">
 72-84x improvement shown for CPU vs. GPU performance of FUN3D version 14.0(unreleased), courtesy of the NASA FUN3D team.
 </center>
 
-<p>减少人工时间也是需要考虑的重要因素。当性能提高到一定程度后，也要考虑网格生成。<br>It is especially important to address this problem because it takes engineering person-time to solve. This is different from other factors, like simulation run time, that leave the researcher free to concentrate on other tasks.<br>三种提高网格生成效率的方式：<a target="_blank" rel="noopener" href="https://www.engineering.com/story/cfd-mesh-generators-top-3-reasons-they-slow-analysis-and-how-to-fix-them">https://www.engineering.com/story/cfd-mesh-generators-top-3-reasons-they-slow-analysis-and-how-to-fix-them</a></p>
-<h2 id="高精度多物理场流动模拟-2"><a href="#高精度多物理场流动模拟-2" class="headerlink" title="高精度多物理场流动模拟^2"></a>高精度多物理场流动模拟<a target="_blank" rel="noopener" href="https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s41452/">^2</a></h2><h2 id="Fluent的非结构隐式求解器-3"><a href="#Fluent的非结构隐式求解器-3" class="headerlink" title="Fluent的非结构隐式求解器^3"></a>Fluent的非结构隐式求解器<a target="_blank" rel="noopener" href="https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s41953/">^3</a></h2><p>未完待续</p>
+<p>使用GPU加速的开源软件有：<em><strong>OpenFOAM</strong></em></p>
+<h1 id="HPC"><a href="#HPC" class="headerlink" title="HPC"></a>HPC</h1><h2 id="OpenMP和MPI混合编程"><a href="#OpenMP和MPI混合编程" class="headerlink" title="OpenMP和MPI混合编程"></a>OpenMP和MPI混合编程</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/woshibutian/articles/4601551.html">MPI与OpenMP的混合编程模型介绍</a></p>
+<h3 id="OpenMP简介"><a href="#OpenMP简介" class="headerlink" title="OpenMP简介"></a>OpenMP简介</h3><p>OpenMP是用于<strong>共享内存</strong>并行<strong>多处理器</strong>程序设计的编译处理方案。</p>
+<p>通过调用OpenMP库，能够将程序并行化、多线程化。在最简单的情形，甚至可以只加一行指令，就可以将循环内的程序并行化处理。</p>
+<p>不适合需要复杂的线程间同步和互斥的场合<br>不能在非共享内存系统(如计算机集群)上使用。此时用MPI替代。</p>
+<h3 id="MPI简介"><a href="#MPI简介" class="headerlink" title="MPI简介"></a>MPI简介</h3><p>MPI (Massage Passing Interface) 是消息传递函数库的标准规范，是一种基于消息传递的编程模型，不同进程间通过消息交换数据。</p>
+<p>参考资料：</p>
+<ul>
+<li>书籍<ul>
+<li>《UNIX环境编程》</li>
+<li>《高性能计算并行编程技术》，都志辉，清华大学出版社</li>
+<li>《MPI并行程序设计实例》，清华大学出版社</li>
+</ul>
+</li>
+<li>网站<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.open-mpi.org/en/v5.0.x/index.html">官网</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="高精度多物理场流动模拟-2"><a href="#高精度多物理场流动模拟-2" class="headerlink" title="高精度多物理场流动模拟^2"></a>高精度多物理场流动模拟<a target="_blank" rel="noopener" href="https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s41452/">^2</a></h2><h2 id="Fluent的非结构隐式求解器-3"><a href="#Fluent的非结构隐式求解器-3" class="headerlink" title="Fluent的非结构隐式求解器^3"></a>Fluent的非结构隐式求解器<a target="_blank" rel="noopener" href="https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s41953/">^3</a></h2><p>未完待续<br>无法直接查看，需要加入NVIDIA什么联盟。</p>
 <h2 id="外流气动模拟的GPGPU加速-4"><a href="#外流气动模拟的GPGPU加速-4" class="headerlink" title="外流气动模拟的GPGPU加速^4"></a>外流气动模拟的GPGPU加速<a target="_blank" rel="noopener" href="https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s41849/">^4</a></h2><h2 id="NVIDIA创始人黄仁勋-Jensen-Huang"><a href="#NVIDIA创始人黄仁勋-Jensen-Huang" class="headerlink" title="NVIDIA创始人黄仁勋(Jensen Huang)"></a>NVIDIA创始人黄仁勋(Jensen Huang)</h2><p>美籍华人，1963年出生于台北。</p>
+<h1 id="编写代码心得-5"><a href="#编写代码心得-5" class="headerlink" title="编写代码心得[^5]"></a>编写代码心得[^5]</h1><h2 id="学习路径"><a href="#学习路径" class="headerlink" title="学习路径"></a>学习路径</h2><ul>
+<li><p>CUDA</p>
+</li>
+<li><p>FEM的matrix free + GPGPU相关论文</p>
+</li>
+<li><p>从解Poisson方程练手，后面加dirichlet和neumann</p>
+</li>
+<li><p>先做单GPU，然后是GPU集群，接着和底层GPU硬件和内存打交道。</p>
+</li>
+<li><p>语言选择</p>
+<ul>
+<li>初学原理MATLAB，正式编程C++<ul>
+<li>与Fortran相比，C++可以带来编程效率的大幅提高和计算性能的小幅提高</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>C++编程技巧</p>
+<ul>
+<li>效率优化语法，例如<code>a=a+b</code>→<code>a+=b</code>(随时注意即可，编译器一般会做优化)</li>
+</ul>
+</li>
+<li><p>数据类型</p>
+<ul>
+<li>编写矩阵模板<ul>
+<li>重载基本矩阵运算操作符</li>
+<li>负指标</li>
+<li>越界检查</li>
+<li>矩阵输出</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>CFD编写顺序</p>
+<ul>
+<li>从无粘欧拉方程开始，再加粘性湍流等。</li>
+<li><strong>重要节点</strong>：完成欧拉方程求解器后，应仔细规划后续程序<ul>
+<li>若要做MPI并行，此时应加入，否则后续改起来很麻烦</li>
+<li>若要做动网格、ALE，此时应加入</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>复用性</p>
+<ul>
+<li>用宏变量&#x2F;模板实现编译时的兼容(模板可参见Deal.II)<ul>
+<li>尽可能兼容二维&#x2F;三维</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>内存访问</p>
+<ul>
+<li>float的必要性<ul>
+<li>对大矩阵的访问读取，float能大大加速内存的访问。</li>
+<li>对于精度要求不高的大矩阵，替换float对计算精度影响不大<ul>
+<li>例如，对于湍流模式的壁面距离矩阵、隐式迭代的对角矩阵、梯度算子矩阵等，用float后，计算精度并没有下降。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>堆和栈的区别<ul>
+<li>堆(new)的访问更慢<ul>
+<li>堆的访问的并行加速倍数有上限，最多3倍</li>
+<li>因为受限于内存带宽的限制</li>
+</ul>
+</li>
+<li>栈的访问更快<ul>
+<li>并行加速没有上限</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>磁盘访问</p>
+<ul>
+<li>传输速度：二进制格式是文本格式的30倍</li>
+<li>大小：二进制是文本的1&#x2F;2</li>
+<li>尽量输出plt而不是dat</li>
+</ul>
+</li>
+<li><p>续算</p>
+<ul>
+<li>超算容易出问题，一定要做“保存断点+载入续算”的功能</li>
+</ul>
+</li>
+</ul>
+<h2 id="动网格"><a href="#动网格" class="headerlink" title="动网格"></a>动网格</h2><ul>
+<li>几何守恒(GCL)<ul>
+<li>显式时间推进才需要</li>
+<li>对于双时间步隐式推进不需要</li>
+</ul>
+</li>
+</ul>
+<h2 id="核心思想"><a href="#核心思想" class="headerlink" title="核心思想"></a>核心思想</h2><p>所有求解器的本质是计算方程组。通用求解器是非线性里面嵌套一个线性。[^6]</p>
 <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>非结构网格隐式算法<br>隐式并行(permetic)</p>
+<p>[^5]: <a target="_blank" rel="noopener" href="https://www.zhihu.com/question/67619060/answer/257847773">(4 封私信 &#x2F; 2 条消息) 写大规模三维并行计算流体力学(CFD)求解器时，有什么经验和心得？ - 知乎 (zhihu.com)</a><br>[^6]: <a target="_blank" rel="noopener" href="https://www.zhihu.com/question/67619060/answer/2467792459">(4 封私信 &#x2F; 2 条消息) 写大规模三维并行计算流体力学(CFD)求解器时，有什么经验和心得？ - 知乎 (zhihu.com)</a></p>
 
         
     
@@ -590,7 +946,7 @@ GPU和CPU效率对比(FUN3D)
 
     <!-- Next Nav -->
     
-        <a href="/2023/11/27/Web02-MInecraft-Multiplay/" id="post_nav-older" class="next-content">
+        <a href="/2023/11/27/Web02-Multiplay/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -682,7 +1038,7 @@ GPU和CPU效率对比(FUN3D)
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2077/11/">十一月 2077<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/11/">十一月 2023<span class="sidebar_archives-count">17</span></a>
+                <a class="sidebar_archives-link" href="/archives/2077/11/">十一月 2077<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/12/">十二月 2023<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/11/">十一月 2023<span class="sidebar_archives-count">17</span></a>
             </ul>
         </li>
         
@@ -700,7 +1056,7 @@ GPU和CPU效率对比(FUN3D)
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/CFD/">CFD<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Game-Development/">Game Development<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/HPC/">HPC<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/leetcode/">leetcode<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/web/">web<span class="sidebar_archives-count">5</span></a>
+                <a class="sidebar_archives-link" href="/categories/CFD/">CFD<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Game-Development/">Game Development<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/HPC/">HPC<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/leetcode/">leetcode<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/rust/">rust<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/web/">web<span class="sidebar_archives-count">5</span></a>
             </ul>
         </li>
         
