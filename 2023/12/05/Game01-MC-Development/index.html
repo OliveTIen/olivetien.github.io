@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+
+
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com"/>
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Game01-MC plugin | 
+        
+        风起地
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/ys/Element/Element_Anemo-%E9%A3%8E.svg">
+    <link rel="icon" href="/img/ys/Element/Element_Anemo-%E9%A3%8E.svg">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content=",Game Development,MC">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-image: url(/img/ys.jpg);
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="风起地">
+    <meta name="msapplication-starturl" content="http://olivetien.github.io/2023/12/05/Game01-MC-Development/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="风起地">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/ys/Element/Element_Anemo-%E9%A3%8E.svg">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://olivetien.github.io/2023/12/05/Game01-MC-Development/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Game01-MC plugin | 风起地">
+    <meta property="og:image" content="/img/ys/Element/Element_Anemo-%E9%A3%8E.svg">
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="Game Development"> <meta property="og:article:tag" content="MC"> 
+
+    
+        <meta property="article:published_time" content="Tue Dec 05 2023 21:45:41 GMT+0800">
+        <meta property="article:modified_time" content="Mon Dec 18 2023 12:10:51 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://olivetien.github.io/2023/12/05/Game01-MC-Development/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://olivetien.github.io/2023/12/05/Game01-MC-Development/index.html",
+    "headline": "Game01-MC plugin",
+    "datePublished": "Tue Dec 05 2023 21:45:41 GMT+0800",
+    "dateModified": "Mon Dec 18 2023 12:10:51 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Olive Tien",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/ys/Neuvillette-2.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "风起地",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/ys/Element/Element_Anemo-风.svg"
+        }
+    },
+    "keywords": ",Game Development,MC",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#MC-Forge-Mod-%E5%BC%80%E5%8F%91"><span class="post-toc-number">1.</span> <span class="post-toc-text">MC Forge Mod 开发</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%B7%BB%E5%8A%A0%E6%96%B9%E5%9D%97"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">添加方块</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%B7%BB%E5%8A%A0%E7%89%A9%E5%93%81"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">添加物品</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">事件监听</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Capability"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Capability</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%B3%A8%E5%86%8C%E5%91%BD%E4%BB%A4-%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%B7%B1%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">注册命令(添加自己定义指令)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%B1%95%E7%A4%BA%E6%96%87%E6%9C%AC"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">展示文本</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%AE%A1%E5%88%92"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">计划</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Forge%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E8%A7%A3%E6%9E%90"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">Forge官方文档解析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Getting-Started"><span class="post-toc-number">1.8.1.</span> <span class="post-toc-text">Getting Started</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Core-Concepts"><span class="post-toc-number">1.8.2.</span> <span class="post-toc-text">Core Concepts</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#MC-paper%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91"><span class="post-toc-number">2.</span> <span class="post-toc-text">MC paper服务器插件开发</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%8F%92%E4%BB%B6%E5%92%8C%E6%A8%A1%E7%BB%84%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">插件和模组的区别</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%8F%92%E4%BB%B6"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">插件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%A8%A1%E7%BB%84"><span class="post-toc-number">2.1.2.</span> <span class="post-toc-text">模组</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Java基础语法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AF%B9%E8%B1%A1"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">Lambda表达式</span></a></li></ol></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Game01-MC plugin
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/ys/Neuvillette-2.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Olive Tien</strong>
+        <span>12月 05, 2023</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/Game-Development/" rel="tag">Game Development</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/MC/" rel="tag">MC</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Game01-MC plugin&url=http://olivetien.github.io/2023/12/05/Game01-MC-Development/index.html&pic=http://olivetien.github.io/img/ys/Element/Element_Anemo-风.svg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Game01-MC plugin&url=http://olivetien.github.io/2023/12/05/Game01-MC-Development/index.html&via=Olive Tien" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://olivetien.github.io/2023/12/05/Game01-MC-Development/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://olivetien.github.io/2023/12/05/Game01-MC-Development/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>Zomboid联机</p>
+<p>原先下载了Zomboid测试版，可是不开放联机。</p>
+<blockquote>
+<p>联机教程 ttps:&#x2F;&#x2F;<a target="_blank" rel="noopener" href="http://www.bilibili.com/read/cv14427208/">www.bilibili.com/read/cv14427208/</a></p>
+</blockquote>
+<h1 id="MC-Forge-Mod-开发"><a href="#MC-Forge-Mod-开发" class="headerlink" title="MC Forge Mod 开发"></a>MC Forge Mod 开发</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/600691757">Minecraft Forge 1.18.2 Mod制作学习笔记 (1) Eclipse开发环境搭建 - 知乎 (zhihu.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/dudujerry/p/17571070.html">【Minecraft Forge】从零开始学习1.20.1模组开发 （零）：配置开发环境 - dudujerry - 博客园 (cnblogs.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1oh4y177bB/?spm_id_from=333.337.search-card.all.click&vd_source=442f2278aa64b55da1a57120b4e10d88">Minecraft Forge Mod 开发入门教程 p0-开发环境搭建_哔哩哔哩_bilibili</a></p>
+<p><a target="_blank" rel="noopener" href="https://docs.minecraftforge.net/en/1.20.x/">Forge Documentation (minecraftforge.net)</a></p>
+</blockquote>
+<p>其中第3个链接是视频链接，有效，<strong>未完待续</strong></p>
+<p>p9-数据生成 为什么失败？</p>
+<p>看这个教程 文字版 <a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv24404738/">我的世界Minecraft 1.19 Mod开发教程分享-04-增加合成表和方块破坏掉落物 - 哔哩哔哩 (bilibili.com)</a></p>
+<p>最新教程 <a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv25210400/?spm_id_from=333.999.0.0">我的世界·1.20.1·forge Mod教程·ep2·添加物品和添加创造物品栏 - 哔哩哔哩 (bilibili.com)</a></p>
+<p>如何打包 <a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv24332474/">https://www.bilibili.com/read/cv24332474/</a></p>
+<p>报错：server mod list is not compatible，服务器模组列表不兼容。可能是因为调试模式下，examplemod也需要在服务器安装。</p>
+<p>将forge服务器所有模组删除后，支持原版客户端登录。</p>
+<h2 id="添加方块"><a href="#添加方块" class="headerlink" title="添加方块"></a>添加方块</h2><p>blockbench网站 <a target="_blank" rel="noopener" href="https://web.blockbench.net/">Blockbench</a></p>
+<p>已成功生成自定义方块。</p>
+<p>目前的问题：如何确定放置时方块的朝向？</p>
+<p>item, block, blockitem。blockitem是用block自动生成的item。</p>
+<p>使用了“复制模式”，即整个游戏中所有example_block共享一个example_block实例(地址也相同)，存储时只需存储每个block的状态。</p>
+<p>官方库映射(反混淆)：参见<code>外部库/Gradle:net.minecraftforge:forge:1.20.1-47.2.0_mapped_official_1.20.1</code>，它实际上位于<code>C:\Users\tgl\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.2.0_mapped_official_1.20.1</code>，jar文件用winRAR打开(或者在项目文件夹打开)，然后进入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\net\minecraft\world\item\</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加物品"><a href="#添加物品" class="headerlink" title="添加物品"></a>添加物品</h2><p>物品逻辑能实现，但是材质不显示。经检查是json的“parent”的值写错了。</p>
+<p>此外，primogems物品需要对着example_block右键使用，才能出现烤鱼。对着其他方块使用不行。</p>
+<h2 id="事件监听"><a href="#事件监听" class="headerlink" title="事件监听"></a>事件监听</h2><p>反编译代码位于</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\net\minecraftforge\event\</span><br></pre></td></tr></table></figure>
+
+<p>事件分为Forge和Fml，后者包括游戏启动等等。</p>
+<p>尽量使用Forge的事件，以免跟其他mod冲突。</p>
+<p>注册类有3种方法，我推荐最后一种，因为单独放在一个类中</p>
+<h2 id="Capability"><a href="#Capability" class="headerlink" title="Capability"></a>Capability</h2><p>一开始没效果。</p>
+<blockquote>
+<p>经排查，是自己抄错了几处：</p>
+<ul>
+<li>感叹号抄错了，导致if判断刚好相反(原本是判断非空)</li>
+<li>“farmxp”抄成”farxp”</li>
+</ul>
+</blockquote>
+<p>这说明Java容错性很强，即使没注册成功，也不报错。</p>
+<h2 id="注册命令-添加自己定义指令"><a href="#注册命令-添加自己定义指令" class="headerlink" title="注册命令(添加自己定义指令)"></a>注册命令(添加自己定义指令)</h2><p>在<code>ForgeEventListener</code>类中添加静态方法，用来在总线中注册命令</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SubscribeEvent</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">registerCommand</span><span class="params">(RegisterCommandsEvent event)</span></span><br><span class="line">&#123;</span><br><span class="line">    GetFarmXpCommand.register(event.getDispatcher());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意其中的<code>GetFarmXpCommand.</code>是调用了类的静态方法，相当于C++中的<code>GetFarmXpCommand::</code>。使用前要import相应的类。</p>
+<p>类中这样写</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">register</span><span class="params">(CommandDispatcher&lt;CommandSourceStack&gt; dispatcher)</span>&#123;</span><br><span class="line">    dispatcher.register(</span><br><span class="line">            Commands.literal(<span class="string">&quot;farmxp&quot;</span>).executes(</span><br><span class="line">                    (context)-&gt;&#123;</span><br><span class="line">                        context.getSource().getPlayer().getCapability(PlayerFarmXpProvider.PLAYER_FARM_XP_CAPABILITY).ifPresent(</span><br><span class="line">                            (xp)-&gt;&#123;</span><br><span class="line">                                context.getSource().sendSuccess(</span><br><span class="line">                                        ()-&gt; Component.literal(<span class="string">&quot;xp:&quot;</span>+xp.getXp()),</span><br><span class="line">                                        <span class="literal">false</span></span><br><span class="line">                                );</span><br><span class="line">                            &#125;</span><br><span class="line">                        );</span><br><span class="line">                    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">            )</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>GPT的解释</p>
+<blockquote>
+<p>这段Java代码是用于注册自定义命令的一部分，属于Minecraft Forge模组的代码。它通过使用CommandDispatcher类来注册一个名为”farmxp”的命令。</p>
+<p>使用<code>Commands.literal(&quot;farmxp&quot;)</code>来指定命令的名称为”farmxp”。然后使用<code>.executes()</code>方法来指定命令的执行逻辑，该方法接受一个Lambda表达式作为参数。</p>
+<p>在Lambda表达式中，我们首先使用<code>context.getSource().getPlayer().getCapability(PlayerFarmXpProvider.PLAYER_FARM_XP_CAPABILITY)</code>来获取玩家的一个特定能力（capability），即PlayerFarmXpProvider.PLAYER_FARM_XP_CAPABILITY，玩家的农场经验。</p>
+<p>接着，我们使用<code>.ifPresent()</code>方法来检查能力是否存在。如果存在，我们使用<code>context.getSource().sendSuccess()</code>方法将一条成功消息发送给命令的来源，即玩家。在这里，我们使用了一个Lambda表达式作为参数来动态构建这条消息。</p>
+<p>消息的内容是”xp:”加上<code>xp.getXp()</code>的返回值，其中<code>xp</code>是获取到的能力实例，<code>.getXp()</code>是能力实例的一个方法。</p>
+<p>最后，我们返回整数值0，表示命令执行成功。</p>
+<p>这段代码的作用是注册一个自定义命令”farmxp”，当玩家输入该命令时，会获取玩家的农场经验并将其发送给玩家。</p>
+</blockquote>
+<h2 id="展示文本"><a href="#展示文本" class="headerlink" title="展示文本"></a>展示文本</h2><p>Overlay可以展示信息，但是没有鼠标交互。</p>
+<p>Container Gui</p>
+<h2 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h2><p>能否更改启动界面？增加原神界面。</p>
+<p>计划更改为原神UI，添加元素反应系统、元素附着机制、元素视野。</p>
+<h2 id="Forge官方文档解析"><a href="#Forge官方文档解析" class="headerlink" title="Forge官方文档解析"></a>Forge官方文档解析</h2><h3 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h3><ul>
+<li>mods.toml</li>
+</ul>
+<p><code>/src/main/resources/META-INF/mods.toml</code>，描述mod信息。例如mod名称、作者、描述、logo等。logo放在<code>/src/main/resources/</code>中。通配符<code>$&#123;&#125;</code>的内容参见<code>/gradle.properties</code>，</p>
+<ul>
+<li>版本号命名规范</li>
+</ul>
+<p>1.20.1-1.0.0.0</p>
+<p>MCVersion-MajorMod.MajorAPI.Minor.Patch</p>
+<h3 id="Core-Concepts"><a href="#Core-Concepts" class="headerlink" title="Core Concepts"></a>Core Concepts</h3><p>Registries</p>
+<p>Sides</p>
+<p>Physical client &amp; Physical server，指的是通常意义上的客户端和服务器。</p>
+<p>Logical client &amp; Logical server：前者是Server Thread，负责运行游戏逻辑，包括实体生成、天气、物理等。后者是Render Thread，负责接受用户输入、传递到logical server，同时负责渲染界面。单人模式下同时存在这两个。</p>
+<p>在修改游戏逻辑前，应检查是否在logical server中</p>
+<h1 id="MC-paper服务器插件开发"><a href="#MC-paper服务器插件开发" class="headerlink" title="MC paper服务器插件开发"></a>MC paper服务器插件开发</h1><blockquote>
+<p>教程：<a target="_blank" rel="noopener" href="https://docs.qq.com/doc/DWFZidkdic1RCdk13">插件开发教程目录在控制台打印文字：零基础paper端插件开发教程之一 (qq.com)</a></p>
+<p>中文文档：<a target="_blank" rel="noopener" href="https://bukkit.windit.net/javadoc/">概览 (Spigot-API 1.20-R0.1-SNAPSHOT API 中文文档) (windit.net)</a></p>
+</blockquote>
+<p>1.13：水生世界，寻宝时间，完整的海洋系统，海洋之心。此外，扁平化把指令几乎全改了</p>
+<p>1.14：劫掠事件</p>
+<p>1.15：蜜蜂</p>
+<p>1.16：下界，猪灵蛮兵，炽足兽，下界合金。</p>
+<p>1.16.5支持java8，</p>
+<p>1.16.5&#x2F;1.16.4只能正版登录。离线登录会被禁止多人游戏选项。但更高版本无此问题。</p>
+<p>高版本无法进入低版本服务器，会显示“Outdated Server! It’s still on 1.12.2”</p>
+<p>forge下载页面如果加载不出来，可以尝试代理。</p>
+<p>forge客户端47.1.0，服务端47.2.0，但仍然可联机。</p>
+<p>optifine与原神模组不兼容</p>
+<p>安装光影：</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://minecrafthub.com/texture/arc-shader-for-minecraft-1-19-3">Arc Shader For Minecraft 1.20&#x2F;1.20.2+ | Minecraft Texture | Minecraft Hub</a></p>
+</blockquote>
+<ol>
+<li>Download a resource pack, you should get a .zip file</li>
+<li>Open the folder to which you downloaded the file</li>
+<li>Copy the .zip file</li>
+<li>Open Minecraft</li>
+<li>In Minecraft, click on “Options”, then “Resource Packs”</li>
+<li>Choose “Open resource pack folder”</li>
+<li>Paste the file into the resource folder in Minecraft</li>
+<li>Go back to Minecraft, the resource pack should now be listed (if not listed then go to the main menu by pressing Esc and repeat step 5) and you can activate it by choosing it and hitting “Done”. The game will now reload itself.</li>
+</ol>
+<h2 id="插件和模组的区别"><a href="#插件和模组的区别" class="headerlink" title="插件和模组的区别"></a>插件和模组的区别</h2><h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><p>不创建新材质&#x2F;GUI，只是修改原版物品数据来更改游戏内容。插件只需服务器安装。</p>
+<p>优点是原版客户端都能登录。</p>
+<h3 id="模组"><a href="#模组" class="headerlink" title="模组"></a>模组</h3><p>有的需要服务器和客户端装，有的辅助类模组(例如背包整理)只需客户端装。</p>
+<blockquote>
+<p>1.12.2 Forge <a target="_blank" rel="noopener" href="https://files.minecraftforge.net/net/minecraftforge/forge/index_1.12.2.html">Downloads for Minecraft Forge for Minecraft 1.12.2</a></p>
+</blockquote>
+<h2 id="Java基础语法"><a href="#Java基础语法" class="headerlink" title="Java基础语法"></a>Java基础语法</h2><h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><ul>
+<li>字符串</li>
+</ul>
+<p>字符串是引用类型，其本质是对象，不是基本数据类型。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">str1</span> <span class="operator">=</span> <span class="string">&quot;Hello world!&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>字符串是不可变对象，无法修改。</p>
+<p>数字转字符串</p>
+<p>方法1：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String.format(<span class="string">&quot; x=%.2f,y=%.2f,z=%.2f&quot;</span>,x,y,z);</span><br></pre></td></tr></table></figure>
+
+<p>方法2：通过拼接操作</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="string">&quot;Hello &quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">res</span> <span class="operator">=</span> str + <span class="number">10</span>;<span class="comment">// &quot;Hello 10&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>对象</li>
+</ul>
+<p>对象是引用类型。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">World</span> <span class="variable">world</span> <span class="operator">=</span> Bukkit.getWorld(<span class="string">&quot;world&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>world是引用，相当于指针。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Location</span> <span class="variable">location</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Location</span>(world,x,y,z);</span><br></pre></td></tr></table></figure>
+
+<p>location是引用，但它指向一个新创建的Location变量。</p>
+<h3 id="Lambda表达式"><a href="#Lambda表达式" class="headerlink" title="Lambda表达式"></a>Lambda表达式</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/501465110">四万字 Lambda 表达式完整教程（强烈建议收藏） - 知乎 (zhihu.com)</a></p>
+</blockquote>
+<p>目的：提高编程效率</p>
+<p>将函数作为另一个函数的参数。</p>
+<p>基本语法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">([形参列表]) -&gt; &#123;Lambda体&#125;</span><br></pre></td></tr></table></figure>
+
+<p>关注返回值和参数，方法名不重要。</p>
+<p>使用<code>-&gt;</code>将参数和实现逻辑分离。</p>
+<p>如果lambda体只有一行代码，则可以省略大括号。</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2023/12/06/Game02-what-need-I-learn/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2023/12/01/Web06-LAN-connection/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/ys_wish.jpg);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/ys/Neuvillette-2.png" alt="Olive Tien's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        tianganlan@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: tianganlan@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2077/11/">十一月 2077<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/12/">十二月 2023<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/11/">十一月 2023<span class="sidebar_archives-count">17</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/CFD/">CFD<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Game-Development/">Game Development<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/HPC/">HPC<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/leetcode/">leetcode<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/rust/">rust<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/web/">web<span class="sidebar_archives-count">5</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="tags">
+                
+                    <i class="material-icons sidebar-material-icons">bookmark</i>
+                
+                tags
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/OliveTIen/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;风起地
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2023;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+
+            <!-- 这是我自己加的 改为自己的live2d路径 -->
+            <script src="https://fastly.jsdelivr.net/gh/OliveTIen/live2d-widget-web@latest/autoload.js"></script>
+
+            <!-- 第2个库测试 -->
+            <!-- <div id="waifu">
+                <div id="waifu-message"></div>
+                <div class="waifu-tool">
+                    <span class="icon-next"></span>
+                    <span class="icon-home"></span>
+                    <span class="icon-message"></span>
+                    <span class="icon-camera"></span>
+                    <span class="icon-volumeup"></span>
+                    <span class="icon-volumedown"></span>
+                    <span class="icon-about"></span>
+                    <span class="icon-cross"></span>
+                </div>
+                <canvas id="live2d2"></canvas>
+                <canvas id="live2d4"></canvas>
+            </div>
+            <script src="live2d/dist/live2d_bundle.js"></script>
+            <script async type="module" src="live2d/waifu-tips.js"></script> -->
+
+        </body>
+    
+</html>

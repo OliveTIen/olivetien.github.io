@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Fri Dec 01 2023 21:54:08 GMT+0800">
-        <meta property="article:modified_time" content="Sat Dec 02 2023 14:00:40 GMT+0800">
+        <meta property="article:modified_time" content="Wed Dec 06 2023 09:14:57 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://olivetien.github.io/2023/12/01/Web06-LAN-connection/index.html",
     "headline": "Web05-LAN-connection",
     "datePublished": "Fri Dec 01 2023 21:54:08 GMT+0800",
-    "dateModified": "Sat Dec 02 2023 14:00:40 GMT+0800",
+    "dateModified": "Wed Dec 06 2023 09:14:57 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Olive Tien",
@@ -346,7 +346,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%B1%80%E5%9F%9F%E7%BD%91%E8%81%94%E6%9C%BA"><span class="post-toc-number">1.</span> <span class="post-toc-text">局域网联机</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%B5%8B%E8%AF%95%E8%83%BD%E5%90%A6ping%E9%80%9A"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">测试能否ping通</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#python%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">python搭建服务器</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E7%94%B5%E8%84%91%E5%B1%80%E5%9F%9F%E7%BD%91%E8%81%94%E6%9C%BA"><span class="post-toc-number">1.</span> <span class="post-toc-text">电脑局域网联机</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%B5%8B%E8%AF%95%E8%83%BD%E5%90%A6ping%E9%80%9A"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">测试能否ping通</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%B5%8B%E8%AF%95%E7%A4%BA%E4%BE%8B%E7%BD%91%E9%A1%B5"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">测试示例网页</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vscode%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">vscode服务器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#python%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">python服务器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#node-js%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">node.js服务器</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E7%94%B5%E8%84%91%E4%B8%8E%E6%89%8B%E6%9C%BA%E9%80%9A%E4%BF%A1"><span class="post-toc-number">2.</span> <span class="post-toc-text">电脑与手机通信</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Socket"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Socket</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%89%8B%E6%9C%BA%E8%83%BD%E5%90%A6%E7%9B%B4%E6%8E%A5%E8%BF%90%E8%A1%8CC-%E7%A8%8B%E5%BA%8F"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">手机能否直接运行C++程序</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -492,18 +492,54 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="局域网联机"><a href="#局域网联机" class="headerlink" title="局域网联机"></a>局域网联机</h1><h2 id="测试能否ping通"><a href="#测试能否ping通" class="headerlink" title="测试能否ping通"></a>测试能否ping通</h2><p>遇到的问题</p>
+        <h1 id="电脑局域网联机"><a href="#电脑局域网联机" class="headerlink" title="电脑局域网联机"></a>电脑局域网联机</h1><h2 id="测试能否ping通"><a href="#测试能否ping通" class="headerlink" title="测试能否ping通"></a>测试能否ping通</h2><p>遇到的问题</p>
 <ul>
 <li>a能ping通b，b不能ping通a，显示“请求超时”<ul>
 <li>考虑关闭a的防火墙：<a target="_blank" rel="noopener" href="https://baijiahao.baidu.com/s?id=1764386911193359357">https://baijiahao.baidu.com/s?id=1764386911193359357</a></li>
 </ul>
 </li>
 </ul>
-<h2 id="python搭建服务器"><a href="#python搭建服务器" class="headerlink" title="python搭建服务器"></a>python搭建服务器</h2><ol>
-<li>创建server.py，写入以下代码，并运行<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> http.server</span><br><span class="line"><span class="keyword">import</span> socketserver</span><br><span class="line"></span><br><span class="line">PORT = <span class="number">8000</span></span><br><span class="line"></span><br><span class="line">Handler = http.server.SimpleHTTPRequestHandler</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> socketserver.TCPServer((<span class="string">&quot;&quot;</span>, PORT), Handler) <span class="keyword">as</span> httpd:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;server started, listening to port: &quot;</span>, PORT)</span><br><span class="line">    httpd.serve_forever()</span><br></pre></td></tr></table></figure>
-如果报错或者无法访问，请将代码中的中文改为英文</li>
-<li>此时在另一台电脑就可以访问 <a target="_blank" rel="noopener" href="http://10.0.1.119:8000/">http://10.0.1.119:8000</a> 了</li>
+<h2 id="测试示例网页"><a href="#测试示例网页" class="headerlink" title="测试示例网页"></a>测试示例网页</h2><p>如果无法直接打开index.html，是因为浏览器的<strong>同源策略</strong>。同源策略隔离了不同类型的网页脚本，防止网页B通过js篡改网页A的内容，实现攻击。<br>例如，直接打开index.html，它属于本地文件系统。而</p>
+<h3 id="vscode服务器"><a href="#vscode服务器" class="headerlink" title="vscode服务器"></a>vscode服务器</h3><p>用vscode打开，点击右下角go live</p>
+<h3 id="python服务器"><a href="#python服务器" class="headerlink" title="python服务器"></a>python服务器</h3><ol>
+<li>创建server.py，写入以下代码，并运行  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> http.server</span><br><span class="line"><span class="keyword">import</span> socketserver</span><br><span class="line"></span><br><span class="line">PORT = <span class="number">8000</span></span><br><span class="line"></span><br><span class="line">Handler = http.server.SimpleHTTPRequestHandler</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> socketserver.TCPServer((<span class="string">&quot;&quot;</span>, PORT), Handler) <span class="keyword">as</span> httpd:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;server started, listening to port: &quot;</span>, PORT)</span><br><span class="line">    httpd.serve_forever()</span><br></pre></td></tr></table></figure></li>
+<li>在终端输入python server.py。此时在本地&#x2F;另一台电脑就可以访问 <a target="_blank" rel="noopener" href="http://10.0.1.119:8000/">http://10.0.1.119:8000</a> 了</li>
+<li>如果报错或者无法访问，请将代码中的中文改为英文</li>
 </ol>
+<h3 id="node-js服务器"><a href="#node-js服务器" class="headerlink" title="node.js服务器"></a>node.js服务器</h3><blockquote>
+<p>参见<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_46032550/article/details/134694890">如何跑通跨窗口渲染：multipleWindow3dScene-CSDN博客</a></p>
+</blockquote>
+<h1 id="电脑与手机通信"><a href="#电脑与手机通信" class="headerlink" title="电脑与手机通信"></a>电脑与手机通信</h1><p>电脑可以访问某网页，手机也可以访问某网页，因此我认为它们的通信机制是类似的。</p>
+<h2 id="Socket"><a href="#Socket" class="headerlink" title="Socket"></a>Socket</h2><p>socket也称作“套接字”，描述了计算机的IP地址和端口，运行在计算机中的程序之间采用socket进行数据通信。通信的两端都有socket，它是一个通道，数据在两个socket之间进行传输。</p>
+<p>socket把复杂的TCP&#x2F;IP协议族隐藏在socket接口后面，对程序员来说，只要用好socket相关的函数，就可以完成数据通信。</p>
+<h2 id="手机能否直接运行C-程序"><a href="#手机能否直接运行C-程序" class="headerlink" title="手机能否直接运行C++程序"></a>手机能否直接运行C++程序</h2><ul>
+<li><p>JNI<br>Java Native Interface<br>目的：将C&#x2F;C++代码集成进Java程序中</p>
+</li>
+<li><p>NDK<br>Native Development Kit 是Android的工具开发包<br>目的：快速开发C&#x2F;C++动态库，并自动将so和应用一起打包为APK</p>
+</li>
+</ul>
+<ol>
+<li>要实现电脑与手机之间的网络通信（局域网），你可以使用以下方法：<ul>
+<li>通过无线局域网（Wi-Fi）：确保电脑和手机连接到同一个Wi-Fi网络，这样它们就可以在同一局域网中进行通信。</li>
+<li>通过移动热点：将手机设置为移动热点，然后让电脑连接到手机的移动热点，这样它们也可以在同一局域网上进行通信。</li>
+</ul>
+</li>
+</ol>
+<p>在确保设备连接到同一局域网后，你可以使用各种方法进行通信，包括但不限于：</p>
+<ul>
+<li>文件共享：通过共享文件夹或使用云存储服务，在电脑和手机之间传输文件。</li>
+<li>远程桌面连接：使用远程桌面软件，如Microsoft Remote Desktop或TeamViewer，从电脑远程控制手机或反之亦可。</li>
+<li>消息传递：使用即时通讯应用程序（如WhatsApp、Telegram、微信等）或电子邮件，在电脑和手机之间发送消息。</li>
+</ul>
+<ol start="2">
+<li>电脑与电脑之间的通信和电脑与手机之间的通信有一些不同之处：<ul>
+<li>硬件和操作系统：电脑和手机是不同类型的设备，它们具有不同的硬件和操作系统。因此，在实现通信时，可能需要使用不同的软件或协议来适应不同的设备类型。</li>
+<li>屏幕尺寸和输入方式：手机的屏幕尺寸较小，而电脑的屏幕尺寸较大。这意味着在通信过程中，显示和输入信息的方式可能会有所不同。</li>
+<li>功能和应用程序：手机通常具有更多的移动功能和应用程序，例如位置服务、相机等。而电脑则更适合进行复杂的计算和多任务处理。</li>
+</ul>
+</li>
+</ol>
+<p>尽管存在这些差异，但电脑和手机之间的通信仍然可以通过网络实现，并且可以使用各种方法进行数据传输和交流。</p>
 
         
     
@@ -524,7 +560,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2077/11/23/Welcome/" id="post_nav-newer" class="prev-content">
+        <a href="/2023/12/05/Game01-MC-Development/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -630,7 +666,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2077/11/">十一月 2077<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/12/">十二月 2023<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/11/">十一月 2023<span class="sidebar_archives-count">17</span></a>
+                <a class="sidebar_archives-link" href="/archives/2077/11/">十一月 2077<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/12/">十二月 2023<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/11/">十一月 2023<span class="sidebar_archives-count">17</span></a>
             </ul>
         </li>
         
@@ -648,7 +684,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/CFD/">CFD<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Game-Development/">Game Development<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/HPC/">HPC<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/leetcode/">leetcode<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/rust/">rust<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/web/">web<span class="sidebar_archives-count">5</span></a>
+                <a class="sidebar_archives-link" href="/categories/CFD/">CFD<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Game-Development/">Game Development<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/HPC/">HPC<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/leetcode/">leetcode<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/rust/">rust<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/web/">web<span class="sidebar_archives-count">5</span></a>
             </ul>
         </li>
         
@@ -929,8 +965,26 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
             </div>
 
             <!-- 这是我自己加的 改为自己的live2d路径 -->
-            <!-- <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script> -->
             <script src="https://fastly.jsdelivr.net/gh/OliveTIen/live2d-widget-web@latest/autoload.js"></script>
+
+            <!-- 第2个库测试 -->
+            <!-- <div id="waifu">
+                <div id="waifu-message"></div>
+                <div class="waifu-tool">
+                    <span class="icon-next"></span>
+                    <span class="icon-home"></span>
+                    <span class="icon-message"></span>
+                    <span class="icon-camera"></span>
+                    <span class="icon-volumeup"></span>
+                    <span class="icon-volumedown"></span>
+                    <span class="icon-about"></span>
+                    <span class="icon-cross"></span>
+                </div>
+                <canvas id="live2d2"></canvas>
+                <canvas id="live2d4"></canvas>
+            </div>
+            <script src="live2d/dist/live2d_bundle.js"></script>
+            <script async type="module" src="live2d/waifu-tips.js"></script> -->
 
         </body>
     
