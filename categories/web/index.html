@@ -271,11 +271,23 @@
             <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
                 
 
+                <!-- 这是我加的 -->
+                        <span id="busuanzi_container_site_pv" >本站总访问量
+                            <span id="busuanzi_value_site_pv" 
+                            onmouseover="changeBackgroundColor(this, 0)" onmouseout="changeBackgroundColor(this,1)" 
+                            onclick="changeBackgroundColor(this,0)"
+                            style="color: black;"></span>
+                            次
+                        </span>
+                        
+
+
                 <!-- Main Container -->
                 <main class="material-layout__content" id="main">
 
                     <!-- Top Anchor -->
                     <div id="top"></div>
+
 
                     
                         <!-- Hamburger Button -->
@@ -998,29 +1010,21 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
             </div>
 
             <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-            <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
 
-            <!-- 这是我自己加的 改为自己的live2d路径 -->
+            <!-- 悬停效果 -->
+            <script>
+            function changeBackgroundColor(element, index_color) {
+                var color;
+                if(index_color==1)color="black";
+                else color="transparent";
+                element.style.backgroundColor = color;
+            }
+            document.getElementById("busuanzi_value_site_pv").style.backgroundColor="black";
+
+            </script>
+
+            <!-- 添加live2d，路径位于自己的仓库 -->
             <script src="https://fastly.jsdelivr.net/gh/OliveTIen/live2d-widget-web@latest/autoload.js"></script>
-
-            <!-- 第2个库测试 -->
-            <!-- <div id="waifu">
-                <div id="waifu-message"></div>
-                <div class="waifu-tool">
-                    <span class="icon-next"></span>
-                    <span class="icon-home"></span>
-                    <span class="icon-message"></span>
-                    <span class="icon-camera"></span>
-                    <span class="icon-volumeup"></span>
-                    <span class="icon-volumedown"></span>
-                    <span class="icon-about"></span>
-                    <span class="icon-cross"></span>
-                </div>
-                <canvas id="live2d2"></canvas>
-                <canvas id="live2d4"></canvas>
-            </div>
-            <script src="live2d/dist/live2d_bundle.js"></script>
-            <script async type="module" src="live2d/waifu-tips.js"></script> -->
 
         </body>
     
