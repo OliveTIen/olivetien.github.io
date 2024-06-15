@@ -711,10 +711,10 @@
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
+<script src="/files/js/md5.min.js"></script>
 <script>
     var gitalk = new Gitalk({
-            id: 'Github Page Comment',
+            id: md5(location.pathname),
             clientID: 'Ov23liAoGf9Wg7dmdfJ9',
             clientSecret: '095bbac5d8c8bd16890340765863219ab18b87fa',
             repo: 'OliveTIen.github.io',
