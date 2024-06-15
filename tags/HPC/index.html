@@ -48,7 +48,7 @@
     
     <title>
         
-            标签: HPC | 
+            Tags - 标签: HPC | 
         
         风起地
     </title>
@@ -232,7 +232,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://olivetien.github.io/tags/HPC/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: HPC | 风起地">
+    <meta property="og:title" content="Tags - 标签: HPC | 风起地">
     <meta property="og:image" content="/img/ys/Element/Element_Anemo-%E9%A3%8E.svg">
     <meta property="og:description" content="">
     
@@ -482,7 +482,7 @@
                 
                     <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
                 
-                分类
+                Category - 分类
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
@@ -780,8 +780,16 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
                 element.style.backgroundColor = color;
             }
             document.getElementById("busuanzi_value_site_pv").style.backgroundColor="black";
+            // 下面这段代码好像不起作用
+            const elements_sidebar = document.getElementsByClassName("MD-burger-icon sidebar-toggle");
+            for(let i=0;i<elements_sidebar.length;i++){
+                elements[i].style.backgroundColor="rgba(255,255,255,0.4)";
+            }
 
             </script>
+
+            <!-- <script src="/files/js/sakura.js"></script> -->
+
 
             <!-- 添加live2d，路径位于自己的仓库 -->
             <script src="https://fastly.jsdelivr.net/gh/OliveTIen/live2d-widget-web@latest/autoload.js"></script>

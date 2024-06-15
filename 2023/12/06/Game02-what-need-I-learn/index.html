@@ -533,6 +533,8 @@
                 
             </div>
 
+
+
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
@@ -656,7 +658,7 @@
                 
                     <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
                 
-                分类
+                Category - 分类
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
@@ -962,8 +964,16 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
                 element.style.backgroundColor = color;
             }
             document.getElementById("busuanzi_value_site_pv").style.backgroundColor="black";
+            // 下面这段代码好像不起作用
+            const elements_sidebar = document.getElementsByClassName("MD-burger-icon sidebar-toggle");
+            for(let i=0;i<elements_sidebar.length;i++){
+                elements[i].style.backgroundColor="rgba(255,255,255,0.4)";
+            }
 
             </script>
+
+            <!-- <script src="/files/js/sakura.js"></script> -->
+
 
             <!-- 添加live2d，路径位于自己的仓库 -->
             <script src="https://fastly.jsdelivr.net/gh/OliveTIen/live2d-widget-web@latest/autoload.js"></script>
