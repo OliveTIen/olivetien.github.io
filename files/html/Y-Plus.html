@@ -1,0 +1,238 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>CFD Online - Y-Plus Wall Distance Estimation</title>
+  <meta name="description" content="An online tool to estimate what wall distance a desired y-plus value will have.">
+  <meta name="keywords"
+    content="CFD Online, cfd-online, tools, y-plus, y+, wall distance, nondimensional, domensionless, boundary layer, height, thickness">
+  <link rel="shortcut icon" href="https://www.cfd-online.com/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+  <div id="pageContent2">
+    <h2>Y+ Wall Distance Calculator</h2>
+    由CFD Online代码改编而来。核心算法不变，结果与CFD Online相同
+    <form name="form2">
+      <table cellspacing="10">
+        <tbody>
+          <tr>
+            <td colspan="3"><b>Input</b>
+              <hr>
+            </td>
+          </tr>
+          <tr>
+            <td>U_∞ (Freestream velocity):</td>
+            <td><input type="text" id="u_freestream" name="u_freestream" value="41.18" size="16"></td>
+            <td>[m/s]</td>
+          </tr>
+          <tr>
+            <td>ρ (Density):</td>
+            <td><input type="text" id="rho" name="rho" value="1.205" size="16"></td>
+            <td>[kg/m3]</td>
+          </tr>
+          <tr>
+            <td>μ (Dynamic viscosity):</td>
+            <td><input type="text" id="mu" name="mu" value="1.82e-5" size="16"></td>
+            <td>[kg/ms]</td>
+          </tr>
+          <tr>
+            <td>L (Reference length):</td>
+            <td><input type="text" id="L" name="L" value="1.0" size="16"></td>
+            <td>[m]</td>
+          </tr>
+          <tr>
+            <td>y+:</td>
+            <td><input type="text" id="y_plus_desired" name="y_plus_desired" value="1.0" size="16"></td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td colspan="3"><br></td>
+          </tr>
+          <tr>
+            <td colspan="3"><b>Output</b>
+              <hr>
+            </td>
+          </tr>
+          <tr>
+            <td>Re:</td>
+            <td><input type="text" id="Re" name="Re" size="16"></td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>y:</td>
+            <td><input type="text" id="wall_distance_estimation" name="wall_distance_estimation" size="16"></td>
+            <td>[m]</td>
+          </tr>
+          <tr>
+            <td colspan="3">&nbsp;</td>
+          </tr>
+          <tr>
+            <td colspan="3"><input type="button" value="Calculate y" onclick="calculate_yplus(this.form)">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+    <script language="JavaScript" type="text/javascript">
+      // https://www.cfd-online.com/Tools/yplus.php
+      function calculate_yplus(form) {
+        u_freestream = eval(form.u_freestream.value)
+        rho = eval(form.rho.value)
+        L = eval(form.L.value)
+        mu = eval(form.mu.value)
+        y_plus_desired = eval(form.y_plus_desired.value)
+
+        if (!check_positive(u_freestream, "Free stream velocity")) return
+        if (!check_positive(rho, "rho")) return
+        if (!check_positive(L, "L")) return
+        if (!check_positive(mu, "mu")) return
+        if (!check_positive(y_plus_desired, "y+")) return
+
+        Re = (rho * u_freestream * L) / mu
+        C_f = Math.pow((2 * Math.log(Re) / Math.log(10) - 0.65), -2.3)
+        tau_w = C_f * 0.5 * rho * u_freestream * u_freestream
+        U_f = Math.sqrt(tau_w / rho)
+
+        wall_distance_estimation = (y_plus_desired * mu) / (U_f * rho)
+
+        form.Re.value = Re.toExponential(1)
+        form.wall_distance_estimation.value = wall_distance_estimation.toExponential(1)
+      }
+
+      function check_positive(value, name){
+        if (value <= 0.0) {
+          alert(name + " must be greater than zero")
+          return false;
+        }
+        return true;
+      }
+    </script>
+
+    <br>
+    The formulas used are give in CFD-Wiki <a
+      href="https://www.cfd-online.com/Wiki/Y_plus_wall_distance_estimation">here</a>.<br>
+    The Schlichting skin-friction formula, is desribed <a
+      href="https://www.cfd-online.com/Wiki/Skin_friction_coefficient">here</a> (equation 21.16 footnote in Schlichting)<br>
+    The correlation is valid for Re &lt; 10^9. <br>
+    The density and viscosity given by default in the form is for air at sea-level and room temperature (20°C).
+    <br>
+  </div>
+
+<div id="pageContent3">
+  <h2>Y+ Wall Distance Calculator</h2>
+  默认室温，声速为343m/s
+  <form name="form3">
+    <table cellspacing="10">
+      <tbody>
+        <tr>
+          <td colspan="3"><b>Input</b>
+            <hr>
+          </td>
+        </tr>
+        <tr>
+          <td>Ma_∞:</td>
+          <td><input type="text" id="Ma_inf" name="Ma_inf" value="0.12" size="16"></td>
+          <td>[]</td>
+        </tr>
+        <tr>
+          <td>Re (Reynolds number):</td>
+          <td><input type="text" id="Re" name="Re" value="1.0e6" size="16"></td>
+          <td>[]</td>
+        </tr>
+        <tr>
+          <td>ρ (Density):</td>
+          <td><input type="text" id="rho" name="rho" value="1.205" size="16"></td>
+          <td>[kg/m3]</td>
+        </tr>
+        <tr>
+          <td>L (Reference length):</td>
+          <td><input type="text" id="L" name="L" value="1.0" size="16"></td>
+          <td>[m]</td>
+        </tr>
+        <tr>
+          <td>y+:</td>
+          <td><input type="text" id="y_plus_desired" name="y_plus_desired" value="1.0" size="16"></td>
+          <td>[]</td>
+        </tr>
+        <tr>
+          <td colspan="3"><br></td>
+        </tr>
+
+        <tr>
+          <td colspan="3"><b>Output</b>
+            <hr>
+          </td>
+        </tr>
+        <tr>
+          <td>y:</td>
+          <td><input type="text" id="wall_distance_estimation" name="wall_distance_estimation" size="16"></td>
+          <td>[m]</td>
+        </tr>
+
+        <tr>
+          <td colspan="3">
+            <span id="mySpan_comment">
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3"><input type="button" value="Calculate y" onclick="calculate_yplus_form3(this.form)">
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </form>
+  <script language="JavaScript" type="text/javascript">
+
+    function calculate_yplus_form3(form) {
+      Ma_inf = eval(form.Ma_inf.value)
+      rho = eval(form.rho.value)
+      L = eval(form.L.value)
+      Re = eval(form.Re.value)
+      y_plus_desired = eval(form.y_plus_desired.value)
+
+      if (!check_positive_form3(Ma_inf, "Ma_inf")) return
+      if (!check_positive_form3(rho, "rho")) return
+      if (!check_positive_form3(L, "L")) return
+      if (!check_positive_form3(Re, "Re")) return
+      if (!check_positive_form3(y_plus_desired, "y+")) return
+
+      const gamma = 1.4;
+      const R = 287;// air
+      const T = 273.15 + 20;// temperature
+      a_inf = Math.sqrt(gamma * R * T);// 343.2020833270101
+      u_inf = Ma_inf * a_inf;
+      mu = (rho * u_inf * L) / Re
+      C_f = Math.pow((2 * Math.log(Re) / Math.log(10) - 0.65), -2.3)
+      tau_w = C_f * 0.5 * rho * u_inf * u_inf
+      U_f = Math.sqrt(tau_w / rho)
+
+      y = (y_plus_desired * mu) / (U_f * rho)
+
+      form.wall_distance_estimation.value = y.toExponential(1)
+
+      var str_comment = "u_inf = " + u_inf + "[m/s]<br>";
+      str_comment += "μ (Dynamic viscosity) = " + mu.toExponential(1) + "[kg/ms]<br>";
+      document.getElementById("mySpan_comment").innerHTML = str_comment;
+    }
+
+    function check_positive_form3(value, name) {
+      if (value <= 0.0) {
+        alert(name + " must be greater than zero")
+        return false;
+      }
+      return true;
+    }
+  </script>
+
+</div>
+
+
+</body>
+
+</html>
