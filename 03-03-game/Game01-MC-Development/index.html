@@ -16,25 +16,27 @@
   <meta name="author" content="Olive Tien">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Zomboid联机 原先下载了Zomboid测试版，可是不开放联机。  联机教程 ttps:&#x2F;&#x2F;www.bilibili.com&#x2F;read&#x2F;cv14427208&#x2F;  MC Forge Mod 开发  Minecraft Forge 1.18.2 Mod制作学习笔记 (1) Eclipse开发环境搭建 - 知乎 (zhihu.com) 【Minecraft Forge】从零开始学习1.20.1模组开">
+    <meta name="description" content="Minecraft Mod 和服务器插件开发 本文介绍了我的世界 Forge 模组开发和paper服务器插件开发 MC Forge Mod 开发  Minecraft Forge 1.18.2 Mod制作学习笔记 (1) Eclipse开发环境搭建 - 知乎 (zhihu.com) 【Minecraft Forge】从零开始学习1.20.1模组开发 （零）：配置开发环境 - dudujerry -">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Game01-MC plugin">
+<meta property="og:title" content="Minecraft Mod 和服务器插件开发">
 <meta property="og:url" content="http://olivetien.github.io/03-03-game/Game01-MC-Development/index.html">
 <meta property="og:site_name" content="风起地">
-<meta property="og:description" content="Zomboid联机 原先下载了Zomboid测试版，可是不开放联机。  联机教程 ttps:&#x2F;&#x2F;www.bilibili.com&#x2F;read&#x2F;cv14427208&#x2F;  MC Forge Mod 开发  Minecraft Forge 1.18.2 Mod制作学习笔记 (1) Eclipse开发环境搭建 - 知乎 (zhihu.com) 【Minecraft Forge】从零开始学习1.20.1模组开">
+<meta property="og:description" content="Minecraft Mod 和服务器插件开发 本文介绍了我的世界 Forge 模组开发和paper服务器插件开发 MC Forge Mod 开发  Minecraft Forge 1.18.2 Mod制作学习笔记 (1) Eclipse开发环境搭建 - 知乎 (zhihu.com) 【Minecraft Forge】从零开始学习1.20.1模组开发 （零）：配置开发环境 - dudujerry -">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://olivetien.github.io/img/posts/minecraft.jpg">
 <meta property="article:published_time" content="2023-12-05T13:45:41.000Z">
-<meta property="article:modified_time" content="2023-12-18T04:10:51.326Z">
+<meta property="article:modified_time" content="2024-11-22T13:33:08.907Z">
 <meta property="article:author" content="Olive Tien">
 <meta property="article:tag" content="Game Development">
 <meta property="article:tag" content="MC">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://olivetien.github.io/img/posts/minecraft.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Game01-MC plugin @ 风起地</title>
+  <title>Minecraft Mod 和服务器插件开发 @ 风起地</title>
 
   <link  rel="stylesheet" href="/static/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Game01-MC plugin"></span>
+            <span id="subtitle" data-typed-text="Minecraft Mod 和服务器插件开发"></span>
           
         </div>
 
@@ -297,12 +299,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Game01-MC plugin</h1>
+            <h1 id="seo-header">Minecraft Mod 和服务器插件开发</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2023年12月18日 中午
+                    本文最后更新于：2024年11月22日 晚上
                   
                 
               </p>
@@ -310,12 +312,9 @@
             
               <div class="markdown-body">
                 
-                <p>Zomboid联机</p>
-<p>原先下载了Zomboid测试版，可是不开放联机。</p>
-<blockquote>
-<p>联机教程 ttps://www.bilibili.com/read/cv14427208/</p>
-</blockquote>
-<h1>MC Forge Mod 开发</h1>
+                <h1>Minecraft Mod 和服务器插件开发</h1>
+<p>本文介绍了我的世界 Forge 模组开发和paper服务器插件开发</p>
+<h2 id="MC-Forge-Mod-开发">MC Forge Mod 开发</h2>
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/600691757">Minecraft Forge 1.18.2 Mod制作学习笔记 (1) Eclipse开发环境搭建 - 知乎 (zhihu.com)</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/dudujerry/p/17571070.html">【Minecraft Forge】从零开始学习1.20.1模组开发 （零）：配置开发环境 - dudujerry - 博客园 (cnblogs.com)</a></p>
@@ -329,7 +328,7 @@
 <p>如何打包 <a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv24332474/">https://www.bilibili.com/read/cv24332474/</a></p>
 <p>报错：server mod list is not compatible，服务器模组列表不兼容。可能是因为调试模式下，examplemod也需要在服务器安装。</p>
 <p>将forge服务器所有模组删除后，支持原版客户端登录。</p>
-<h2 id="添加方块">添加方块</h2>
+<h3 id="添加方块">添加方块</h3>
 <p>blockbench网站 <a target="_blank" rel="noopener" href="https://web.blockbench.net/">Blockbench</a></p>
 <p>已成功生成自定义方块。</p>
 <p>目前的问题：如何确定放置时方块的朝向？</p>
@@ -337,16 +336,16 @@
 <p>使用了“复制模式”，即整个游戏中所有example_block共享一个example_block实例(地址也相同)，存储时只需存储每个block的状态。</p>
 <p>官方库映射(反混淆)：参见<code>外部库/Gradle:net.minecraftforge:forge:1.20.1-47.2.0_mapped_official_1.20.1</code>，它实际上位于<code>C:\Users\tgl\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.2.0_mapped_official_1.20.1</code>，jar文件用winRAR打开(或者在项目文件夹打开)，然后进入</p>
 <figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">\net\minecraft\world\item\<br></code></pre></td></tr></table></figure>
-<h2 id="添加物品">添加物品</h2>
+<h3 id="添加物品">添加物品</h3>
 <p>物品逻辑能实现，但是材质不显示。经检查是json的“parent”的值写错了。</p>
 <p>此外，primogems物品需要对着example_block右键使用，才能出现烤鱼。对着其他方块使用不行。</p>
-<h2 id="事件监听">事件监听</h2>
+<h3 id="事件监听">事件监听</h3>
 <p>反编译代码位于</p>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs csharp">\net\minecraftforge\<span class="hljs-keyword">event</span>\<br></code></pre></td></tr></table></figure>
 <p>事件分为Forge和Fml，后者包括游戏启动等等。</p>
 <p>尽量使用Forge的事件，以免跟其他mod冲突。</p>
 <p>注册类有3种方法，我推荐最后一种，因为单独放在一个类中</p>
-<h2 id="Capability">Capability</h2>
+<h3 id="Capability">Capability</h3>
 <p>一开始没效果。</p>
 <blockquote>
 <p>经排查，是自己抄错了几处：</p>
@@ -356,7 +355,7 @@
 </ul>
 </blockquote>
 <p>这说明Java容错性很强，即使没注册成功，也不报错。</p>
-<h2 id="注册命令-添加自己定义指令">注册命令(添加自己定义指令)</h2>
+<h3 id="注册命令-添加自己定义指令">注册命令(添加自己定义指令)</h3>
 <p>在<code>ForgeEventListener</code>类中添加静态方法，用来在总线中注册命令</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@SubscribeEvent</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">registerCommand</span><span class="hljs-params">(RegisterCommandsEvent event)</span><br>&#123;<br>    GetFarmXpCommand.register(event.getDispatcher());<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>注意其中的<code>GetFarmXpCommand.</code>是调用了类的静态方法，相当于C++中的<code>GetFarmXpCommand::</code>。使用前要import相应的类。</p>
@@ -372,14 +371,14 @@
 <p>最后，我们返回整数值0，表示命令执行成功。</p>
 <p>这段代码的作用是注册一个自定义命令&quot;farmxp&quot;，当玩家输入该命令时，会获取玩家的农场经验并将其发送给玩家。</p>
 </blockquote>
-<h2 id="展示文本">展示文本</h2>
+<h3 id="展示文本">展示文本</h3>
 <p>Overlay可以展示信息，但是没有鼠标交互。</p>
 <p>Container Gui</p>
-<h2 id="计划">计划</h2>
+<h3 id="计划">计划</h3>
 <p>能否更改启动界面？增加原神界面。</p>
 <p>计划更改为原神UI，添加元素反应系统、元素附着机制、元素视野。</p>
-<h2 id="Forge官方文档解析">Forge官方文档解析</h2>
-<h3 id="Getting-Started">Getting Started</h3>
+<h3 id="Forge官方文档解析">Forge官方文档解析</h3>
+<h4 id="Getting-Started">Getting Started</h4>
 <ul>
 <li>mods.toml</li>
 </ul>
@@ -389,13 +388,13 @@
 </ul>
 <p>1.20.1-1.0.0.0</p>
 <p>MCVersion-MajorMod.MajorAPI.Minor.Patch</p>
-<h3 id="Core-Concepts">Core Concepts</h3>
+<h4 id="Core-Concepts">Core Concepts</h4>
 <p>Registries</p>
 <p>Sides</p>
 <p>Physical client &amp; Physical server，指的是通常意义上的客户端和服务器。</p>
 <p>Logical client &amp; Logical server：前者是Server Thread，负责运行游戏逻辑，包括实体生成、天气、物理等。后者是Render Thread，负责接受用户输入、传递到logical server，同时负责渲染界面。单人模式下同时存在这两个。</p>
 <p>在修改游戏逻辑前，应检查是否在logical server中</p>
-<h1>MC paper服务器插件开发</h1>
+<h2 id="MC-paper服务器插件开发">MC paper服务器插件开发</h2>
 <blockquote>
 <p>教程：<a target="_blank" rel="noopener" href="https://docs.qq.com/doc/DWFZidkdic1RCdk13">插件开发教程目录在控制台打印文字：零基础paper端插件开发教程之一 (qq.com)</a></p>
 <p>中文文档：<a target="_blank" rel="noopener" href="https://bukkit.windit.net/javadoc/">概览 (Spigot-API 1.20-R0.1-SNAPSHOT API 中文文档) (windit.net)</a></p>
@@ -424,17 +423,17 @@
 <li>Paste the file into the resource folder in Minecraft</li>
 <li>Go back to Minecraft, the resource pack should now be listed (if not listed then go to the main menu by pressing Esc and repeat step 5) and you can activate it by choosing it and hitting “Done”. The game will now reload itself.</li>
 </ol>
-<h2 id="插件和模组的区别">插件和模组的区别</h2>
-<h3 id="插件">插件</h3>
+<h3 id="插件和模组的区别">插件和模组的区别</h3>
+<h4 id="插件">插件</h4>
 <p>不创建新材质/GUI，只是修改原版物品数据来更改游戏内容。插件只需服务器安装。</p>
 <p>优点是原版客户端都能登录。</p>
-<h3 id="模组">模组</h3>
+<h4 id="模组">模组</h4>
 <p>有的需要服务器和客户端装，有的辅助类模组(例如背包整理)只需客户端装。</p>
 <blockquote>
 <p>1.12.2 Forge <a target="_blank" rel="noopener" href="https://files.minecraftforge.net/net/minecraftforge/forge/index_1.12.2.html">Downloads for Minecraft Forge for Minecraft 1.12.2</a></p>
 </blockquote>
-<h2 id="Java基础语法">Java基础语法</h2>
-<h3 id="对象">对象</h3>
+<h3 id="Java基础语法">Java基础语法</h3>
+<h4 id="对象">对象</h4>
 <ul>
 <li>字符串</li>
 </ul>
@@ -454,7 +453,7 @@
 <p>world是引用，相当于指针。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Location</span> <span class="hljs-variable">location</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Location</span>(world,x,y,z);<br></code></pre></td></tr></table></figure>
 <p>location是引用，但它指向一个新创建的Location变量。</p>
-<h3 id="Lambda表达式">Lambda表达式</h3>
+<h4 id="Lambda表达式">Lambda表达式</h4>
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/501465110">四万字 Lambda 表达式完整教程（强烈建议收藏） - 知乎 (zhihu.com)</a></p>
 </blockquote>
@@ -512,7 +511,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Game01-MC plugin</div>
+      <div>Minecraft Mod 和服务器插件开发</div>
       <div>http://olivetien.github.io/03-03-game/Game01-MC-Development/</div>
     </div>
     <div class="license-meta">

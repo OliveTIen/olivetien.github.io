@@ -16,27 +16,27 @@
   <meta name="author" content="Olive Tien">
   <meta name="keywords" content="">
   
-    <meta name="description" content="搜索植物大战僵尸API关键词，找到以下内容 Cheat Engine 一种开发工具是cheat engine。它可以抓取内存某个变量的变化。  https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1nR4y1u7PZ&#x2F;  两种修改技术：数据修改、指令修改 操作流程：  寻找数据位置(筛选)  先输入数值，点击new scan。待游戏数值变动后，输入新数值，点击next scan。然后">
+    <meta name="description" content="Game04 游戏外挂开发 - 以PVZ为例 本文介绍 C++ 游戏的外挂开发的一般思路，先通过 Cheat Engine 找到游戏数据对应的内存位置，然后用dll注入等方式修改内存内容。 搜索植物大战僵尸API关键词，找到以下内容 Cheat Engine 一种开发工具是cheat engine。它可以抓取内存某个变量的变化。  https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Game04-PVZ">
+<meta property="og:title" content="Game04 游戏外挂开发 - 以PVZ为例">
 <meta property="og:url" content="http://olivetien.github.io/03-03-game/Game04-PVZ/index.html">
 <meta property="og:site_name" content="风起地">
-<meta property="og:description" content="搜索植物大战僵尸API关键词，找到以下内容 Cheat Engine 一种开发工具是cheat engine。它可以抓取内存某个变量的变化。  https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1nR4y1u7PZ&#x2F;  两种修改技术：数据修改、指令修改 操作流程：  寻找数据位置(筛选)  先输入数值，点击new scan。待游戏数值变动后，输入新数值，点击next scan。然后">
+<meta property="og:description" content="Game04 游戏外挂开发 - 以PVZ为例 本文介绍 C++ 游戏的外挂开发的一般思路，先通过 Cheat Engine 找到游戏数据对应的内存位置，然后用dll注入等方式修改内存内容。 搜索植物大战僵尸API关键词，找到以下内容 Cheat Engine 一种开发工具是cheat engine。它可以抓取内存某个变量的变化。  https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://olivetien.github.io/img/posts/image-20231214103642018.png">
+<meta property="og:image" content="http://olivetien.github.io/img/posts/pvz.jpg">
 <meta property="article:published_time" content="2023-12-14T02:03:58.000Z">
-<meta property="article:modified_time" content="2024-11-22T12:43:31.432Z">
+<meta property="article:modified_time" content="2024-11-22T13:26:40.154Z">
 <meta property="article:author" content="Olive Tien">
 <meta property="article:tag" content="Game Development">
 <meta property="article:tag" content="PVZ">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://olivetien.github.io/img/posts/image-20231214103642018.png">
+<meta name="twitter:image" content="http://olivetien.github.io/img/posts/pvz.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Game04-PVZ @ 风起地</title>
+  <title>Game04 游戏外挂开发 - 以PVZ为例 @ 风起地</title>
 
   <link  rel="stylesheet" href="/static/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,13 +196,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/ys/ys.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/posts/pvz.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Game04-PVZ"></span>
+            <span id="subtitle" data-typed-text="Game04 游戏外挂开发 - 以PVZ为例"></span>
           
         </div>
 
@@ -230,7 +230,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          554 字
+          639 字
         
       </span>
     
@@ -241,7 +241,7 @@
         
         
         
-          5 分钟
+          6 分钟
         
       </span>
     
@@ -299,7 +299,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Game04-PVZ</h1>
+            <h1 id="seo-header">Game04 游戏外挂开发 - 以PVZ为例</h1>
             
               <p class="note note-info">
                 
@@ -312,7 +312,9 @@
             
               <div class="markdown-body">
                 
-                <p>搜索<code>植物大战僵尸API</code>关键词，找到以下内容</p>
+                <h1>Game04 游戏外挂开发 - 以PVZ为例</h1>
+<p>本文介绍 C++ 游戏的外挂开发的一般思路，先通过 Cheat Engine 找到游戏数据对应的内存位置，然后用dll注入等方式修改内存内容。</p>
+<p>搜索<code>植物大战僵尸API</code>关键词，找到以下内容</p>
 <h2 id="Cheat-Engine">Cheat Engine</h2>
 <p>一种开发工具是cheat engine。它可以抓取内存某个变量的变化。</p>
 <blockquote>
@@ -388,7 +390,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Game04-PVZ</div>
+      <div>Game04 游戏外挂开发 - 以PVZ为例</div>
       <div>http://olivetien.github.io/03-03-game/Game04-PVZ/</div>
     </div>
     <div class="license-meta">
