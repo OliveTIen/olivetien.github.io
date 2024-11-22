@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>写在前面</title>
+    <link href="/2077/11/23/Welcome/"/>
+    <url>/2077/11/23/Welcome/</url>
+    
+    <content type="html"><![CDATA[<p>54 年前的今天，是 2023 年 11 月 23 日星期四。那天，我创建了自己的第一个个人网站。<br>之前生产实习时，也尝试搭建个人网站和 Minecraft 服务器，只不过是内网。而这个网站，是真正意义上的，对世界开放的个人网站。</p><p>这里是风起地。</p><blockquote><p>背景图是大连电车</p></blockquote><div>    <!-- 添加live2d，路径位于自己的仓库 -->    <script src="https://fastly.jsdelivr.net/gh/OliveTIen/live2d-widget-web@latest/autoload.js">    </script>    <script>            document.addEventListener('DOMContentLoaded', function() {            var waifuDiv = document.getElementById('waifu');            if (waifuDiv) {                waifuDiv.style.zIndex = '9999';            }        });    </script></div>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>life</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Web06 WebGL</title>
+    <link href="/2024/06/22/Web06-WebGL/"/>
+    <url>/2024/06/22/Web06-WebGL/</url>
+    
+    <content type="html"><![CDATA[<h1>WebGL简介</h1><p>前面已经学习了OpenGL的部分内容，而OpenGL和OpenGL ES、WebGL都差不多。</p><p>参照教程<a href="https://webglfundamentals.org/%EF%BC%8C%E5%B0%86%E7%BD%91%E9%A1%B5%E6%BA%90%E7%A0%81%E4%BF%9D%E5%AD%98%E5%88%B0%E6%9C%AC%E5%9C%B0%EF%BC%8C%E6%B7%BB%E5%8A%A0%E5%BF%85%E8%A6%81%E7%9A%84%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E3%80%82%E7%94%B1%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%8C%E5%A6%82%E6%9E%9C%E7%9B%B4%E6%8E%A5%E5%8F%8C%E5%87%BBhtml%E5%8F%AF%E8%83%BD%E4%B8%8D%E4%BC%9A%E6%AD%A3%E5%B8%B8%E6%98%BE%E7%A4%BA%EF%BC%8C%E5%9B%A0%E6%AD%A4%E9%9C%80%E8%A6%81%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%82%E6%96%B0%E5%BB%BA%E6%89%B9%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%60run_server.bat%60%EF%BC%8C%E5%85%B6%E4%B8%AD%E8%BE%93%E5%85%A5">https://webglfundamentals.org/，将网页源码保存到本地，添加必要的资源文件。由于浏览器的安全策略，如果直接双击html可能不会正常显示，因此需要创建本地服务器。新建批处理文件`run_server.bat`，其中输入</a></p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">python</span> -m http.server <span class="hljs-number">8000</span><br></code></pre></td></tr></table></figure><p>双击运行，即可创建简单的http服务器。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Web</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>CPP01-STL-container</title>
+    <link href="/2024/01/07/CPP01-STL-container/"/>
+    <url>/2024/01/07/CPP01-STL-container/</url>
+    
+    <content type="html"><![CDATA[<h1>C++ 容器</h1><blockquote><p><a href="https://blog.csdn.net/dshycorz/article/details/131175284">C++学习记录———容器的简单整理_容器和数组-CSDN博客</a></p></blockquote><p>容器</p><ul><li>顺序容器<ul><li>元素之间是顺序关系,元素有固定的位置</li><li>Array数组，vector向量，list链表，queue队列</li></ul></li><li>关联容器<ul><li>元素之间没有严格物理上的顺序关系。内部是有联系的</li><li>map 键值对 ，mulitmap 多重键值对</li></ul></li></ul><p>迭代器</p><p>迭代器是对“遍历容器”这一操作进行的封装。</p><p>为什么用迭代器而不用指针：迭代器的功能比指针更强大。指针只能遍历连续存储的数据结构，而迭代器还可以遍历链表、树等。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>C++</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>C++</tag>
+      
+      <tag>STL</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Game04-PVZ</title>
+    <link href="/2023/12/14/Game04-PVZ/"/>
+    <url>/2023/12/14/Game04-PVZ/</url>
+    
+    <content type="html"><![CDATA[<p>搜索<code>植物大战僵尸API</code>关键词</p><p>一种开发工具是cheat engine。它可以抓取内存某个变量的变化。</p><blockquote><p><a href="https://www.bilibili.com/video/BV1nR4y1u7PZ/">https://www.bilibili.com/video/BV1nR4y1u7PZ/</a></p></blockquote><p>两种修改技术：数据修改、指令修改</p><p>操作流程：</p><ol><li>寻找数据位置(筛选)</li></ol><p>[博客内容转移至本地-知识和感悟]</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Game Development</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Game Development</tag>
+      
+      <tag>PVZ</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Game02 游戏开发语言</title>
+    <link href="/2023/12/06/Game02-what-need-I-learn/"/>
+    <url>/2023/12/06/Game02-what-need-I-learn/</url>
+    
+    <content type="html"><![CDATA[<h1>游戏行业</h1><p>C++和Lua<br>要认清自己擅长什么、喜欢什么，既擅长又喜欢的工作，往往是最佳选择。<br>软件业人人都能学，因此更需要终身学习。<br>在校招方面，一般不会要求游戏开发经验，但是要语言基础狗，STL工具熟练掌握，思维灵活，对做游戏有热情。</p><h2 id="TA-technical-artist-技术美术">TA technical artist 技术美术</h2><p>解决艺术蓝图设计与实际技术执行之间的问题<br>是交叉岗位，需要大量的技术积淀，一般是由之前的艺术家或程序员转型而成。<br>是两边的润滑剂，做着沟通的活儿。技不如人，只能让别人去做。</p><h2 id="STL">STL</h2><p>Standard Template Library<br>是C++软件库，包含算法、容器、函数、迭代器四个部分。<br>迭代器是泛化的指针，开发者可以操作数据结构而不必关心其</p><h1>开发游戏示例</h1><p>C++：巫师3、黑暗之魂、上古卷轴5、PUBG、堡垒之夜<br>Java：Minecraft、Zomboid<br>C#：</p><ul><li>Unity<br>社区热度高、教学视频多<br>跨平台，一键导出<br>插件多，拓展性强<br>个人版免费：过去1年盈利不超过10万美元(每月5万人民币)<br>王者荣耀、原神、戴森球计划、坎巴拉太空计划、都市天际线、炉石传说、纪念碑谷</li></ul><h1>Java</h1><p>首先， 最重要差别是C++是用于系统编程，而Java主要用于应用编程。前者编译成本机的代码，直接运行在目标硬件与操作系统上运行，而后者编译为‘字节’码，运行在虚拟机之上。其次，Java是一种内存安全的语言，而C++并不是。C++中存在不安全的特性，未检查的强制转换，指针使用以及手动管理内存。这意味着C++比Java编程更加容易出错。再次，C++的设计决策优先考虑的是执行速度和低内存使用率，而Java的设计是为了简单性和程序开发的工作效率，并不是为了执行效率。经常听到一些声音，需要在二者做出选择：如果速度与内存使用是重要的因素，那么建议使用C++.如果学习曲线，也是开发者的生产力最重要的因素之一，那么就应该选择Java最后，还有一些差别：Java自动内存回收机制。Java不支持任何的结构Java不支持析构函数，如上所述，它很大程序是依赖着GC垃圾回收机制，所以无需析构函数来释放资源。</p><p>作者：Leon<br>链接：<a href="https://www.zhihu.com/question/477455484/answer/2308413468">https://www.zhihu.com/question/477455484/answer/2308413468</a></p><h1>Unity游戏开发</h1><blockquote><p>计算机系科协暑期培训：<a href="https://summer23.net9.org/">https://summer23.net9.org/</a></p></blockquote><p>能否将数据库用于数值计算？</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Game01-MC plugin</title>
+    <link href="/2023/12/05/Game01-MC-Development/"/>
+    <url>/2023/12/05/Game01-MC-Development/</url>
+    
+    <content type="html"><![CDATA[<p>Zomboid联机</p><p>原先下载了Zomboid测试版，可是不开放联机。</p><blockquote><p>联机教程 ttps://www.bilibili.com/read/cv14427208/</p></blockquote><h1>MC Forge Mod 开发</h1><blockquote><p><a href="https://zhuanlan.zhihu.com/p/600691757">Minecraft Forge 1.18.2 Mod制作学习笔记 (1) Eclipse开发环境搭建 - 知乎 (zhihu.com)</a></p><p><a href="https://www.cnblogs.com/dudujerry/p/17571070.html">【Minecraft Forge】从零开始学习1.20.1模组开发 （零）：配置开发环境 - dudujerry - 博客园 (cnblogs.com)</a></p><p><a href="https://www.bilibili.com/video/BV1oh4y177bB/?spm_id_from=333.337.search-card.all.click&amp;vd_source=442f2278aa64b55da1a57120b4e10d88">Minecraft Forge Mod 开发入门教程 p0-开发环境搭建_哔哩哔哩_bilibili</a></p><p><a href="https://docs.minecraftforge.net/en/1.20.x/">Forge Documentation (minecraftforge.net)</a></p></blockquote><p>其中第3个链接是视频链接，有效，<strong>未完待续</strong></p><p>p9-数据生成 为什么失败？</p><p>看这个教程 文字版 <a href="https://www.bilibili.com/read/cv24404738/">我的世界Minecraft 1.19 Mod开发教程分享-04-增加合成表和方块破坏掉落物 - 哔哩哔哩 (bilibili.com)</a></p><p>最新教程 <a href="https://www.bilibili.com/read/cv25210400/?spm_id_from=333.999.0.0">我的世界·1.20.1·forge Mod教程·ep2·添加物品和添加创造物品栏 - 哔哩哔哩 (bilibili.com)</a></p><p>如何打包 <a href="https://www.bilibili.com/read/cv24332474/">https://www.bilibili.com/read/cv24332474/</a></p><p>报错：server mod list is not compatible，服务器模组列表不兼容。可能是因为调试模式下，examplemod也需要在服务器安装。</p><p>将forge服务器所有模组删除后，支持原版客户端登录。</p><h2 id="添加方块">添加方块</h2><p>blockbench网站 <a href="https://web.blockbench.net/">Blockbench</a></p><p>已成功生成自定义方块。</p><p>目前的问题：如何确定放置时方块的朝向？</p><p>item, block, blockitem。blockitem是用block自动生成的item。</p><p>使用了“复制模式”，即整个游戏中所有example_block共享一个example_block实例(地址也相同)，存储时只需存储每个block的状态。</p><p>官方库映射(反混淆)：参见<code>外部库/Gradle:net.minecraftforge:forge:1.20.1-47.2.0_mapped_official_1.20.1</code>，它实际上位于<code>C:\Users\tgl\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.2.0_mapped_official_1.20.1</code>，jar文件用winRAR打开(或者在项目文件夹打开)，然后进入</p><figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">\net\minecraft\world\item\<br></code></pre></td></tr></table></figure><h2 id="添加物品">添加物品</h2><p>物品逻辑能实现，但是材质不显示。经检查是json的“parent”的值写错了。</p><p>此外，primogems物品需要对着example_block右键使用，才能出现烤鱼。对着其他方块使用不行。</p><h2 id="事件监听">事件监听</h2><p>反编译代码位于</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs csharp">\net\minecraftforge\<span class="hljs-keyword">event</span>\<br></code></pre></td></tr></table></figure><p>事件分为Forge和Fml，后者包括游戏启动等等。</p><p>尽量使用Forge的事件，以免跟其他mod冲突。</p><p>注册类有3种方法，我推荐最后一种，因为单独放在一个类中</p><h2 id="Capability">Capability</h2><p>一开始没效果。</p><blockquote><p>经排查，是自己抄错了几处：</p><ul><li>感叹号抄错了，导致if判断刚好相反(原本是判断非空)</li><li>“farmxp&quot;抄成&quot;farxp”</li></ul></blockquote><p>这说明Java容错性很强，即使没注册成功，也不报错。</p><h2 id="注册命令-添加自己定义指令">注册命令(添加自己定义指令)</h2><p>在<code>ForgeEventListener</code>类中添加静态方法，用来在总线中注册命令</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@SubscribeEvent</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">registerCommand</span><span class="hljs-params">(RegisterCommandsEvent event)</span><br>&#123;<br>    GetFarmXpCommand.register(event.getDispatcher());<br>&#125;<br></code></pre></td></tr></table></figure><p>注意其中的<code>GetFarmXpCommand.</code>是调用了类的静态方法，相当于C++中的<code>GetFarmXpCommand::</code>。使用前要import相应的类。</p><p>类中这样写</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">register</span><span class="hljs-params">(CommandDispatcher&lt;CommandSourceStack&gt; dispatcher)</span>&#123;<br>    dispatcher.register(<br>            Commands.literal(<span class="hljs-string">&quot;farmxp&quot;</span>).executes(<br>                    (context)-&gt;&#123;<br>                        context.getSource().getPlayer().getCapability(PlayerFarmXpProvider.PLAYER_FARM_XP_CAPABILITY).ifPresent(<br>                            (xp)-&gt;&#123;<br>                                context.getSource().sendSuccess(<br>                                        ()-&gt; Component.literal(<span class="hljs-string">&quot;xp:&quot;</span>+xp.getXp()),<br>                                        <span class="hljs-literal">false</span><br>                                );<br>                            &#125;<br>                        );<br>                    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>                    &#125;<br>            )<br>    );<br>&#125;<br></code></pre></td></tr></table></figure><p>GPT的解释</p><blockquote><p>这段Java代码是用于注册自定义命令的一部分，属于Minecraft Forge模组的代码。它通过使用CommandDispatcher类来注册一个名为&quot;farmxp&quot;的命令。</p><p>使用<code>Commands.literal(&quot;farmxp&quot;)</code>来指定命令的名称为&quot;farmxp&quot;。然后使用<code>.executes()</code>方法来指定命令的执行逻辑，该方法接受一个Lambda表达式作为参数。</p><p>在Lambda表达式中，我们首先使用<code>context.getSource().getPlayer().getCapability(PlayerFarmXpProvider.PLAYER_FARM_XP_CAPABILITY)</code>来获取玩家的一个特定能力（capability），即PlayerFarmXpProvider.PLAYER_FARM_XP_CAPABILITY，玩家的农场经验。</p><p>接着，我们使用<code>.ifPresent()</code>方法来检查能力是否存在。如果存在，我们使用<code>context.getSource().sendSuccess()</code>方法将一条成功消息发送给命令的来源，即玩家。在这里，我们使用了一个Lambda表达式作为参数来动态构建这条消息。</p><p>消息的内容是&quot;xp:&quot;加上<code>xp.getXp()</code>的返回值，其中<code>xp</code>是获取到的能力实例，<code>.getXp()</code>是能力实例的一个方法。</p><p>最后，我们返回整数值0，表示命令执行成功。</p><p>这段代码的作用是注册一个自定义命令&quot;farmxp&quot;，当玩家输入该命令时，会获取玩家的农场经验并将其发送给玩家。</p></blockquote><h2 id="展示文本">展示文本</h2><p>Overlay可以展示信息，但是没有鼠标交互。</p><p>Container Gui</p><h2 id="计划">计划</h2><p>能否更改启动界面？增加原神界面。</p><p>计划更改为原神UI，添加元素反应系统、元素附着机制、元素视野。</p><h2 id="Forge官方文档解析">Forge官方文档解析</h2><h3 id="Getting-Started">Getting Started</h3><ul><li>mods.toml</li></ul><p><code>/src/main/resources/META-INF/mods.toml</code>，描述mod信息。例如mod名称、作者、描述、logo等。logo放在<code>/src/main/resources/</code>中。通配符<code>$&#123;&#125;</code>的内容参见<code>/gradle.properties</code>，</p><ul><li>版本号命名规范</li></ul><p>1.20.1-1.0.0.0</p><p>MCVersion-MajorMod.MajorAPI.Minor.Patch</p><h3 id="Core-Concepts">Core Concepts</h3><p>Registries</p><p>Sides</p><p>Physical client &amp; Physical server，指的是通常意义上的客户端和服务器。</p><p>Logical client &amp; Logical server：前者是Server Thread，负责运行游戏逻辑，包括实体生成、天气、物理等。后者是Render Thread，负责接受用户输入、传递到logical server，同时负责渲染界面。单人模式下同时存在这两个。</p><p>在修改游戏逻辑前，应检查是否在logical server中</p><h1>MC paper服务器插件开发</h1><blockquote><p>教程：<a href="https://docs.qq.com/doc/DWFZidkdic1RCdk13">插件开发教程目录在控制台打印文字：零基础paper端插件开发教程之一 (qq.com)</a></p><p>中文文档：<a href="https://bukkit.windit.net/javadoc/">概览 (Spigot-API 1.20-R0.1-SNAPSHOT API 中文文档) (windit.net)</a></p></blockquote><p>1.13：水生世界，寻宝时间，完整的海洋系统，海洋之心。此外，扁平化把指令几乎全改了</p><p>1.14：劫掠事件</p><p>1.15：蜜蜂</p><p>1.16：下界，猪灵蛮兵，炽足兽，下界合金。</p><p>1.16.5支持java8，</p><p>1.16.5/1.16.4只能正版登录。离线登录会被禁止多人游戏选项。但更高版本无此问题。</p><p>高版本无法进入低版本服务器，会显示“Outdated Server! It’s still on 1.12.2”</p><p>forge下载页面如果加载不出来，可以尝试代理。</p><p>forge客户端47.1.0，服务端47.2.0，但仍然可联机。</p><p>optifine与原神模组不兼容</p><p>安装光影：</p><blockquote><p><a href="https://minecrafthub.com/texture/arc-shader-for-minecraft-1-19-3">Arc Shader For Minecraft 1.20/1.20.2+ | Minecraft Texture | Minecraft Hub</a></p></blockquote><ol><li>Download a resource pack, you should get a .zip file</li><li>Open the folder to which you downloaded the file</li><li>Copy the .zip file</li><li>Open Minecraft</li><li>In Minecraft, click on “Options”, then “Resource Packs”</li><li>Choose “Open resource pack folder”</li><li>Paste the file into the resource folder in Minecraft</li><li>Go back to Minecraft, the resource pack should now be listed (if not listed then go to the main menu by pressing Esc and repeat step 5) and you can activate it by choosing it and hitting “Done”. The game will now reload itself.</li></ol><h2 id="插件和模组的区别">插件和模组的区别</h2><h3 id="插件">插件</h3><p>不创建新材质/GUI，只是修改原版物品数据来更改游戏内容。插件只需服务器安装。</p><p>优点是原版客户端都能登录。</p><h3 id="模组">模组</h3><p>有的需要服务器和客户端装，有的辅助类模组(例如背包整理)只需客户端装。</p><blockquote><p>1.12.2 Forge <a href="https://files.minecraftforge.net/net/minecraftforge/forge/index_1.12.2.html">Downloads for Minecraft Forge for Minecraft 1.12.2</a></p></blockquote><h2 id="Java基础语法">Java基础语法</h2><h3 id="对象">对象</h3><ul><li>字符串</li></ul><p>字符串是引用类型，其本质是对象，不是基本数据类型。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">str1</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Hello world!&quot;</span>;<br></code></pre></td></tr></table></figure><p>字符串是不可变对象，无法修改。</p><p>数字转字符串</p><p>方法1：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">String.format(<span class="hljs-string">&quot; x=%.2f,y=%.2f,z=%.2f&quot;</span>,x,y,z);<br></code></pre></td></tr></table></figure><p>方法2：通过拼接操作</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">str</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Hello &quot;</span>;<br><span class="hljs-type">String</span> <span class="hljs-variable">res</span> <span class="hljs-operator">=</span> str + <span class="hljs-number">10</span>;<span class="hljs-comment">// &quot;Hello 10&quot;</span><br></code></pre></td></tr></table></figure><ul><li>对象</li></ul><p>对象是引用类型。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">World</span> <span class="hljs-variable">world</span> <span class="hljs-operator">=</span> Bukkit.getWorld(<span class="hljs-string">&quot;world&quot;</span>);<br></code></pre></td></tr></table></figure><p>world是引用，相当于指针。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Location</span> <span class="hljs-variable">location</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Location</span>(world,x,y,z);<br></code></pre></td></tr></table></figure><p>location是引用，但它指向一个新创建的Location变量。</p><h3 id="Lambda表达式">Lambda表达式</h3><blockquote><p><a href="https://zhuanlan.zhihu.com/p/501465110">四万字 Lambda 表达式完整教程（强烈建议收藏） - 知乎 (zhihu.com)</a></p></blockquote><p>目的：提高编程效率</p><p>将函数作为另一个函数的参数。</p><p>基本语法</p><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs livescript"><span class="hljs-function"><span class="hljs-params">([形参列表])</span> -&gt;</span> &#123;Lambda体&#125;<br></code></pre></td></tr></table></figure><p>关注返回值和参数，方法名不重要。</p><p>使用<code>-&gt;</code>将参数和实现逻辑分离。</p><p>如果lambda体只有一行代码，则可以省略大括号。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Game Development</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Game Development</tag>
+      
+      <tag>MC</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Web05-LAN-connection</title>
+    <link href="/2023/12/01/Web06-LAN-connection/"/>
+    <url>/2023/12/01/Web06-LAN-connection/</url>
+    
+    <content type="html"><![CDATA[<h1>电脑局域网联机</h1><h2 id="测试能否ping通">测试能否ping通</h2><p>遇到的问题</p><ul><li>a能ping通b，b不能ping通a，显示“请求超时”<ul><li>考虑关闭a的防火墙：<a href="https://baijiahao.baidu.com/s?id=1764386911193359357">https://baijiahao.baidu.com/s?id=1764386911193359357</a></li></ul></li></ul><h2 id="测试示例网页">测试示例网页</h2><p>如果无法直接打开index.html，是因为浏览器的<strong>同源策略</strong>。同源策略隔离了不同类型的网页脚本，防止网页B通过js篡改网页A的内容，实现攻击。<br>例如，直接打开index.html，它属于本地文件系统。而</p><h3 id="vscode服务器">vscode服务器</h3><p>用vscode打开，点击右下角go live</p><h3 id="python服务器">python服务器</h3><ol><li><a href="http://xn--server-hn3jk46f.py">创建server.py</a>，写入以下代码，并运行</li></ol>  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> http.server<br><span class="hljs-keyword">import</span> socketserver<br><br>PORT = <span class="hljs-number">8000</span><br><br>Handler = http.server.SimpleHTTPRequestHandler<br><br><span class="hljs-keyword">with</span> socketserver.TCPServer((<span class="hljs-string">&quot;&quot;</span>, PORT), Handler) <span class="hljs-keyword">as</span> httpd:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;server started, listening to port: &quot;</span>, PORT)<br>    httpd.serve_forever()<br></code></pre></td></tr></table></figure><ol start="2"><li>在终端输入python <a href="http://server.py">server.py</a>。此时在本地/另一台电脑就可以访问 <a href="http://10.0.1.119:8000">http://10.0.1.119:8000</a> 了</li><li>如果报错或者无法访问，请将代码中的中文改为英文</li></ol><h3 id="node-js服务器">node.js服务器</h3><blockquote><p>参见<a href="https://blog.csdn.net/qq_46032550/article/details/134694890">如何跑通跨窗口渲染：multipleWindow3dScene-CSDN博客</a></p></blockquote><h1>电脑与手机通信</h1><p>电脑可以访问某网页，手机也可以访问某网页，因此我认为它们的通信机制是类似的。</p><h2 id="Socket">Socket</h2><p>socket也称作“套接字”，描述了计算机的IP地址和端口，运行在计算机中的程序之间采用socket进行数据通信。通信的两端都有socket，它是一个通道，数据在两个socket之间进行传输。</p><p>socket把复杂的TCP/IP协议族隐藏在socket接口后面，对程序员来说，只要用好socket相关的函数，就可以完成数据通信。</p><h2 id="手机能否直接运行C-程序">手机能否直接运行C++程序</h2><ul><li><p>JNI<br>Java Native Interface<br>目的：将C/C++代码集成进Java程序中</p></li><li><p>NDK<br>Native Development Kit 是Android的工具开发包<br>目的：快速开发C/C++动态库，并自动将so和应用一起打包为APK</p></li></ul><ol><li>要实现电脑与手机之间的网络通信（局域网），你可以使用以下方法：<ul><li>通过无线局域网（Wi-Fi）：确保电脑和手机连接到同一个Wi-Fi网络，这样它们就可以在同一局域网中进行通信。</li><li>通过移动热点：将手机设置为移动热点，然后让电脑连接到手机的移动热点，这样它们也可以在同一局域网上进行通信。</li></ul></li></ol><p>在确保设备连接到同一局域网后，你可以使用各种方法进行通信，包括但不限于：</p><ul><li>文件共享：通过共享文件夹或使用云存储服务，在电脑和手机之间传输文件。</li><li>远程桌面连接：使用远程桌面软件，如Microsoft Remote Desktop或TeamViewer，从电脑远程控制手机或反之亦可。</li><li>消息传递：使用即时通讯应用程序（如WhatsApp、Telegram、微信等）或电子邮件，在电脑和手机之间发送消息。</li></ul><ol start="2"><li>电脑与电脑之间的通信和电脑与手机之间的通信有一些不同之处：<ul><li>硬件和操作系统：电脑和手机是不同类型的设备，它们具有不同的硬件和操作系统。因此，在实现通信时，可能需要使用不同的软件或协议来适应不同的设备类型。</li><li>屏幕尺寸和输入方式：手机的屏幕尺寸较小，而电脑的屏幕尺寸较大。这意味着在通信过程中，显示和输入信息的方式可能会有所不同。</li><li>功能和应用程序：手机通常具有更多的移动功能和应用程序，例如位置服务、相机等。而电脑则更适合进行复杂的计算和多任务处理。</li></ul></li></ol><p>尽管存在这些差异，但电脑和手机之间的通信仍然可以通过网络实现，并且可以使用各种方法进行数据传输和交流。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Rust01 What&#39;s Rust?</title>
+    <link href="/2023/12/01/Rust01-What-s-rust/"/>
+    <url>/2023/12/01/Rust01-What-s-rust/</url>
+    
+    <content type="html"><![CDATA[<p>Rust特点</p><ul><li>学习曲线较高<ul><li>编译器严格，难以编译通过，但一旦通过，debug少<ul><li>它从语法特性上禁止一切可能出现内存问题的操作</li><li>通过学习rust，能够写出更好的cpp代码</li></ul></li><li>使用RAII、模板、静态分发、元编程等新特性</li></ul></li></ul><p>Rust菜鸟教程</p><ul><li>Rust所有权<ul><li>无论是栈变量还是堆变量，超出作用域一律自动释放</li></ul></li><li>Rust并发编程<ul><li>安全高效地处理并发是Rust诞生的目的之一，主要解决服务器的高负载承受能力。</li><li>C/C++语言本身不具备侦察和避免并行错误的能力，因此开发者需要花费大量精力避免发生错误。</li><li>Rust将错误尽可能消灭在编译阶段。</li></ul></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>rust</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>rust</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Web05-php</title>
+    <link href="/2023/11/30/Web05-php/"/>
+    <url>/2023/11/30/Web05-php/</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.runoob.com/php/php-tutorial.html">https://www.runoob.com/php/php-tutorial.html</a></p><p>既然PHP可以操纵服务器文件，那么“静态网站”也会被修改吗？</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>web</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>web</tag>
+      
+      <tag>php</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Game03 VR Research</title>
+    <link href="/2023/11/29/Game03-VR-research/"/>
+    <url>/2023/11/29/Game03-VR-research/</url>
+    
+    <content type="html"><![CDATA[<p>对开发者的建议<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://www.zhihu.com/question/514844705/answer/2357202142">[2]</span></a></sup><br>如果在大公司或能拿到投资，跟着公司和投资走。<br>如果全职开发，只能勉强过日子；如果是副业，可以过得很香。</p><h1>VR游戏开发简介</h1><h2 id="XR">XR</h2><p>Unity做VR全平台游戏开发（五）——认识UnityXR与OpenXR<br><a href="https://zhuanlan.zhihu.com/p/609218188">https://zhuanlan.zhihu.com/p/609218188</a></p><h2 id="引擎">引擎</h2><ul><li>Unity<ul><li>VR生态和教程更多，苹果的官方合作伙伴<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://www.zhihu.com/question/576465731/answer/3190854055">[1]</span></a></sup></li><li>开发速度快，性能好</li></ul></li><li>Unreal<ul><li>画面表现更好</li></ul></li></ul><h2 id="整体评价">整体评价</h2><ul><li>VR的实时渲染应用(例如游戏)对性能的要求远超传统游戏<ul><li>分辨率高(至少4K)</li><li>刷新率高(100Hz)</li><li>双镜头渲染(两倍性能要求)</li></ul></li><li>因此目前高品质游戏(像Alyx)还是电脑渲染、串流游玩，而不是一体机上游玩</li></ul><h2 id="资产制作">资产制作</h2><ul><li>包括<ul><li>平面设计</li><li>三维模型</li><li>音乐、音效</li><li>动画、特效</li></ul></li><li>对独立开发者而言，难度很大，可以直接使用Unity的案例资产</li></ul><h2 id="案例">案例</h2><ul><li><a href="https://www.zhihu.com/zvideo/1504501604837896192">VR文化展馆</a><ul><li>使用UE4.27开发</li></ul></li><li>切方块游戏 <a href="https://www.zhihu.com/question/514844705/answer/2357202142">https://www.zhihu.com/question/514844705/answer/2357202142</a><ul><li>在pico平台销量过万</li><li></li></ul></li></ul><h1>VR游戏开发(基于Pico, Unity)</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://www.zhihu.com/question/576465731/answer/3190854055">https://www.zhihu.com/question/576465731/answer/3190854055</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="https://www.zhihu.com/question/514844705/answer/2357202142">https://www.zhihu.com/question/514844705/answer/2357202142</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>Game Development</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Game Development</tag>
+      
+      <tag>VR</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Web04 Customize Live2d</title>
+    <link href="/2023/11/29/Web04-Customize-Live2d/"/>
+    <url>/2023/11/29/Web04-Customize-Live2d/</url>
+    
+    <content type="html"><![CDATA[<h1>加入live2d</h1><p>live2d_api创作者信息</p><blockquote><p>B站空间：<a href="https://space.bilibili.com/3695903">FGHRSH的个人空间-FGHRSH个人主页-哔哩哔哩视频 (bilibili.com)</a></p><p>广州市聚德中学，2015届(2015年初中毕业)，比我大两岁。</p><p>广州城市职业学院(专科)，分数线400-</p></blockquote><h2 id="添加live2d">添加live2d</h2><ul><li>可以用别人的库<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure></li><li>为了应用到全局，我在<code>themes/hexo-theme-material/layout/layout.ejs</code>文件中，添加如下代码：<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://fastly.jsdelivr.net/gh/OliveTIen/live2d-widget-web@latest/autoload.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>而且将路径修改为<strong>自己的</strong>仓库路径</li></ul><h2 id="第一个库">第一个库</h2><blockquote><p>参考资料： <a href="https://github.com/stevenjoezhang/live2d-widget">https://github.com/stevenjoezhang/live2d-widget</a></p></blockquote><p>该库利用rollup.js打包，将<code>./src</code>中的文件打包成根目录下的<code>waifu-tips.js</code>，阅读时，可以直接阅读<code>./src</code>中的相应文件。</p><p>之前谈到，只需要在模板文件添加一行代码就可以实现live2d。该代码加载了<code>autoload.js</code> 。</p><p><code>autoload.js</code>做了两件事:</p><ol><li>加载同目录下的<code>waifu.css``live2d.min.js``waifu-tips.js</code>。</li><li>加载完成后，调用<code>waifu-tips.js</code>中的<code>initWidget</code>函数(由于受rollup.js打包的影响，函数名可能发生改变/不便阅读，原函数名可以在<code>./src/index.js</code>中找到)</li><li><code>initWidget</code>函数将参数<code>config, apiPath</code>传递给<code>loadWidget</code>函数，<code>loadWidget</code>函数新建一个<code>Model</code>(详见index.js第6行)<ul><li>Model的定义参见<code>/model.js/</code>，里面定义了加载模型的方法</li><li><code>loadModelList()</code>函数加载了<code>apiPath(即live2D_API仓库根目录)</code>中的<code>model_list.json</code>。<code>model_list.json</code>定义了要加载的模型列表</li></ul></li></ol><p>Model</p><blockquote><p>Genshin live2d model: [Free 2 Use <a href="https://www.hoyolab.com/article/998327">Live2D Vtuber] Bennett From Genshin Impact 原神 | HoYoLAB</a></p></blockquote><ul><li>waifu-tips.json<ul><li>定义事件响应(回复词)<ul><li>鼠标hover click</li><li>日期时间</li><li>其他</li></ul></li></ul></li><li>src/model.js<ul><li>在该文件中找到了代码<code>$&#123;this.cdnPath&#125;model_list.json</code>，从而知道了api来源。其中cdnPath为api路径，例如<a href="https://github.com/fghrsh/live2d_api/">https://github.com/fghrsh/live2d_api/</a></li><li>我将api clone到本地，并修改api路径为<strong>自己的</strong>仓库路径</li><li>该文件的<code>loadModel</code>函数调用了<code>loadlive2d</code>函数，该函数读取<code>cdnPath</code>的目标模型文件夹的<code>index.json</code></li><li>试图搜索<code>loadlive2d</code>函数，<ul><li>live2d_widget_web有：<ul><li>login.html</li><li>model.js(3处)</li></ul></li><li>live2d_api未发现其来源。</li><li>但是在github上找到其他项目<code>Live2dOnWeb</code><ul><li><code>src\SDKv2\mainV2.js</code>中发现定义</li></ul></li></ul></li></ul></li></ul><h2 id="添加自定义模型">添加自定义模型</h2><blockquote><p>第2个库：</p><p>Hexo添加自定义文件：<a href="https://blog.leonus.cn/2022/custom.html">Hexo博客添加自定义css和js文件 | Leonus</a></p></blockquote><p>我想加载自定义模型，可是上面的方式无法加载moc格式(旧版本)模型。因此我又找到一个仓库<code>Live2dOnWeb</code>，它的优点有</p><ul><li>可加载moc或moc3格式模型</li><li>将模型包和api统一，不必像上一个项目一样，反复调用</li></ul><p>我尝试将文件直接放进hexo的source目录，可是没有显示。</p><p>看来只能调用其他库了。</p><p>我先在Live2dOnWeb加一个<code>autoload.js</code>，然后用类似的调用js代码的方式</p><p><strong>未完待续</strong></p><p>先分析</p><h2 id="Web知识总结">Web知识总结</h2><h3 id="rollup-js打包">rollup.js打包</h3><p>第一个库之所以难读，是因为它将<code>./src</code>中的文件打包成根目录下的<code>waifu-tips.js</code></p><h3 id="同源与跨域">同源与跨域</h3><blockquote><p>参考资料：</p><ul><li>跨域：<a href="https://blog.csdn.net/my_web012/article/details/104834284">https://blog.csdn.net/my_web012/article/details/104834284</a></li></ul></blockquote><p>同源：协议、域名、端口都相同。</p><p>浏览器的同源策略：只有同源的文件才能互相访问，以保证安全性。这就是为什么有时候本地调试时，直接打开<code>index.html</code>显示空白。</p><p>跨域，就是用一个域下的文档请求另一个域下的资源文档。</p><p>Promise异步加载资源，<code>appendChild(tag)</code>动态加载元素</p><p>加载js资源，通过并行加快速度，同时保证在完全加载js脚本后才能执行下一步，这就是Promise的作用。</p><h3 id="JavaScript异步编程">JavaScript异步编程</h3><blockquote><p>参考资料：<a href="https://www.runoob.com/js/js-async.html">JavaScript 异步编程 | 菜鸟教程 (runoob.com)</a></p></blockquote><p>回调函数：</p><p>setTimeout是异步的。</p><h3 id="Promise">Promise</h3><blockquote><p>参考资料：<a href="https://www.runoob.com/js/js-promise.html">JavaScript Promise | 菜鸟教程 (runoob.com)</a></p></blockquote><p>Javascript是单线程语言，若资源过大，加载过慢，会让人感觉阻塞。</p><p>Promise 是一个 ECMAScript 6 提供的类，目的是更加优雅地书写复杂的异步任务。</p><p>当 Promise 被构造时，起始函数会被同步执行</p><p>Promise 对象代表一个异步操作，有三种状态：pending（进行中）、fulfilled（已成功）、rejected（已失败）</p><h3 id="CDN-降低加载延迟">CDN - 降低加载延迟</h3><blockquote><p>参考资料：<a href="https://zhuanlan.zhihu.com/p/28940451">https://zhuanlan.zhihu.com/p/28940451</a></p></blockquote><p>加载live2d时用到了CDN。感谢CDN网站 <a href="https://www.jsdelivr.com/">https://www.jsdelivr.com/</a> 对我项目的加速支持。</p><p>CDN(Content Delivery Network)，内容分发网络，用来解决因分布、带宽、服务器性能带来的网络延迟问题。</p><ul><li>架构(以最简单的CDN网络为例)<ul><li>由一个DNS服务器和几台缓存服务器组成</li><li>用户点击URL，经过本地DNS系统解析，将域名的解析权交给CDN专用DNS服务器</li><li>CDN将全局负载均衡设备IP地址返回用户</li></ul></li><li>服务模式<br>分布式存储、负载均衡、网络请求的重定向、内容管理<br>核心要件：内容管理、全局流量管理</li><li>特点<ul><li>本地Cache加速，提高大量图片和静态页面的访问速度</li><li>镜像服务</li><li>远程加速</li><li>带宽优化</li><li>集群抗攻击</li></ul></li><li>应用<br>网站、直播、视频平台</li><li>示例<br><a href="https://www.jsdelivr.com/">https://www.jsdelivr.com/</a> 对开源免费</li></ul><h3 id="Cookie-Session-Token">Cookie, Session, Token</h3><blockquote><p>参考资料：<a href="https://zhuanlan.zhihu.com/p/625995458?utm_id=0">https://zhuanlan.zhihu.com/p/625995458?utm_id=0</a></p></blockquote><p>HTTP协议是无状态的，下一次请求与上一次请求无关系。</p><p>如何判断两次请求是同一个人？因此需要在客户端做标识。</p><table><thead><tr><th>方式</th><th>Cookie</th><th>Session</th><th>Token</th></tr></thead><tbody><tr><td>存储位置</td><td>客户端</td><td>服务端</td><td>自由操作</td></tr><tr><td>存储大小</td><td></td><td></td><td></td></tr><tr><td>优点</td><td>兼容性好</td><td></td><td></td></tr><tr><td>缺点</td><td>跨域不便</td><td></td><td></td></tr><tr><td>安全性</td><td>低</td><td></td><td>高</td></tr><tr><td>响应速度</td><td></td><td>快</td><td>慢</td></tr></tbody></table><p>Cookie存储在客户端，不够安全。</p><p>Session耗费服务器资源。通常与Cookie结合使用。</p><p>Token每次只存了用户id，然后查询数据库。由于只存id，内容存在服务端，因此安全性高，且不耗费服务器内存。由于需要查询服务端的数据库，因此响应慢。</p><p>Session以空间换时间，Token以时间换空间</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>web</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>web</tag>
+      
+      <tag>UI</tag>
+      
+      <tag>live2d</tag>
+      
+      <tag>hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Web03-UI</title>
+    <link href="/2023/11/28/Web03-UI/"/>
+    <url>/2023/11/28/Web03-UI/</url>
+    
+    <content type="html"><![CDATA[<h1>前端开发调研</h1><p>以前用Qt开发界面，主要问题是不能很好适配不同屏幕缩放比例。<br>Qt解决缩放问题：<br><a href="https://www.zhihu.com/question/451021591/answer/1896642195">https://www.zhihu.com/question/451021591/answer/1896642195</a></p><p>微信有一个WebUI库</p><h2 id="Electron">Electron</h2><ul><li>示例<ul><li>vs code</li><li><a href="http://draw.io">draw.io</a></li><li>Xmind</li></ul></li><li>优势</li><li>不足<ul><li>对硬件有要求。无法做嵌入式应用。</li><li>精度问题。通过通信协议调用Api而不是直接调用。(<a href="https://www.zhihu.com/question/509656170/answer/2874462255">https://www.zhihu.com/question/509656170/answer/2874462255</a>)</li><li>性能问题。</li><li>有人说，这是将软件开发成本转移到硬件</li></ul></li></ul><h2 id="WPF">WPF</h2><p>C#</p><h2 id="Qt">Qt</h2><ul><li>示例<ul><li>telegram</li><li>WPS</li></ul></li><li>优势<ul><li>自绘引擎，保证跨平台</li></ul></li></ul><h1>Web UI集锦</h1><ul><li><p>打字机效果</p><ul><li>示例 <a href="https://www.aomanhao.top/LoveHeart/">https://www.aomanhao.top/LoveHeart/</a></li><li>库介绍 <a href="https://blog.csdn.net/weixin_59480481/article/details/129205107">https://blog.csdn.net/weixin_59480481/article/details/129205107</a></li></ul></li><li><p>插入bilibili视频</p><ul><li>教程 <a href="https://zhuanlan.zhihu.com/p/149536086">https://zhuanlan.zhihu.com/p/149536086</a></li><li>直接用代码调整高度 <a href="https://blog.csdn.net/weixin_40539125/article/details/89682652">https://blog.csdn.net/weixin_40539125/article/details/89682652</a></li></ul></li><li><p>图片悬浮放大效果</p><ul><li>item-thumb lazy <a href="https://www.phenxso.com/archives/87.html">https://www.phenxso.com/archives/87.html</a></li></ul></li><li><p>基于配置文件/模板文件的修改</p><ul><li>步骤<ul><li>在网页中F12，检查需要修改的元素，获取其class和id</li><li>在themes/hexo-thema-material/layout/_partial/中找到ejs模板文件</li><li>在themes/hexo-thema-material/source/css/style.css中找到.sidebar-overlay</li></ul></li><li>教程 <a href="https://mmddyhc.github.io/2020/10/05/ji-yu-hexo-de-matery-zhu-ti-bo-ke-zeng-jia-shi-pin-bo-fang-qi/">https://mmddyhc.github.io/2020/10/05/ji-yu-hexo-de-matery-zhu-ti-bo-ke-zeng-jia-shi-pin-bo-fang-qi/</a></li></ul></li><li><p>加入Live2D详见Web04</p></li></ul><div class="bilibili"><iframe id="bili-radio" src="//player.bilibili.com/player.html?bvid=BV1pz4y1g7FC&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></div><script>document.getElementById("bili-radio").style.height = document.getElementById("bili-radio").scrollWidth * 0.6 + "px";</script>]]></content>
+    
+    
+    <categories>
+      
+      <category>web</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>web</tag>
+      
+      <tag>UI</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>CFD02 CFD&amp;GPU&amp;HPC综述</title>
+    <link href="/2023/11/27/CFD02-CFD&amp;GPU/"/>
+    <url>/2023/11/27/CFD02-CFD&amp;GPU/</url>
+    
+    <content type="html"><![CDATA[<p>[TOC]</p><blockquote><p>本文章是综述性的文章，不涉及具体代码实现和使用步骤。如果想要了解某一板块的具体知识，请移步“HPC”系列文章。</p></blockquote><h1>To do</h1><ul><li><p>AMD的构架，和CUDA对比</p></li><li><p>李新亮的GPU是如何实现的(OpenCFD GPU)</p></li></ul><p>一定要是非结构网格。如果跟李新亮做单块结构网格，就是死路一条。</p><p>调研高性能计算</p><blockquote><p>高性能计算的急迫需求</p><ul><li>大规模并行(集群)</li><li>并行效率</li><li>非定常湍流</li><li>多学科耦合的高精度预测问题(气动噪声、气动弹性)</li></ul></blockquote><p>多少网格需要多少CPU/GPU需要多长时间。</p><p>例如美国计算飞机，起落架、盖板均打开，能够算出来。</p><p>其他：</p><p>屏幕放大镜快捷键：win+“+”/“-”</p><p>编程时，修改FVM_2D代码（非结构网格），贡献到CMake上去。<br>也可以作为毕设的内容的一部分，因此也要做。</p><p>近壁厚度</p><p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>s</mi><mo>=</mo><mn>80</mn><mi mathvariant="normal">/</mi><mi>R</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">\Delta s = 80/Re </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Δ</span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">80/</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">e</span></span></span></span></span></p><p>云图和线图的区别：云图定性，线图定量。云图强调整体认识。</p><p>什么是壁函数。子迭代。<br>楼上有Fluent？</p><p>markdown生成思维导图：<a href="https://markmap.js.org/repl">Try markmap</a></p><h1>研究现状</h1><p>GPU（Graphics Processing Unit，图形处理单元）已成为计算流体动力学（CFD）编程领域的重要工具。它的并行处理能力大大加速了模拟，使研究人员能够解决更大、更复杂的问题。<br>近年来，在利用GPU进行CFD编程方面取得了重大进展。研究人员开发了专门的GPU加速求解器和算法，利用GPU的并行架构来有效求解流体流动的控制方程。与传统的基于CPU的求解器相比，这些基于GPU的求解器可以提供显著的加速，从而加快模拟的周转时间。<br>此外，诸如CUDA（计算统一设备架构）和OpenCL（开放计算语言）之类的GPU库提供编程接口，允许开发人员利用GPU的力量进行CFD应用。这些库为实现并行算法和优化GPU上的代码执行提供了一个框架。<br>许多商业和开源CFD软件包现在提供GPU加速选项，允许用户利用GPU计算资源。这些软件包包括ANSYS Fluent、OpenFOAM和COMSOL Multiphysics等。通过使用GPU，用户可以在合理的时间范围内获得显著的性能提升并解决更复杂的CFD问题。<br>GPU加速CFD编程领域的研究正在进行中。科学家和工程师继续探索新的技术和算法，以充分利用GPU的功能。这包括优化CPU和GPU之间的数据传输，开发高效的并行化策略，以及探索CPU-GPU混合方法以实现更大的性能改进。<br>总之，GPU技术通过实现更快的模拟和更复杂问题的解决方案，彻底改变了CFD编程。该领域正在进行的研究和开发有望进一步增强GPU加速CFD模拟的能力，使其在各个行业和科学研究中更有价值。</p><h1>GPU</h1><h2 id="GPU的特点">GPU的特点</h2><blockquote><p><a href="https://zhuanlan.zhihu.com/p/625896745">基于WebGL的GPGPU指南 - 概述 - 知乎 (zhihu.com)</a></p></blockquote><p>以图像显示为例，GPU上有许多着色器(shaders)，着色器用来计算屏幕每个像素点的颜色，而且它们是并行运行的。</p><p>这种并行性的<strong>代价</strong>是，着色器之间没有通信，它的输出仅取决于事先的输入，与相邻着色器无关。在图像显示中，这无关紧要，但是如果要用于科学计算，必然要涉及到通信的问题。</p><p>研究基于GPU的数值计算，其关键是将计算模型映射到图形硬件上，包括微分方程、金融建模、机器学习、图像处理，甚至数据库等领域。</p><h2 id="GPU和CPU性能对比">GPU和CPU性能对比</h2><p>对于流体实时渲染，GPU速度是CPU的86.422倍(数据来源<a href="https://www.youtube.com/watch?v=fE0P6H8eK4I">Real-Time Fluid Dynamics: CPU vs GPU - YouTube</a> [加州理工学院课件](<a href="http://courses.cms.caltech.edu/cs179/2023_lectures/cs179_2023_lec01.pdf">PowerPoint Presentation (caltech.edu)</a>))</p><h2 id="GPU和GPGPU？">GPU和GPGPU？</h2><p>GPGPU(General-purpose computing on graphics processing units)，即“通用图形处理器”。</p><p><code>GPGPU</code> = <code>General-purpose</code> + <code>GPU</code> ，目前市面上多数GPU都是GPGPU。</p><h2 id="CUDA、ROCm还是OpenCL？">CUDA、ROCm还是OpenCL？</h2><blockquote><p><a href="https://www.zhihu.com/question/360174784">opencl和cuda性能比较 - 知乎 (zhihu.com)</a></p></blockquote><p>CUDA是半开放的开发生态，NVIDIA没有完全依靠开源力量，而是花费大量精力制作工具包、计算库，例如TensorRT、离线产品渲染器、游戏物理加速等。</p><p>ROCm是开源生态。它只支持linux，不支持windows和macOS，而且容易出现显卡兼容性问题。</p><p>OpenCL (Open Compute Language) 是面向异构系统通用并行编程、可以在多个平台和设备上运行的开放标准。</p><p>OpenCL的处理流程和OpenGL类似。</p><table><thead><tr><th></th><th>CUDA</th><th>ROCm</th><th>OpenCL</th></tr></thead><tbody><tr><td>供应商</td><td>NVIDIA</td><td>AMD</td><td>AMD, NVIDIA, Apple, Radeon等</td></tr><tr><td>适用范围</td><td>仅限NVIDIA硬件</td><td></td><td></td></tr><tr><td>性能</td><td></td><td></td><td>为CUDA的1/4</td></tr><tr><td>库</td><td></td><td></td><td>不如CUDA广泛</td></tr><tr><td>技术细节</td><td>在C++上扩展， 使用CUDA关键字</td><td></td><td>C和CL脚本语言</td></tr></tbody></table><p>如果主要是学术研究发paper，那大部分的实验室会有N卡，基本上都是CUDA更加方便了。如果是给工业界正式的做项目，考虑到跨平台性，更多的还是openCL。</p><p>因此<strong>选用CUDA</strong>。</p><h2 id="CUDA">CUDA</h2><p>CUDA(Compute Unified Device Architectecture)是 NVIDIA 于 2006 年推出的通用并行计算架构，包含 CUDA 指令集架构(ISA)和 GPU 内部的并行计算引擎。</p><h3 id="CUDA的背景-NVIDIA的GPU架构">CUDA的背景 - NVIDIA的GPU架构</h3><p>在讲解CUDA前，有必要了解其历史和背景。</p><p>随着显卡的发展，GPU越来越强大，而且GPU为显示图像做了优化。在计算上已经超越了通用的CPU。如此强大的芯片如果只是作为显卡就太浪费了，因此NVIDIA推出CUDA，让显卡可以用于图像计算以外的目的。</p><blockquote><p><a href="https://zhuanlan.zhihu.com/p/394352476?utm_id=0&amp;eqid=c04f0ee500024ebe00000005648ab7c3">NVIDIA GPU 架构梳理 - 知乎 (zhihu.com)</a></p></blockquote><p>截止2021年，发布时间离我们最近的8种NVIDIA GPU微架构是：</p><ul><li><strong>Tesla</strong><ul><li>第一个实现统一着色器模型的微架构</li><li>G80<ul><li>第一款支持C语言的GPU</li></ul></li></ul></li><li><strong>Fermi</strong><ul><li>共享内存和L1 cache</li></ul></li><li><strong>Kepler</strong></li><li><strong>Maxwell</strong></li><li><strong>Pascal</strong></li><li><strong>Volta</strong></li><li><strong>Turing</strong></li><li><strong>Ampere</strong></li></ul><p>NVIDIA一般以历史上一些著名科学家的名字命名自己的GPU微架构，上面8种微架构分别是：<strong>特斯拉</strong>，<strong>费米</strong>，<strong>开普勒</strong>，<strong>麦克斯韦</strong>，<strong>帕斯卡</strong>，<strong>伏打</strong>，<strong>图灵</strong>，<strong>安培</strong>。</p><img src="/2023/11/27/CFD02-CFD&GPU/Fermi.jpg" class="" title="Fermi.jpg"><p>以Fermi架构的GPU为例，它共512 个 CUDA 内核，每个内核划分为 16 个 SM，每个 SM 是一个<strong>垂直的矩形条带</strong>(红框中的内容)，分别位于一个普通的 L2 cache周围，每个 SM 有32 个CUDA 内核。</p><p>每个CUDA 内核为一个线程在每个时钟周期里执行一条浮点或整数指令。</p><blockquote><p>GDDR5：第五版图形用双倍数据传输率存储器<br>DRAM：动态随机存取存储器</p></blockquote><h3 id="CPU-GPU的异构计算">CPU&amp;GPU的异构计算</h3><p>在CUDA编程模型中，主要有 Host（主机）和 Device（设备）两个概念，Host 包含 CPU 和主机内存，Device 包含 GPU 和显存，两者之间通过 PCI Express 总线进行数据传输。</p><p>在具体的 CUDA 实现中，程序通常划分为两部分，在主机上运行的 Host 代码和在设备上运行的 Device 代码。Host 代码负责程序整体的流程控制和数据交换，而 Device 代码则负责执行具体的计算任务。</p><p>主机和设备协同工作，即异构计算。</p><h3 id="CUDA的函数">CUDA的函数</h3><p>Host函数库</p><ul><li>Libraries<ul><li>常见的数学和科学计算任务运算库</li></ul></li><li>Runtime API<ul><li>自动管理 GPU 资源</li></ul></li><li>Driver API<ul><li>C 函数库，能更底层、更高效地控制 GPU 资源，但相应的开发者需要手动管理模块编译等复杂任务</li></ul></li></ul><p>Device函数，又称内核函数(Kernel)</p><ul><li>并行部分由 K 个不同的 CUDA 线程并行执行 K 次</li><li>一组线程被称为 CUDA 块(block)</li><li>若干block组成一个grid，若干grid被一个Kernel调用</li></ul><p><strong>丰富而成熟的软件生态是 CUDA 被广泛使用的关键原因.</strong></p><p>（1）编程语言：CUDA 12.0 支持 C、C++、Fortran、Python 等多种编程语言.此外，NVIDIA 还支持了如 PyCUDA、ltimesh Hybridizer、OpenACC 等众多第三方工具链，不断提升开发者的使用体验.</p><p>（2）库：NVIDIA 在 CUDA 平台上提供了名为 CUDA-X 的集合层，开发人员可以通过 CUDA-X 快速部署如 cuBLA、NPP、NCCL、cuDNN、TensorRT、OpenCV 等多领域常用库.</p><p>（3）其他：NVIDIA 还为 CUDA 开发人员提供了容器部署流程简化以及集群环境扩展应用程序的工具，让应用程序更易加速，使得CUDA 技术能够适用于更广泛的领域.</p><h2 id="WebGPU与WebGL">WebGPU与WebGL</h2><blockquote><p><a href="https://zhuanlan.zhihu.com/p/625896745">基于WebGL的GPGPU指南 - 概述 - 知乎 (zhihu.com)</a></p><p><a href="http://www.vizitsolutions.com/portfolio/webgl/gpgpu/index.html">Unleash Your Inner Supercomputer (vizitsolutions.com)</a></p></blockquote><p>新概念：</p><ul><li>帧缓冲对象(Framebuffer Object, FBO)</li></ul><h2 id="计算机图形学，GPU，OpenGL，Unity3D的关系">计算机图形学，GPU，OpenGL，Unity3D的关系</h2><blockquote><p><a href="https://www.zhihu.com/question/66848391/answer/3050017678?utm_id=0">计算机图形学，GPU，OpenGL，Unity3D什么关系？ - 知乎 (zhihu.com)</a></p></blockquote><p>从顶层到底层可以理解为：</p><p>“Unity”可以通过“OpenGL”告知“驱动”要做什么操作，“驱动”指挥“gpu”做计算并输出内容。</p><p>计算机图形学提供了理论和算法支持，GPU提供了硬件加速，OpenGL提供了图形编程接口，Unity3D则将它们整合在一起，方便开发者进行游戏和虚拟现实应用的开发。</p><p>OpenGL是一种跨平台的图形库。它本身并不是一个API，它仅仅是一个由Khronos组织制定并维护的规范(Specification)。API(Application Programming Interface, 应用程序编程接口)应当包含一系列可以操作图形、图像的函数。</p><p>Unity3D是一个软件（开发平台/游戏引擎），它可以使用OpenGL的接口（不一定）。Unity3D不是对接口的封装，它有一系列完备的工具/部件，使得你只需要写少量的代码，方便而已。</p><h1>GPU和CFD</h1><h3 id="防止发散的措施">防止发散的措施</h3><p>合适的初始条件。例如Fluent中先算10步是为了初始化。</p><h2 id="用结构网格还是非结构网格？">用结构网格还是非结构网格？</h2><p>结构网格</p><ul><li>优势<ul><li>算法简单<ul><li>数据结构简单，使得算法简单，且host(CPU)到device(GPU)的数据转移效率高</li></ul></li></ul></li><li>难点<ul><li>负载平衡</li><li>网格<ul><li>自适应网格加密(adaptive mesh refinement, AMR)<ul><li>类似碰撞检测算法中的八叉树。</li></ul></li></ul></li><li>复杂外形<ul><li>结构网格一般局限于笛卡尔坐标系或极坐标系<br>负载平衡。<br>非结构网格好处：复杂网格，自适应加密。</li></ul></li></ul></li></ul><p>非结构网格</p><ul><li>优势<ul><li>处理复杂外形时，非结构网格可以耗费更少的人力资源。其本质是将人工时间成本转移到计算量上</li></ul></li><li>难点<ul><li>不规则的内存访问模式(Irregular memory access patterns)<ul><li>单元数据通常是非连续的，而降低GPU性能<ul><li>GPUs typically achieve optimal performance with regular memory access patterns</li><li>通常，高速缓存中为了并行处理数据，要求数据连续存储</li><li>对于不连续数据，需要拷贝，造成额外开销</li></ul></li></ul></li><li>负载均衡(Load balancing)<ul><li>非结构网格的每个单元的计算量差异性更大</li></ul></li><li>数据结构和算法(Data structures and algorithms)<ul><li>网格的物理顺序和存储顺序不一致，导致需要增加额外映射</li><li>表示和处理都更加复杂、耗时。需要额外优化<ul><li>数据结构：邻接列表、八叉树(octrees)</li><li>算法：邻居搜索，插值(interpolation)</li></ul></li></ul></li><li>内存占用大<ul><li>非结构网格除了存储节点坐标，还要存储节点邻接关系，内存占用更大</li><li>GPU内存有限</li><li>需要更精细的内存管理<ul><li>数据压缩</li><li>分级数据结构(hierarchical data structures)</li></ul></li></ul></li></ul></li></ul><h2 id="GPU求解中，矩阵求解为主要耗时部分">GPU求解中，矩阵求解为主要耗时部分</h2><p>最主要耗时部分是矩阵求解，矩阵组装占比&lt;10%<sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="[(4 封私信 / 2 条消息) 写大规模三维并行计算流体力学(CFD)求解器时，有什么经验和心得？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/67619060/answer/2467792459)">[6]</span></a></sup></p><p>就目前来讲，多快好省地调用GPU的办法，是考虑使用现成的基于GPU架构编写的矩阵解法器，在这些解法器的基础上进行CFD的算法开发。比如Nvidia家的AMGx,、Petsc、Taichi等。不过GPU比CPU计算快在CAE领域并不是恒成立的，这跟CFD算法的计算逻辑、网格域划分的均衡程度、核间通信开销、访存命中率等都有很大的关系。而基于CPU的并行求解，如果对内存机制有比较深入的了解，依然可以获得最高达数十倍的性能提升，某些情况下并不会太逊色于GPU。</p><h2 id="提高网格生成效率的必要性">提高网格生成效率的必要性</h2><p>减少人工时间也是需要考虑的重要因素。当性能提高到一定程度后，也要考虑网格生成。<br>It is especially important to address this problem because it takes engineering person-time to solve. This is different from other factors, like simulation run time, that leave the researcher free to concentrate on other tasks.<br>三种提高网格生成效率的方式：<a href="https://www.engineering.com/story/cfd-mesh-generators-top-3-reasons-they-slow-analysis-and-how-to-fix-them">https://www.engineering.com/story/cfd-mesh-generators-top-3-reasons-they-slow-analysis-and-how-to-fix-them</a></p><h3 id="ParMETIS">ParMETIS</h3><p>ParMETIS(Parallel Graph Partitioning and Fill-reducing Matrix Ordering)</p><ul><li>简介<ul><li>基于MPI的并行库</li><li>是METIS的扩展</li><li>特别适用于并行AMR计算和大规模数值模拟</li><li>由ANSI C和MPI编写</li></ul></li><li>特点<ul><li>网址<ul><li>源网址为 <a href="http://glaros.dtc.umn.edu/gkhome/metis/parmetis/">http://glaros.dtc.umn.edu/gkhome/metis/parmetis/</a><br>Karypis Lab, University of Minnesota(美国明尼苏达大学)<br>wikipedia也是引用该网站的内容</li><li>其github仓库为 <a href="https://github.com/KarypisLab/ParMETIS">https://github.com/KarypisLab/ParMETIS</a><br>奇怪的是，仅有88stars</li></ul></li><li>功能<ul><li>Graph Partitioning</li><li>Mesh Partitioning</li><li>Graph Repartitioning</li><li>Partitioning Refinement<ul><li>improve the quality of partitions produced by other partition algorithms</li></ul></li><li>Matrix Reordering</li></ul></li><li>算法<ul><li>稀疏矩阵求解</li><li>非结构网格划分<ul><li>multilevel k-way graph-partitioning</li><li>adaptive repartitioning</li><li>parallel multi-constrained partitioning</li></ul></li></ul></li></ul></li></ul><h2 id="GPU在CFD中应用-需求">GPU在CFD中应用(需求)</h2><p>以下领域的模拟需要高性能计算，常与GPU有关：<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://developer.nvidia.com/blog/computational-fluid-dynamics-revolution-driven-by-gpu-acceleration/">[1]</span></a></sup></p><ul><li>考虑热传递的湍流</li><li>大涡和燃烧</li><li>磁流体力学</li><li>机器学习在CFD中的应用</li></ul><p>目前的需求有</p><ul><li>大规模并行(集群)</li><li>并行效率</li><li>非定常湍流</li><li>多学科耦合的高精度预测问题(气动噪声、气动弹性)</li></ul><p>对于非定常湍流的直接数值模拟</p><p>直接数值模拟不需要对湍流建立模型，对于流动的控制方程直接采用数值计算求解。由于湍流是多尺度的不规则流动，要获得所有尺度的流动信息，对于空间和时间分辨率需求很高，因而计算量大、耗时多、对于计算机内存依赖性强。直接数值模拟只能计算雷诺数较低的简单湍流运动，例如槽道或圆管湍流，现如今它还难以预测复杂湍流运动。</p><h2 id="GPU在CFD中的发展历程">GPU在CFD中的发展历程</h2><p>2021年末至2022年初，两大CFD软件供应商<em><strong>Ansys</strong></em>和Siemens(西门子)推出支持GPU加速的CFD工具旗舰版。<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://developer.nvidia.com/blog/computational-fluid-dynamics-revolution-driven-by-gpu-acceleration/">[1]</span></a></sup></p><blockquote><p>文章来源：GPU加速驱动的CFD革命 - The Computational Fluid Dynamics Revolution Driven by GPU Acceleration</p></blockquote><p>如今已经使用GPU加速的商业<strong>软件</strong>有：</p><ul><li>Altair CFD, nanoFluidX, ultraFluidX, and Acusolve</li><li>Cascade Technologies, CharLES</li><li>CPFD, Barracuda</li><li>Dassault Systèmes, SIMULIA XFlow</li><li>Numeric Systems, pacefish</li><li>Prometec, Particleworks</li><li>M-Star CFD</li><li><em><strong>NASA, FUN3D</strong></em></li></ul><p>Resolved Analytics统计了当今CFD计算所用线程数量，其中以9~32线程(34.0%)、33~256线程(29.0%)居多，共占比63.0%。</p><img src="/2023/11/27/CFD02-CFD&GPU/1-survey.png" class="" title="survey"><center style="font-size:14px;color:#C0C0C0;">Resolved Analytics survey of CFD users</center><p>GPU和CPU效率对比(Ansys Fluent)</p><img src="/2023/11/27/CFD02-CFD&GPU/4-ansys.png" class="" title="ansys"><center style="font-size:14px;color:#C0C0C0;">Performance of Ansys FLUENT 2022 beta1 for a 105M cell car model server vs. CPU-only servers</center><p>GPU和CPU效率对比(FUN3D)</p><img src="/2023/11/27/CFD02-CFD&GPU/5-fun3d.png" class="" title="fun3d"><center style="font-size:14px;color:#C0C0C0;">72-84x improvement shown for CPU vs. GPU performance of FUN3D version 14.0(unreleased), courtesy of the NASA FUN3D team.</center>使用GPU加速的开源软件有：***OpenFOAM***<p>目前正在研究的代码：Opencfd-SCU</p><h1>HPC</h1><blockquote><p><a href="https://en.wikipedia.org/wiki/High-performance_computing">High-performance computing - Wikipedia</a></p></blockquote><p>HPC即高性能计算，它涵盖GPU、OpenMP、MPI等方面，其终极目标是提高计算效率，最大限度提高能够计算的问题规模。</p><h2 id="OpenMP和MPI混合编程">OpenMP和MPI混合编程</h2><p><a href="https://www.cnblogs.com/woshibutian/articles/4601551.html">MPI与OpenMP的混合编程模型介绍</a></p><h3 id="OpenMP简介">OpenMP简介</h3><p>OpenMP是用于<strong>共享内存</strong>并行<strong>多处理器</strong>程序设计的编译处理方案。</p><p>通过调用OpenMP库，能够将程序并行化、多线程化。在最简单的情形，甚至可以只加一行指令，就可以将循环内的程序并行化处理。</p><p>不适合需要复杂的线程间同步和互斥的场合<br>不能在非共享内存系统(如计算机集群)上使用。此时用MPI替代。</p><h3 id="MPI简介">MPI简介</h3><p>MPI (Massage Passing Interface) 是消息传递函数库的标准规范，是一种基于消息传递的编程模型，不同进程间通过消息交换数据。</p><p>参考资料：</p><ul><li>书籍<ul><li>《UNIX环境编程》</li><li>《高性能计算并行编程技术》，都志辉，清华大学出版社</li><li>《MPI并行程序设计实例》，清华大学出版社</li></ul></li><li>网站<ul><li><a href="https://docs.open-mpi.org/en/v5.0.x/index.html">官网</a></li></ul></li></ul><h2 id="高精度多物理场流动模拟-sup-id-fnref-2-class-footnote-ref-a-href-fn-2-rel-footnote-span-class-hint-top-hint-rounded-aria-label-https-www-nvidia-com-en-us-on-demand-session-gtcspring22-s41452-2-span-a-sup">高精度多物理场流动模拟<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s41452/">[2]</span></a></sup></h2><h2 id="Fluent的非结构隐式求解器-sup-id-fnref-3-class-footnote-ref-a-href-fn-3-rel-footnote-span-class-hint-top-hint-rounded-aria-label-https-www-nvidia-com-en-us-on-demand-session-gtcspring22-s41953-3-span-a-sup">Fluent的非结构隐式求解器<sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s41953/">[3]</span></a></sup></h2><p>未完待续<br>无法直接查看，需要加入NVIDIA什么联盟。</p><h2 id="外流气动模拟的GPGPU加速-sup-id-fnref-4-class-footnote-ref-a-href-fn-4-rel-footnote-span-class-hint-top-hint-rounded-aria-label-https-www-nvidia-com-en-us-on-demand-session-gtcspring22-s41849-4-span-a-sup">外流气动模拟的GPGPU加速<sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s41849/">[4]</span></a></sup></h2><h2 id="NVIDIA创始人黄仁勋-Jensen-Huang">NVIDIA创始人黄仁勋(Jensen Huang)</h2><p>美籍华人，1963年出生于台北。</p><h1>编写代码注意事项<sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="[(4 封私信 / 2 条消息) 写大规模三维并行计算流体力学(CFD)求解器时，有什么经验和心得？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/67619060/answer/257847773)">[5]</span></a></sup></h1><h2 id="编程准备">编程准备</h2><blockquote><p><a href="https://www.zhihu.com/question/557675741/answer/3173033583">(5 封私信 / 10 条消息) 计算数学或者计算力学的研究生或博士生C++要学到什么程度（要搞高性能计算）？ - 知乎 (zhihu.com)</a></p></blockquote><h3 id="Level-1">Level 1</h3><p>基本C++语法</p><p>STL库</p><p>基本OOP</p><h2 id="编程准备1-待整理">编程准备1(待整理)</h2><p>所有求解器的本质是计算方程组。通用求解器是非线性里面嵌套一个线性。<sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="[(4 封私信 / 2 条消息) 写大规模三维并行计算流体力学(CFD)求解器时，有什么经验和心得？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/67619060/answer/2467792459)">[6]</span></a></sup></p><h3 id="学习路径">学习路径</h3><ul><li>CUDA</li><li>FEM的matrix free + GPGPU相关论文</li><li>从解Poisson方程练手，后面加dirichlet和neumann</li><li>先做单GPU，然后是GPU集群，接着和底层GPU硬件和内存打交道。</li></ul><h3 id="是否有必要重构旧代码">是否有必要重构旧代码</h3><p>要不要造轮子？先要想清楚是自己写还是在开源code上面<strong>二次开发</strong>，开源的openfoam蛮强大的，做很多科学问题完全可以在上面二次开发，毫不逊色。(身边有些组在上面做出很优秀的工作)</p><p>每个人都觉得旧代码烂，但也许你见了别人的代码就不这么认为了。</p><p>我觉得烂有几个级别：</p><p>(a) 丑但能用 – 结构不清晰，代码重复，变量重复，几十个参数传来传去，但代码大体正确，数学上没问题；</p><p>(b) 效率低下 – 在以上基础之上，在<strong>不影响正确性</strong>的地方有公式错误，收敛缓慢，在可接受的范围；</p><p>© 充满苟且 – 出现<strong>神秘参数</strong>不能改动，数学公式明显和论文对不上，但运行熟悉的case的结果竟然是对的，换新的case就不一定了；</p><p>(d) 忍无可忍 – 在以上基础上，有重大公式错误，造成求解不收敛，根本无法通过Benchmark测试，出于某种原因前人一直在拿这稀烂的结果忽悠人。</p><p>如果代码的症状在a和b的范畴之内，只要你还看得懂就不要考虑重写了；到c这一步就慎重考虑；到d这一步，要么直接走人要么就<a href="https://www.zhihu.com/search?q=%E5%A3%AE%E5%A3%AB%E6%96%AD%E8%85%95&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A256628270%7D">壮士断腕</a>。</p><p>总之，重写的工作量十分巨大，<strong>吃力不讨好</strong>，在别人看来是“进度停滞”、没有产出；你写出的东西只有<strong>署名权</strong>，毕业后没有代码产权，除非你写自己的代码然后将其开源掉。</p><p>如果你重写是为了提高CFD水平，不如直接读成熟的代码。 探索开源世界比自己造轮子要学起来<strong>快的多</strong>。</p><h3 id="常见CFD开源软件">常见CFD开源软件</h3><p>目前比较有名的CFD开源软件OpenFOAM，Su2，CFL3D, salome（<em>Code_Saturne</em> ）, coolfluid,moose,nektar++等。</p><blockquote><p>详见<a href="https://www.cfd-online.com/Wiki/Codes">Codes – CFD-Wiki, the free CFD reference (cfd-online.com)</a></p></blockquote><h3 id="不要急于求成，从一维-二维到三维">不要急于求成，从一维/二维到三维</h3><p>如果你必须算三维大规模<a href="https://www.zhihu.com/search?q=%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A255058565%7D">并行计算</a>，那也得把一二维的算好，一二维的benchmark能暴露很多问题的其实…</p><h3 id="使用库">使用库</h3><p>为了提高效率，不要重复造轮子，尽量用已有的库。</p><p>有限元</p><ul><li>dealii(<a href="http://www.dealii.org">www.dealii.org</a>)<ul><li>提供shape function, gauss integration, dof renumbering, etc.</li></ul></li></ul><p>FDM</p><ul><li>PETSc<ul><li>专注于大规模矩阵运算</li><li>提供分布式存储的矩阵、并行求解器。</li></ul></li><li>FEniCS<ul><li>内部默认基于PETSc，也有Trilinos的接口</li><li>适用于几百万自由度，几百万CPU并行</li></ul></li></ul><h3 id="选用合适的数值格式">选用合适的数值格式</h3><p>CFD计算中最难的是对流项，因为它将矩阵变为非对称的，增加了求解难度，另外当它占主导地位时还经常需要额外的稳定项。但如果你把这一项做显式处理，把它挪到方程右边，那你的方程左边就跟stokes方程一样了。这样能降低求解的难度，但代价的CFL条件更苛刻。如果你要用纯隐式方法你就要正确地线性化NS方程再使用牛顿法求解，总之要选择并推导出合适的数值格式。</p><h3 id="求解Ax-b">求解Ax=b</h3><h3 id="湍流模式">湍流模式</h3><p>大规模并行的目的之一就是计算带湍流的非定常问题，因此湍流必须加。目前主要是des，随着超算性能的提高，未来会加入les和dns</p><h3 id="并行">并行</h3><p>直接用PETSc，别傻乎乎用MPI造轮子，在2023年干1957年的活。</p><h3 id="团队合作">团队合作</h3><p>我觉得做大code的确需要良好的团队，大科学的时代即使数学家也需要更多的交流和刺激，何况这种妥妥的体力活。非数十年累计，数十人开发而不得，如NASA之流。我这方面没有太多经验，我的体会是如果蒙头写code改你们的code，我觉得毕业都是问题…当然如果完全没有后顾之忧，开着大奔玩<a href="https://www.zhihu.com/search?q=cfd&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A255058565%7D">cfd</a>，那这类工作于课题组是很有益的。</p><ul><li>语言选择<ul><li>初学原理MATLAB，正式编程C++<ul><li>与Fortran相比，C++可以带来编程效率的大幅提高和计算性能的小幅提高</li></ul></li></ul></li><li>数据类型<ul><li>编写矩阵模板<ul><li>重载基本矩阵运算操作符</li><li>负指标</li><li>越界检查</li><li>矩阵输出</li></ul></li></ul></li></ul><h2 id="编程顺序">编程顺序</h2><ul><li>从无粘欧拉方程开始，再加粘性湍流等。</li><li><strong>重要节点</strong>：完成欧拉方程求解器后，应仔细规划后续程序<ul><li>若要做MPI并行，此时应加入，否则后续改起来很麻烦</li><li>若要做动网格、ALE，此时应加入</li></ul></li></ul><p>注意</p><ul><li>复用性<ul><li>用宏变量/模板实现编译时的兼容(模板可参见Deal.II)<ul><li>尽可能兼容二维/三维</li></ul></li></ul></li><li>C++编程技巧<ul><li>效率优化语法，例如<code>a=a+b</code>→<code>a+=b</code>(随时注意即可，编译器一般会做优化)</li></ul></li><li>内存访问<ul><li>float的必要性<ul><li>对大矩阵的访问读取，float能大大加速内存的访问。</li><li>对于精度要求不高的大矩阵，替换float对计算精度影响不大<ul><li>例如，对于湍流模式的壁面距离矩阵、隐式迭代的对角矩阵、梯度算子矩阵等，用float后，计算精度并没有下降。</li></ul></li></ul></li><li>堆和栈的区别<ul><li>堆(new)的访问更慢<ul><li>堆的访问的并行加速倍数有上限，最多3倍</li><li>因为受限于内存带宽的限制</li></ul></li><li>栈的访问更快<ul><li>并行加速没有上限</li></ul></li></ul></li></ul></li><li>磁盘访问<ul><li>传输速度：二进制格式是文本格式的30倍</li><li>大小：二进制是文本的1/2</li><li>尽量输出plt而不是dat</li></ul></li><li>续算<ul><li>超算容易出问题，一定要做“保存断点+载入续算”的功能</li></ul></li></ul><h3 id="动网格">动网格</h3><ul><li>几何守恒(GCL)<ul><li>显式时间推进才需要</li><li>对于双时间步隐式推进不需要</li></ul></li></ul><h1>问题</h1><p>非结构网格隐式算法<br>隐式并行(permetic)</p><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://developer.nvidia.com/blog/computational-fluid-dynamics-revolution-driven-by-gpu-acceleration/">https://developer.nvidia.com/blog/computational-fluid-dynamics-revolution-driven-by-gpu-acceleration/</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s41452/">https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s41452/</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a href="https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s41953/">https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s41953/</a><a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a href="https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s41849/">https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s41849/</a><a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a href="https://www.zhihu.com/question/67619060/answer/257847773">(4 封私信 / 2 条消息) 写大规模三维并行计算流体力学(CFD)求解器时，有什么经验和心得？ - 知乎 (zhihu.com)</a><a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:6" class="footnote-text"><span><a href="https://www.zhihu.com/question/67619060/answer/2467792459">(4 封私信 / 2 条消息) 写大规模三维并行计算流体力学(CFD)求解器时，有什么经验和心得？ - 知乎 (zhihu.com)</a><a href="#fnref:6" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>CFD</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CFD</tag>
+      
+      <tag>HPC</tag>
+      
+      <tag>GPU</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Web02 Minecraft Multiplay</title>
+    <link href="/2023/11/27/Web02-Multiplay/"/>
+    <url>/2023/11/27/Web02-Multiplay/</url>
+    
+    <content type="html"><![CDATA[<h1>Minecraft联机</h1><p>首先确认能ping通，详见“Web06-LAN-connection”</p><h2 id="PCL局域网联机">PCL局域网联机</h2><p>PCL 登入失败:身份验证目前正在停机维护<br>需要正版账号，没办法</p><h2 id="Minecraft服务器联机">Minecraft服务器联机</h2><ol><li>下载服务器文件 <a href="https://mcres.net/download/paper">https://mcres.net/download/paper</a></li><li>联网条件下(最好有VPN)，撰写start.bat，初始化。参见：<br><a href="https://www.bilibili.com/read/cv24721921/">https://www.bilibili.com/read/cv24721921/</a></li></ol><h1>戴森球计划联机</h1><p><a href="https://www.bilibili.com/read/cv11150200/">https://www.bilibili.com/read/cv11150200/</a></p><h1>联机工具介绍</h1><p><a href="https://zhuanlan.zhihu.com/p/601246524">https://zhuanlan.zhihu.com/p/601246524</a></p><h2 id="RANmin-LAN">RANmin_LAN</h2><p>下载安装软件</p><ul><li><p>创建房间</p><ul><li>输入房间号和密码</li></ul></li><li><p>加入房间</p></li><li><p>打开游戏</p><ul><li>主机不用填</li><li>其他玩家填主机的虚拟IP地址</li></ul></li><li><p>协议</p><ul><li>TCP<ul><li>面向连接的，可靠的，基于字节流的</li><li>可靠<ul><li>超时重传</li></ul></li><li>三次握手，一对一</li></ul></li><li>UDP<ul><li>无连接的，不可靠的，面向数据报的</li><li>实时性更好，传输效率更高</li><li>实时应用，多媒体应用</li></ul></li></ul></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>web</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>web</tag>
+      
+      <tag>Minecraft</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>HPC04-cuda</title>
+    <link href="/2023/11/26/HPC04-cuda/"/>
+    <url>/2023/11/26/HPC04-cuda/</url>
+    
+    <content type="html"><![CDATA[<p>[TOC]</p><h1>CUDA with cmake</h1><p>2023-11-26<br>尝试用CMake和CUDA联合编程。但是由于目前虚拟机不能用GPU，因此不知道运行效果。<br>如果能够用Visual Studio打开CMake项目，并且设置nvcc为编译器就好了。可惜现在还对CMake不熟练，不知如何设置编译器<br>先暂时用VS+CUDA runtime，跨平台的事情以后再说吧。</p><table><tr><td bgcolor=yellow>background yellow</td></tr></table>]]></content>
+    
+    
+    <categories>
+      
+      <category>HPC</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>cuda</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>HPC03-mpi</title>
+    <link href="/2023/11/26/HPC03-mpi/"/>
+    <url>/2023/11/26/HPC03-mpi/</url>
+    
+    <content type="html"><![CDATA[<p>[TOC]</p><p>MPI总结<br><s>之前的文档太散乱了，因此在这里重新整理一下</s></p><h1>MPI</h1><h2 id="MPI简介">MPI简介</h2><h3 id="定义">定义</h3><p>Massage Passing Interface。是消息传递函数库的标准规范</p><h3 id="原理">原理</h3><p>MPI是一种基于消息传递的编程模型，不同进程间通过消息交换数据。<br>1.MPI点对点通信类型<br>2.MPI聚合通信<br>…</p><h3 id="参考资料">参考资料</h3><ul><li>书籍<ul><li>《UNIX环境编程》</li><li>《高性能计算并行编程技术》，都志辉，清华大学出版社</li><li>《MPI并行程序设计实例》，清华大学出版社</li></ul></li><li>网站<ul><li><a href="https://docs.open-mpi.org/en/v5.0.x/index.html">官网</a></li></ul></li></ul><h2 id="MS-MPI环境配置">MS-MPI环境配置</h2><p>步骤(详见<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="[在win10的VS 2019中安装 MPI （听不懂看操作就行） C++ 并行计算_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV12V411h7K4/)">[2]</span></a></sup>)</p><ol><li>下载MPI资源，安装至E:\Microsoft SDKs\<ol><li>进入网页<a href="https://learn.microsoft.com/en-us/message-passing-interface/microsoft-mpi">Microsoft MPI</a></li></ol></li><li>配置VS路径(在VS设置中)<ol><li>打开项目属性页-C/C+±常规-附加包含目录-编辑-添加E:\Microsoft SDKs\MPI\Include</li></ol><img src="/2023/11/26/HPC03-mpi/install-01.png" class="" title="mpi-install"><ol start="2"><li>链接器-常规-附加库目录-编辑-添加E:\Microsoft SDKs\MPI\Lib\x64</li></ol><img src="/2023/11/26/HPC03-mpi/install-02.png" class="" title="mpi-install"><ol start="3"><li>链接器-输入-附加依赖项-编辑-添加msmpi.lib</li></ol><img src="/2023/11/26/HPC03-mpi/install-03.png" class="" title="mpi-install"></li></ol><h2 id="Intel-MPI环境配置">Intel MPI环境配置</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://wenku.baidu.com/link?url=BgnOLi2JPMP7W3rV9Ud5_ttSRn71pOjE5B4Iib5Yjoy0lCT93J0fgMr63faNMNaF_BElAUDTotV0MVB8LLj0U9RUK1-XZWQoJx3q2JeKB8_&amp;_wkts_=1681633726745">VS2012下配置MPI - 百度文库</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="https://www.bilibili.com/video/BV12V411h7K4/">在win10的VS 2019中安装 MPI （听不懂看操作就行） C++ 并行计算_哔哩哔哩_bilibili</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>HPC</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mpi</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>HPC05-OpenMP</title>
+    <link href="/2023/11/26/HPC05-OpenMP/"/>
+    <url>/2023/11/26/HPC05-OpenMP/</url>
+    
+    <content type="html"><![CDATA[<h1>OpenMP简介</h1><h2 id="定义">定义</h2><p>OpenMP是由OpenMP Architecture Review Board牵头提出的，并已被广泛接受，用于共享内存并行系统的多处理器程序设计的一套指导性编译处理方案</p><h2 id="作用">作用</h2><p>通过调用OpenMP库，能够将程序并行化、多线程化。在最简单的情形，甚至可以只加一行指令，就可以将循环内的程序并行化处理。</p><h2 id="缺点">缺点</h2><p>不适合需要复杂的线程间同步和互斥的场合<br>不能在非共享内存系统(如计算机集群)上使用。此时用MPI替代。</p><h1>OpenMP使用方法</h1><h2 id="Visual-Studio">Visual Studio</h2><p>项目-右键-属性，打开项目属性页<br>如图，OpenMP支持选择“是”</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>HPC</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>OpenMP</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>HPC02-sbatch</title>
+    <link href="/2023/11/26/HPC02-sbatch/"/>
+    <url>/2023/11/26/HPC02-sbatch/</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://help.rc.ufl.edu/doc/Sample_SLURM_Scripts">https://help.rc.ufl.edu/doc/Sample_SLURM_Scripts</a></p><p>Memory requests<br>内存与计算速度无关</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>HPC</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>sbatch</tag>
+      
+      <tag>linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>HPC01-cmake01</title>
+    <link href="/2023/11/26/HPC01-cmake/"/>
+    <url>/2023/11/26/HPC01-cmake/</url>
+    
+    <content type="html"><![CDATA[<h1>VS 再次打开CMake项目时无法识别</h1><p>尝试清理缓存，然后重新生成</p><ul><li>菜单栏-项目-清理缓存并重新配置</li></ul><h1>cmake文件跨平台，程序计算结果不同</h1><p>我使用Visual Studio创建了一个CMake项目，能成功运行。然而我移植到在Linux上用cmake编译、运行时，程序得到的计算结果却不同。<br>查看log发现，应该是 abs() max()函数定义问题，自己定义abs_() max_() 后，问题解决。</p><p>GPT的回答：</p><ol><li><p>编译器差异：不同的操作系统和编译器可能对代码的处理方式存在差异，特别是在涉及浮点数运算和优化方面。这可能导致在不同平台上得到不同的计算结果。你可以尝试在Linux上使用与Visual Studio中相同的编译器（例如GCC）来编译代码，以确保结果的一致性。</p></li><li><p>依赖项问题：你的项目可能依赖于特定的库或组件，而在Linux上可能缺少这些依赖项或使用了不同的版本。这可能会导致在不同平台上产生不同的结果。确保在Linux上安装和配置了与Visual Studio相同的依赖项版本，并且在CMakeLists.txt文件中正确设置了这些依赖项。</p></li><li><p>CMake配置问题：CMakeLists.txt文件可能在不同平台上有所不同，特别是与编译选项、链接库和宏定义相关的部分。确保在Linux上正确配置了CMakeLists.txt，以便与Visual Studio中的配置保持一致。</p></li><li><p>平台相关行为：某些代码可能依赖于特定平台的行为，而在不同平台上可能表现不同。这可能涉及文件路径、操作系统相关的特性、并发行为等。确保你的代码在移植到Linux时考虑了这些平台相关的差异，并进行了适当的调整。</p></li></ol><p>这是windows前18步文件</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs stylus">  istep = <span class="hljs-number">0</span><span class="hljs-selector-tag">time</span> = <span class="hljs-number">0.0104167</span><br>dvormax/<span class="hljs-selector-tag">dt</span> = <span class="hljs-number">8640</span>dstrmax/<span class="hljs-selector-tag">dt</span> = <span class="hljs-number">0</span><br>calcutate <span class="hljs-selector-tag">time</span>: <span class="hljs-number">0.005s</span><br>  istep = <span class="hljs-number">1</span><span class="hljs-selector-tag">time</span> = <span class="hljs-number">0.0208333</span><br>dvormax/<span class="hljs-selector-tag">dt</span> = <span class="hljs-number">2671.78</span>dstrmax/<span class="hljs-selector-tag">dt</span> = <span class="hljs-number">9.18258</span>e-<span class="hljs-number">07</span><br>calcutate <span class="hljs-selector-tag">time</span>: <span class="hljs-number">0.007s</span><br>  istep = <span class="hljs-number">2</span><span class="hljs-selector-tag">time</span> = <span class="hljs-number">0.03125</span><br>dvormax/<span class="hljs-selector-tag">dt</span> = <span class="hljs-number">1541.5</span>dstrmax/<span class="hljs-selector-tag">dt</span> = <span class="hljs-number">9.44346</span>e-<span class="hljs-number">07</span><br>calcutate <span class="hljs-selector-tag">time</span>: <span class="hljs-number">0.014s</span><br>...<br>  istep = <span class="hljs-number">17</span><span class="hljs-selector-tag">time</span> = <span class="hljs-number">0.1875</span><br>dvormax/<span class="hljs-selector-tag">dt</span> = <span class="hljs-number">37.8238</span>dstrmax/<span class="hljs-selector-tag">dt</span> = <span class="hljs-number">9.18957</span>e-<span class="hljs-number">07</span><br>calcutate <span class="hljs-selector-tag">time</span>: <span class="hljs-number">0.042s</span><br>  istep = <span class="hljs-number">18</span><span class="hljs-selector-tag">time</span> = <span class="hljs-number">0.197917</span><br>dvormax/<span class="hljs-selector-tag">dt</span> = <span class="hljs-number">34.7246</span>dstrmax/<span class="hljs-selector-tag">dt</span> = <span class="hljs-number">8.76593</span>e-<span class="hljs-number">07</span><br>calcutate <span class="hljs-selector-tag">time</span>: <span class="hljs-number">0.044s</span><br></code></pre></td></tr></table></figure><p>这是linux文件。它把残差整数化了</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs stylus">  istep = <span class="hljs-number">0</span><span class="hljs-selector-tag">time</span> = <span class="hljs-number">0.0104167</span><br>dvormax/<span class="hljs-selector-tag">dt</span> = <span class="hljs-number">8640</span>dstrmax/<span class="hljs-selector-tag">dt</span> = <span class="hljs-number">0</span><br>calcutate <span class="hljs-selector-tag">time</span>: <span class="hljs-number">0.000465s</span><br>  istep = <span class="hljs-number">1</span><span class="hljs-selector-tag">time</span> = <span class="hljs-number">0.0208333</span><br>dvormax/<span class="hljs-selector-tag">dt</span> = <span class="hljs-number">2400</span>dstrmax/<span class="hljs-selector-tag">dt</span> = <span class="hljs-number">0</span><br>calcutate <span class="hljs-selector-tag">time</span>: <span class="hljs-number">0.000647s</span><br>  istep = <span class="hljs-number">2</span><span class="hljs-selector-tag">time</span> = <span class="hljs-number">0.03125</span><br>dvormax/<span class="hljs-selector-tag">dt</span> = <span class="hljs-number">1824</span>dstrmax/<span class="hljs-selector-tag">dt</span> = <span class="hljs-number">0</span><br>calcutate <span class="hljs-selector-tag">time</span>: <span class="hljs-number">0.002803s</span><br>  istep = <span class="hljs-number">3</span><span class="hljs-selector-tag">time</span> = <span class="hljs-number">0.0416667</span><br>dvormax/<span class="hljs-selector-tag">dt</span> = <span class="hljs-number">1536</span>dstrmax/<span class="hljs-selector-tag">dt</span> = <span class="hljs-number">0</span><br>calcutate <span class="hljs-selector-tag">time</span>: <span class="hljs-number">0.002997s</span><br>...<br>  istep = <span class="hljs-number">17</span><span class="hljs-selector-tag">time</span> = <span class="hljs-number">0.1875</span><br>dvormax/<span class="hljs-selector-tag">dt</span> = <span class="hljs-number">96</span>dstrmax/<span class="hljs-selector-tag">dt</span> = <span class="hljs-number">0</span><br>calcutate <span class="hljs-selector-tag">time</span>: <span class="hljs-number">0.005587s</span><br>  istep = <span class="hljs-number">18</span><span class="hljs-selector-tag">time</span> = <span class="hljs-number">0.197917</span><br>dvormax/<span class="hljs-selector-tag">dt</span> = <span class="hljs-number">0</span>dstrmax/<span class="hljs-selector-tag">dt</span> = <span class="hljs-number">0</span><br>calcutate <span class="hljs-selector-tag">time</span>: <span class="hljs-number">0.00577s</span><br>  istep = <span class="hljs-number">18</span><span class="hljs-selector-tag">time</span> = <span class="hljs-number">0.197917</span><br>dvormax/<span class="hljs-selector-tag">dt</span> = <span class="hljs-number">0</span>dstrmax/<span class="hljs-selector-tag">dt</span> = <span class="hljs-number">0</span><br>calcutate <span class="hljs-selector-tag">time</span>: <span class="hljs-number">0.005823s</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>HPC</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>tricks</tag>
+      
+      <tag>c++</tag>
+      
+      <tag>cpp</tag>
+      
+      <tag>cmake</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>CFD01-tecplot01 tecplot notes</title>
+    <link href="/2023/11/25/CFD01-tecplot01/"/>
+    <url>/2023/11/25/CFD01-tecplot01/</url>
+    
+    <content type="html"><![CDATA[<h1>01如何使用tecplot</h1><p>若未特殊说明，适用版本：Tecplot360EX2014<br>软件安装目录&quot;\doc&quot;下有说明文档</p><h2 id="CFD后处理基本流程">CFD后处理基本流程</h2><ol><li>看hist残差，是否收敛</li><li></li></ol><h2 id="线图">线图</h2><h3 id="xy线图">xy线图</h3><ol><li>设置对数坐标轴<ol><li>菜单栏 - plot - MappingStyle，勾选需要显示的值。例如，R_1~R_5表示5种守恒量的残差，C_L表示升力系数</li><li>菜单栏 - plot - axis，打开“Axis Details”对话框，使用对数坐标，并reset range to nice value</li></ol></li></ol><p>显示图例：Plot-LineLegend-ShowLineLegend</p><h2 id="二维Plot">二维Plot</h2><h3 id="矢量图">矢量图</h3><p>显示流场速度矢量图时，要保证矢量的定义是正确的，否则流场有问题。方法是菜单栏 - Plot - Vector - Variables，修改UVW矢量对应的变量。</p><h3 id="等高线图">等高线图</h3><ol><li>显示等高线<ol><li>菜单栏 - plot - zone style，打开“Zone Style”对话框</li><li>然后右击更改contour type为line。</li></ol></li><li>更改背景颜色<ol><li>如果背景为灰色，在对话框的Shade选项卡中，更改shade color为白色</li></ol></li><li>添加数字<ol><li>菜单栏 - plot - contour/multicoloring，打开对话框</li><li>选择对应数字的组，例如“1”组</li><li>在Labels选项卡显示数字</li><li>在Levels选项卡调整等高线疏密</li></ol></li></ol><p><a href="http://k.sina.com.cn/article_7454513598_1bc52d9be00100y0hp.html">http://k.sina.com.cn/article_7454513598_1bc52d9be00100y0hp.html</a></p><h3 id="动画">动画</h3><p>菜单栏-data-edit time strands（编辑时间线），<br>左侧列表显示的是每一帧。点击apply，会将列表中的帧连成动画</p><h2 id="三维Plot">三维Plot</h2><p>该部分参照Tecplot360EX2023的user manual<br>注意：IJK plot settings、Edge Layer、Contour plots只适用于IJK-ordered data或FEdata[195]</p><h3 id="绘制物体表面云图-剖面图">绘制物体表面云图+剖面图</h3><ol><li>确保导入surface data。不能只导入volume data！</li><li>绘制压力梯度<ol><li>菜单栏-Analyze-Field Variables，设置p、Temperature</li><li>菜单栏-Analyze-Calculate Variables，计算Pressure Gradient Magnitude</li><li>计算得到的压力梯度值，在某些激波处会非常小，难以识别。通常与网格尺度有关。此时需要手动取点，观察值，然后设置合适的ColorBar</li></ol></li></ol><h3 id="绘制物体表面云图-涡结构">绘制物体表面云图+涡结构</h3><p>iso-surfaces见手册[252]</p><h3 id="流线">流线</h3><p>可以在对话框中设置流线颜色，也可设置线型(条带)</p><h3 id="剖面图">剖面图</h3><ul><li>选取任意方向剖面图<ul><li>点击“Slices”右侧第1个图标，然后按“A”<ul><li>拖动控制手柄的顶点，即可改变arbitary slices的法线方向</li><li>拖动控制手柄的杆，即可平移slice</li><li>拖动控制手柄的另一个顶点，即可改变旋转中心</li></ul></li></ul></li><li>双击剖面可打开属性对话框，右击可弹出快捷菜单</li><li>将剖面云图随展向的变化制作为动画<ul><li>在Slice的属性对话框中，Animate标签页，设置截面初始值和终止值。然后将视图正对截面，录制视频</li><li>请参考： <a href="https://tecplot.com/2021/08/05/placing-a-slice/">https://tecplot.com/2021/08/05/placing-a-slice/</a></li></ul></li></ul><p>注：<br>在勾选mesh和contour时若弹出对话框“all active zones are volume zones, …”，说明未导入表面云图数据</p><h3 id="根据剖面图绘制线图，提取翼型某截面的升阻力系数随弦长的变化关系">根据剖面图绘制线图，提取翼型某截面的升阻力系数随弦长的变化关系</h3><p><a href="https://tecplot.com/2022/02/25/extracting-surface-slices-in-xy-line-data/">https://tecplot.com/2022/02/25/extracting-surface-slices-in-xy-line-data/</a></p><h2 id="如何手动编写tecplot文件">如何手动编写tecplot文件</h2><p><a href="https://www.cnblogs.com/zhubinglong/p/8735426.html">https://www.cnblogs.com/zhubinglong/p/8735426.html</a></p><h1>参考资料</h1><p><a href="https://www.bilibili.com/video/BV1Fy4y1S7zj?p=13">Tecplot基础教程（完整版）- bilibili</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CFD</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>tecplot</tag>
+      
+      <tag>tricks</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>How to clear usb history</title>
+    <link href="/2023/11/24/How-to-clear-usb-history/"/>
+    <url>/2023/11/24/How-to-clear-usb-history/</url>
+    
+    <content type="html"><![CDATA[<h1>How to clear the USB drive access record on the computer</h1><h2 id="如何查找U盘留下的痕迹">如何查找U盘留下的痕迹</h2><ol><li>recent<br>通过查“recent”，会出现已接入的USB<br>如何清除“recent”</li><li>registry<br>命令行中输入以下命令</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs code">Get-ItemProperty -Path HKLM:SYSTEM\CurrentControlSet\Enum\USBSTOR\*\* | Select FriendlyName<br></code></pre></td></tr></table></figure><p>或者在注册表中查找</p><figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\<br></code></pre></td></tr></table></figure><ol start="3"><li><p>windows event viewer (事件查看器)</p></li><li><p>使用专用工具<br><a href="https://www.nirsoft.net/utils/usb_devices_view.html">USBDeview</a></p></li></ol><h2 id="如何清除U盘痕迹">如何清除U盘痕迹</h2><ol><li><p>清理recent<br>win11：在explorer中，点击“…”-选项，打开“文件夹选项”，“清除文件资源管理器历史记录”</p></li><li><p>清理注册表</p><ul><li><p>手动清除：在注册表编辑器中搜索</p>   <figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\USBSTOR<br></code></pre></td></tr></table></figure><p>删除时，通常会报错：“无法清除。清除项时出错。”，因为没有权限。</p></li><li><p>软件删除：用USBOblivion<br>它会清除注册表中USB4和USBSTOR的信息。</p></li></ul></li><li><p>清理事件查看器</p></li></ol><h2 id="参考资料">参考资料</h2><p><a href="https://www.makeuseof.com/windows-view-usb-history/">5种方式查看history - makeuseof.com</a><br><a href="https://www.bjjmlv.com/jiaocheng/09346864.html">通过注册表查看history - bjjmlv.com</a><br><a href="https://www.wikihow.com/Clear-the-Record-of-USB-Plug-in-Equipment">使用USB Deview查看history - wikihow</a><br><a href="https://www.itechtics.com/remove-traces-usb-drives-ever-connected-computer/">使用Oblivion移除history - itechtics</a><br><a href="https://baike.baidu.com/item/%E4%BF%9D%E5%AF%86%E6%A3%80%E6%9F%A5%E5%B7%A5%E5%85%B7/5915199">保密检查工具 - 百度百科</a><br><a href="https://zhidao.baidu.com/question/170713628.html">保密检查工具 - 百度知道</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Leetcode01 NodeList</title>
+    <link href="/2023/11/24/Leetcode01-NodeList/"/>
+    <url>/2023/11/24/Leetcode01-NodeList/</url>
+    
+    <content type="html"><![CDATA[<h1>链表</h1><p><a href="https://leetcode.cn/leetbook/read/illustration-of-algorithm/7fadz7/">力扣-图解算法数据结构</a></p><h2 id="链表逆序">链表逆序</h2><p>写算法时，脑海里应当有“图”。<br>用节点表示内存数据，用箭头表示链接关系。为了减少开销，应尽量不改变节点(不改变内存数据)，只改变箭头。逆序的过程，就是改变箭头指向的过程。<br>改变箭头指向，需要用指针的next操作来实现。<br>从每一步来看，改变箭头指向，需要知道箭头改变后首尾节点的位置，因此需要两个指针(cur, pre)。<br>但是，为了做到与下一步的衔接，还需要一个指针(tmp)。因此共需三个指针。</p><img src="/2023/11/24/Leetcode01-NodeList/01-reverse-01.png" class="" title="reverse01"><img src="/2023/11/24/Leetcode01-NodeList/01-reverse-02.png" class="" title="reverse02"><img src="/2023/11/24/Leetcode01-NodeList/01-reverse-03.png" class="" title="reverse03">]]></content>
+    
+    
+    <categories>
+      
+      <category>leetcode</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>tricks</tag>
+      
+      <tag>c++</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Python01 有趣的python库</title>
+    <link href="/2023/11/23/Python01-useful-tricks/"/>
+    <url>/2023/11/23/Python01-useful-tricks/</url>
+    
+    <content type="html"><![CDATA[<h1>python库</h1><p><a href="https://www.bilibili.com/video/BV1uw411T71R">原神自动跳过剧情</a>，通过opencv库的图像识别功能识别“播放”按钮，然后控制鼠标跳过剧情。</p><p>OpenCV库讲解：<br><a href="https://zhuanlan.zhihu.com/p/650558117">快速入门OpenCV(python版)</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>tricks</tag>
+      
+      <tag>python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Web01 如何创建个人主页</title>
+    <link href="/2023/11/23/Web01-How-to-create-a-personal-homepage/"/>
+    <url>/2023/11/23/Web01-How-to-create-a-personal-homepage/</url>
+    
+    <content type="html"><![CDATA[<h1>用Hexo创建静态博客网站</h1><h2 id="简介">简介</h2><p>本网站是基于github-page，无需自建服务器<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://www.zhihu.com/question/462149457">[1]</span></a></sup>。</p><ul><li>优点：<ul><li>免费</li></ul></li><li>缺点：<ul><li>无法实现客户端到服务器的数据传输(?没试过)</li><li>网站代码公开</li></ul></li></ul><h2 id="首次创建网站">首次创建网站</h2><p>直接参照<a href="http://tanglab.pku.edu.cn/2022/11/24/R&amp;D/2022/GitHub_pages_tutorial_sequel/">网站1</a>，它详细讲解了创建方法。它是基于hexo创建的，即将md文件转换为html网页。<br>如果想更换hexo主题，可以参照<a href="https://easyhexo.com/2-Theme-use-and-config/">网站2</a><br>Markdown语法参见<a href="https://docs.github.com/en/get-started/writing-on-github">GitHub官方文档</a>，或者<a href="https://www.runoob.com/markdown/md-tutorial.html">菜鸟教程</a>。Typora用起来是真香，和word一样可见即所得。</p><p>需要注意的内容</p><ol><li>hexo初始化需要保证是空目录，否则报错</li><li>发现&quot; <a href="https://olivetien.github.io/">https://olivetien.github.io/</a> &quot;显示404。原因根目录没有index.html。应该将public文件夹推送上去，而不是将整个项目目录推送上去</li><li>我打算直接将源码推送到github.io项目，在外面新建一个重定向的index.html，但是不行，邮件提示报错。因此改回原来的双respectory方式</li></ol><h2 id="修改网站内容">修改网站内容</h2><h3 id="基本步骤">基本步骤</h3><ol><li>用vscode打开本地源码目录，修改内容<ul><li>用<code>hexo new post &quot;(new_post_title)&quot;</code>新建一篇文档</li></ul></li><li>根目录打开终端<ul><li>输入“hexo s”，启动服务器。此时可以实时修改并查看效果</li><li>输入“hexo clean”清理之前生成的内容，输入“hexo g”编译，生成到public</li></ul></li><li>清除目标仓库的原有代码(别把.git和readme给删了)，将public中的代码复制到目标仓库，用github客户端推送两个respectory</li><li>推送完成后，等待2分钟(等网页更新)</li></ol><h3 id="图片">图片</h3><p>插入图片可以用markdown格式，注意别忘记&quot;!&quot;(否则显示为超链接)</p><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">![img](<span class="hljs-keyword">https</span>://olivetien.github.io/<span class="hljs-number">2023</span>/<span class="hljs-number">11</span>/<span class="hljs-number">23</span>/How-<span class="hljs-built_in">to</span>-<span class="hljs-built_in">create</span>-<span class="hljs-keyword">a</span>-personal-homepage/img.png)<br></code></pre></td></tr></table></figure><p>也可以用hexo格式</p><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs maxima">&#123;<span class="hljs-symbol">%</span> asset_img img.png This <span class="hljs-built_in">is</span> an <span class="hljs-built_in">example</span> <span class="hljs-built_in">image</span> <span class="hljs-symbol">%</span>&#125;<br></code></pre></td></tr></table></figure><h3 id="封面图">封面图</h3><p>封面图（thumbnail）直接放在博客同名文件夹，命名为thumbnail.jpg即可</p><p>如果thumbnail不显示，首先应检查是否在_config.yml中设置post_asset_folder为true，此外检查路径是否输入正确</p><h2 id="高级玩法">高级玩法</h2><h3 id="添加自定义文件">添加自定义文件</h3><p>在<code>./source/</code>中添加文件夹和文件即可。注意如果添加的是空文件夹，编译时会自动删除，因为用不到。</p><p>你也可以添加进主题的<code>source</code>文件夹中。</p><h3 id="添加自定义html页面并防止被hexo渲染">添加自定义html页面并防止被hexo渲染</h3><p>理论上，可以在source文件夹中放任何文件，它会映射到对应目录。但如果是md或html文件，会被hexo处理导致无法正常显示。如何避免被hexo渲染：</p><p>法一：<br>编辑hexo配置文件_config.yml，在skip_render位置添加属性：</p><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><span class="hljs-attribute">skip_render</span><span class="hljs-punctuation">: </span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">./HTML/**</span><br>    <span class="hljs-comment"># 表示HTML文件夹里面的所有内容都不会被hexo渲染</span><br></code></pre></td></tr></table></figure><p>但自己测试发现不起作用</p><p>法二：在每个html前加上</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">layout:</span> <span class="hljs-literal">false</span><br><span class="hljs-meta">---</span><br><span class="hljs-string">解决的。渲染时会自动去掉这些</span><br></code></pre></td></tr></table></figure><h3 id="添加Javascript代码">添加Javascript代码</h3><p>要想在md中添加JS代码，只需要添加html代码即可。以下是一个按钮示例：</p><div id="phaser-catch-the-cat"></div><p><button id="phaser-catch-the-cat-load-button">点击加载游戏</button></p><script>  document.getElementById('phaser-catch-the-cat-load-button').addEventListener('click', function () {    document.getElementById('phaser-catch-the-cat').innerHTML = '<iframe width="100%" height="600" src="https://ganlvtech.github.io/phaser-catch-the-cat/index.html"></iframe>';    this.remove();  });</script><div></div><p>按钮的md源码：</p> <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;phaser-catch-the-cat&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;phaser-catch-the-cat-load-button&quot;</span>&gt;</span>点击加载游戏<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-handlebars"><span class="language-xml"></span></span><br><span class="language-xml"><span class="language-handlebars">  document.getElementById(&#x27;phaser-catch-the-cat-load-button&#x27;).addEventListenerclick&#x27;, function () &#123;</span></span><br><span class="language-xml"><span class="language-handlebars">    document.getElementById(&#x27;phaser-catch-the-cat&#x27;).innerHTML = &#x27;<span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">dth</span>=<span class="hljs-string">&quot;100%&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;600&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://ganlvtech.github.io/phaser-catch-the-cat/dex.html&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>&#x27;;</span></span><br><span class="language-xml"><span class="language-handlebars">    this.remove();</span></span><br><span class="language-xml"><span class="language-handlebars">  &#125;);</span></span><br><span class="language-xml"><span class="language-handlebars"></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure><h3 id="添加网页计数器">添加网页计数器</h3><p>添加如下代码</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">async</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;busuanzi_container_site_pv&quot;</span>&gt;</span>本站总访问量<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;busuanzi_value_site_pv&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>次<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br><br></code></pre></td></tr></table></figure><p>如果要应用到全局，可以修改<code>themes/hexo-theme-material/layout/layout.ejs</code>的模板文件<br>它统计的实际是该域名下的点击量(例如<code>olivetien.github.io\</code>下所有网页)，因此每点击一篇文章都会导致记录加1</p><p>前面提到模板文件使用ejs格式。ejs是&quot;E&quot; javascript的速写，这里&quot;E&quot;可以理解为easy/elegant等单词。它在html中嵌入脚本，实现批量生成html的功能</p><h3 id="添加评论">添加评论</h3><p>使用gitalk。</p><p>首先需要注册github app，每个评论的人都需要登录该app。注册方法参照如下教程</p><p><a href="https://yuanlichenai.cn/2020/01/16/Gitalk/">Gitalk配置教程 | YuanLiChenAi</a></p><p>然后修改配置文件，参照如下教程。material自带预设，不需要自己写ejs代码，只需修改配置文件即可</p><p><a href="https://easyhexo.com/2-Theme-use-and-config/2-5-hexo-theme-material/#material-%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE">hexo-theme-material | Easy Hexo 👨‍💻</a></p><p>可是总是出现error not found的问题，参照以下链接，看F12解决</p><p><a href="https://www.zhihu.com/question/564993787">(3 封私信 / 31 条消息) Gitalk 错误码Error: Not Found.？ - 知乎 (zhihu.com)</a></p><p>又出现Error: Validation Failed.</p><p>搜索gitalk，关键信息位于<code>\layout\_widget\comment\gitalk\main.ejs</code>和<code>enter.ejs</code>中。在<code>main.ejs</code>中有如下代码</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript">    <span class="hljs-keyword">var</span> gitalk = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Gitalk</span>(&#123;</span><br><span class="language-javascript">            <span class="hljs-attr">clientID</span>: <span class="hljs-string">&#x27;&lt;%= theme.comment.gitalk_client_id %&gt;&#x27;</span>,</span><br><span class="language-javascript">            <span class="hljs-attr">clientSecret</span>: <span class="hljs-string">&#x27;&lt;%= theme.comment.gitalk_client_secret %&gt;&#x27;</span>,</span><br><span class="language-javascript">            <span class="hljs-attr">repo</span>: <span class="hljs-string">&#x27;&lt;%= theme.comment.gitalk_repo %&gt;&#x27;</span>,</span><br><span class="language-javascript">            <span class="hljs-attr">owner</span>: <span class="hljs-string">&#x27;&lt;%= theme.comment.gitalk_owner %&gt;&#x27;</span>,</span><br><span class="language-javascript">            <span class="hljs-attr">admin</span>: [<span class="hljs-string">&#x27;&lt;%= theme.comment.gitalk_owner %&gt;&#x27;</span>],</span><br><span class="language-javascript">            <span class="hljs-attr">distractionFreeMode</span>: <span class="hljs-literal">false</span></span><br><span class="language-javascript">        &#125;)</span><br><span class="language-javascript">   gitalk.<span class="hljs-title function_">render</span>(<span class="hljs-string">&#x27;gitalk-container&#x27;</span>)</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure><p>参照教程<a href="https://blog.csdn.net/Keith_Prime/article/details/111604291">Gitalk Error: Validation Failed._gitalk正则报错-CSDN博客</a>的分析，问题的原因是该代码没有配置必要参数id和title，导致生成issue时自动生成了很长的id，超出了新版github对id字符数的限制（50字符）。解决方法是添加这两项</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs html">id: &#x27;Github Page Comment&#x27;<br>title: &#x27;Github Page Comment&#x27;<br></code></pre></td></tr></table></figure><p>虽然能成功评论了，但是所有博客共用评论，这不是我想看到的。于是参照博客<a href="https://www.cnblogs.com/JosonLee/p/10053715.html">不知道的痛 - 博客园</a>，采用md5，根据每个博客的路径（<code>location.pathname</code>），生成唯一的id。代码如下，注意需要导入文件<code>/files/js/md5.min.js</code></p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/files/js/md5.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript">    <span class="hljs-keyword">var</span> gitalk = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Gitalk</span>(&#123;</span><br><span class="language-javascript">            <span class="hljs-attr">id</span>: <span class="hljs-title function_">md5</span>(location.<span class="hljs-property">pathname</span>),</span><br><span class="language-javascript">            <span class="hljs-attr">clientID</span>: <span class="hljs-string">&#x27;&lt;%= theme.comment.gitalk_client_id %&gt;&#x27;</span>,</span><br><span class="language-javascript">            <span class="hljs-attr">clientSecret</span>: <span class="hljs-string">&#x27;&lt;%= theme.comment.gitalk_client_secret %&gt;&#x27;</span>,</span><br><span class="language-javascript">            <span class="hljs-attr">repo</span>: <span class="hljs-string">&#x27;&lt;%= theme.comment.gitalk_repo %&gt;&#x27;</span>,</span><br><span class="language-javascript">            <span class="hljs-attr">owner</span>: <span class="hljs-string">&#x27;&lt;%= theme.comment.gitalk_owner %&gt;&#x27;</span>,</span><br><span class="language-javascript">            <span class="hljs-attr">admin</span>: [<span class="hljs-string">&#x27;&lt;%= theme.comment.gitalk_owner %&gt;&#x27;</span>],</span><br><span class="language-javascript">            <span class="hljs-attr">distractionFreeMode</span>: <span class="hljs-literal">false</span>,</span><br><span class="language-javascript">            <span class="hljs-attr">title</span>: <span class="hljs-string">&#x27;Github Page Comment&#x27;</span></span><br><span class="language-javascript">        &#125;)</span><br><span class="language-javascript">   gitalk.<span class="hljs-title function_">render</span>(<span class="hljs-string">&#x27;gitalk-container&#x27;</span>)</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><br></code></pre></td></tr></table></figure><p>md5简介：md5是消息摘要算法，任意长度的消息经过处理都会生成相同长度的字符串。MD5的用途有：防止信息被篡改，防止直接看到明文，添加数字签名等</p><p>经过以上操作，每篇文章的issue都是独立的了。但还需要做初始化操作，否则访客看到的页面是“未找到相关的issues进行评论，请联系@OliveTIen初始化创建”。初始化操作为，登自己的账号，把每个博客浏览一遍，这样每个博客首次加载时都会自动初始化issue</p><h3 id="其他">其他</h3><p>添加live2d参见文章Web04</p><p>更多高阶玩法参见Lei Mao的GitHub博客<a href="https://leimao.github.io/blog/Hexo-Blog-Add-JavaScript/">教程</a>，这是他的<a href="https://github.com/ganlvtech/ganlvtech.github.io">GitHubPage仓库(ganlvtech.github.io)</a>，这是他的<a href="https://github.com/ganlvtech/blog">博客源码</a></p><p><a href="http://tanglab.pku.edu.cn/2022/11/24/R&amp;D/2022/GitHub_pages_tutorial/#%E6%B3%A8%E5%86%8C%E4%B8%AA%E4%BA%BAGitHub%E8%B4%A6%E5%8F%B7%EF%BC%8C%E5%9C%A8%E5%85%B6%E4%B8%AD%E5%88%9B%E5%BB%BAGitHub%E4%B8%BB%E9%A1%B5%E5%AF%B9%E5%BA%94%E7%9A%84%E4%BB%A3%E7%A0%81%E4%BB%93%E5%BA%93">how to create personal homepage using Node.js</a></p><p><a href="https://easyhexo.com/2-Theme-use-and-config/2-13-hexo-theme-fluid/#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B">how to install fluid theme</a></p><h1>问题</h1><h2 id="hexo无法使用的问题">hexo无法使用的问题</h2><p>有时候很长时间没碰博客了，再次输入hexo命令时，找不到命令(<code>无法将“hexo”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。</code>)<br>进入<code>C:\Users\tgl\AppData\Roaming\npm</code>，输入<code>hexo</code>有效果<br>将该目录添加进系统环境变量<br>进入源码目录，打开Git Bash，输入<code>hexo</code>，出现<code>INFO  Validating config</code>，然后显示版本信息<br>在Git Bash中输入<code>hexo generate</code> <code>hexo clean</code> <code>hexo server</code>，有效果</p><h2 id="找不到博客内容">找不到博客内容</h2><ul><li>为什么leetcode、how-to-clear-usb-history被404了？<ul><li>原来是大小写问题。我将标题首字母改为大写，然后push到github，但是实际上github上这部分代码没有更新(因为目录不区分大小写，而hexo链接跳转时区分大小写)。</li><li>解决措施是将github文件夹删除后push，再添加后重新push。此外也可以通过修改文件名来解决</li></ul></li></ul> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://www.zhihu.com/question/462149457">https://www.zhihu.com/question/462149457</a><p><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>web</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>web</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2023/11/23/hello-world/"/>
+    <url>/2023/11/23/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start">Quick Start</h2><h3 id="Create-a-new-post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
