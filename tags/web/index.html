@@ -382,13 +382,7 @@
   </noscript>
 </body>
 </html>
-ion (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
+     var text = subtitle.getAttribute('data-typed-text');
       
         typing(text);
       

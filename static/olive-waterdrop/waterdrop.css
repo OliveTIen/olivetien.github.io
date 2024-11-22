@@ -1,0 +1,72 @@
+.waterdrop-wrapper {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    left: 0vw; top: 0vh; width: 100vw; height: 100vh;/* 浏览器高度 */
+    /* background-color: #63b9e4; */
+    justify-content: center;/* 居中 */
+    pointer-events: none;/* 防止遮盖后面的东西，无法点击 */
+}
+
+/* 设置水滴的样式 */
+.waterdrop {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    top: 0px;
+    left: 100px;
+    width: 300px;
+    height: 300px;
+    /* margin-top: 200px; */
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    box-shadow: inset 10px 20px 30px rgba(0, 0, 0, 0.5),
+        10px 10px 20px rgba(0, 0, 0, 0.3),
+        15px 15px 30px rgba(0, 0, 0, 0.05),
+        inset -10px -10px 15px rgba(255, 255, 255, 0.8);
+    pointer-events: auto;/* 如果不设置，会继承父对象的属性，导致无法接收鼠标事件 */
+}
+
+.waterdrop:hover{
+    cursor:move;
+}
+
+/* 设置水滴上面的两个小白点为椭圆形状 */
+.waterdrop-shine {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 水滴晃动效果 */
+@keyframes waterDropShake {
+    0%   { border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; }
+    20%  { border-radius: 76% 31% 77% 33% / 51% 40% 71% 54%; }
+    43%  { border-radius: 54% 71% 40% 51% / 33% 77% 31% 70%; }
+    70%  { border-radius: 74% 33% 75% 35% / 50% 42% 69% 52%; }
+    100% { border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; }
+}
+
+/* 大小白点晃动效果 */
+@keyframes waterDropShine {
+    0%   { top: 85%; left: 47%; }
+    20%  { top: 81%; left: 42%; }
+    43%  { top: 86%; left: 49%; }
+    70%  { top: 81%; left: 42%; }
+    100% { top: 85%; left: 47%; }
+}
+
+/* 添加一个 CSS 类来启动动画 */
+.ani-shake-drop {
+    animation: waterDropShake 0.5s ease-in-out 1 forwards;
+}
+
+.ani-shake-shine {
+    animation: waterDropShine 0.5s ease-in-out 1 forwards;
+}
