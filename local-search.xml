@@ -431,7 +431,7 @@
     <link href="/01-01-welcome/Welcome/"/>
     <url>/01-01-welcome/Welcome/</url>
     
-    <content type="html"><![CDATA[<p>这里是风起地。</p><span id="more"></span><blockquote><p>背景图是大连电车</p></blockquote><div>    <!-- 添加live2d，路径位于自己的仓库 -->    <script src="https://fastly.jsdelivr.net/gh/OliveTIen/live2d-widget-web@latest/autoload.js">    </script>    <script>            document.addEventListener('DOMContentLoaded', function() {            var waifuDiv = document.getElementById('waifu');            if (waifuDiv) {                waifuDiv.style.zIndex = '9999';            }        }, 5000);// 5s后执行    </script></div>]]></content>
+    <content type="html"><![CDATA[<p>这里是风起地。</p><span id="more"></span><p>2023年，创建此github page。</p><p>（2024 年 11 月 12 日更新）</p><p>今天重新整理了网站，将主题从华丽的 material 改为简洁的 fluid，并调整了博客结构。</p><blockquote><p>背景图是大连电车</p></blockquote><div>    <!-- 添加live2d，路径位于自己的仓库 -->    <script src="https://fastly.jsdelivr.net/gh/OliveTIen/live2d-widget-web@latest/autoload.js">    </script>    <script>            document.addEventListener('DOMContentLoaded', function() {            var waifuDiv = document.getElementById('waifu');            if (waifuDiv) {                waifuDiv.style.zIndex = '9999';            }        }, 5000);// 5s 后执行    </script></div>]]></content>
     
     
     
