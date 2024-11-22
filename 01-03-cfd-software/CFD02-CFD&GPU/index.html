@@ -1,0 +1,1358 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/ys/Element/Element_Anemo-%E9%A3%8E.svg">
+  <link rel="icon" href="/img/ys/Element/Element_Anemo-%E9%A3%8E.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Olive Tien">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="[TOC]  本文章是综述性的文章，不涉及具体代码实现和使用步骤。如果想要了解某一板块的具体知识，请移步“HPC”系列文章。  To do   AMD的构架，和CUDA对比   李新亮的GPU是如何实现的(OpenCFD GPU)   一定要是非结构网格。如果跟李新亮做单块结构网格，就是死路一条。 调研高性能计算  高性能计算的急迫需求  大规模并行(集群) 并行效率 非定常湍流 多学科耦合的高精">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CFD02 CFD&amp;GPU&amp;HPC综述">
+<meta property="og:url" content="http://olivetien.github.io/01-03-cfd-software/CFD02-CFD&GPU/index.html">
+<meta property="og:site_name" content="风起地">
+<meta property="og:description" content="[TOC]  本文章是综述性的文章，不涉及具体代码实现和使用步骤。如果想要了解某一板块的具体知识，请移步“HPC”系列文章。  To do   AMD的构架，和CUDA对比   李新亮的GPU是如何实现的(OpenCFD GPU)   一定要是非结构网格。如果跟李新亮做单块结构网格，就是死路一条。 调研高性能计算  高性能计算的急迫需求  大规模并行(集群) 并行效率 非定常湍流 多学科耦合的高精">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://olivetien.github.io/01-03-cfd-software/CFD02-CFD&GPU/Fermi.jpg">
+<meta property="og:image" content="http://olivetien.github.io/01-03-cfd-software/CFD02-CFD&GPU/1-survey.png">
+<meta property="og:image" content="http://olivetien.github.io/01-03-cfd-software/CFD02-CFD&GPU/4-ansys.png">
+<meta property="og:image" content="http://olivetien.github.io/01-03-cfd-software/CFD02-CFD&GPU/5-fun3d.png">
+<meta property="article:published_time" content="2023-11-27T13:48:33.000Z">
+<meta property="article:modified_time" content="2024-11-22T08:12:24.237Z">
+<meta property="article:author" content="Olive Tien">
+<meta property="article:tag" content="CFD">
+<meta property="article:tag" content="HPC">
+<meta property="article:tag" content="GPU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://olivetien.github.io/01-03-cfd-software/CFD02-CFD&GPU/Fermi.jpg">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>CFD02 CFD&amp;GPU&amp;HPC综述 @ 风起地</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"olivetien.github.io","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"▌","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>风起地 Windrise</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/banner_img/1-survey.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="CFD02 CFD&amp;GPU&amp;HPC综述"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        Olive Tien
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-11-27 21:48" pubdate>
+          2023年11月27日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          10k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          85 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">CFD02 CFD&amp;GPU&amp;HPC综述</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2024年11月22日 下午
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <p>[TOC]</p>
+<blockquote>
+<p>本文章是综述性的文章，不涉及具体代码实现和使用步骤。如果想要了解某一板块的具体知识，请移步“HPC”系列文章。</p>
+</blockquote>
+<h1>To do</h1>
+<ul>
+<li>
+<p>AMD的构架，和CUDA对比</p>
+</li>
+<li>
+<p>李新亮的GPU是如何实现的(OpenCFD GPU)</p>
+</li>
+</ul>
+<p>一定要是非结构网格。如果跟李新亮做单块结构网格，就是死路一条。</p>
+<p>调研高性能计算</p>
+<blockquote>
+<p>高性能计算的急迫需求</p>
+<ul>
+<li>大规模并行(集群)</li>
+<li>并行效率</li>
+<li>非定常湍流</li>
+<li>多学科耦合的高精度预测问题(气动噪声、气动弹性)</li>
+</ul>
+</blockquote>
+<p>多少网格需要多少CPU/GPU需要多长时间。</p>
+<p>例如美国计算飞机，起落架、盖板均打开，能够算出来。</p>
+<p>其他：</p>
+<p>屏幕放大镜快捷键：win+“+”/“-”</p>
+<p>编程时，修改FVM_2D代码（非结构网格），贡献到CMake上去。<br>
+也可以作为毕设的内容的一部分，因此也要做。</p>
+<p>近壁厚度</p>
+<p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>s</mi><mo>=</mo><mn>80</mn><mi mathvariant="normal">/</mi><mi>R</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">\Delta s = 80/Re 
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Δ</span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">80/</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">e</span></span></span></span></span></p>
+<p>云图和线图的区别：云图定性，线图定量。云图强调整体认识。</p>
+<p>什么是壁函数。子迭代。<br>
+楼上有Fluent？</p>
+<p>markdown生成思维导图：<a target="_blank" rel="noopener" href="https://markmap.js.org/repl">Try markmap</a></p>
+<h1>研究现状</h1>
+<p>GPU（Graphics Processing Unit，图形处理单元）已成为计算流体动力学（CFD）编程领域的重要工具。它的并行处理能力大大加速了模拟，使研究人员能够解决更大、更复杂的问题。<br>
+近年来，在利用GPU进行CFD编程方面取得了重大进展。研究人员开发了专门的GPU加速求解器和算法，利用GPU的并行架构来有效求解流体流动的控制方程。与传统的基于CPU的求解器相比，这些基于GPU的求解器可以提供显著的加速，从而加快模拟的周转时间。<br>
+此外，诸如CUDA（计算统一设备架构）和OpenCL（开放计算语言）之类的GPU库提供编程接口，允许开发人员利用GPU的力量进行CFD应用。这些库为实现并行算法和优化GPU上的代码执行提供了一个框架。<br>
+许多商业和开源CFD软件包现在提供GPU加速选项，允许用户利用GPU计算资源。这些软件包包括ANSYS Fluent、OpenFOAM和COMSOL Multiphysics等。通过使用GPU，用户可以在合理的时间范围内获得显著的性能提升并解决更复杂的CFD问题。<br>
+GPU加速CFD编程领域的研究正在进行中。科学家和工程师继续探索新的技术和算法，以充分利用GPU的功能。这包括优化CPU和GPU之间的数据传输，开发高效的并行化策略，以及探索CPU-GPU混合方法以实现更大的性能改进。<br>
+总之，GPU技术通过实现更快的模拟和更复杂问题的解决方案，彻底改变了CFD编程。该领域正在进行的研究和开发有望进一步增强GPU加速CFD模拟的能力，使其在各个行业和科学研究中更有价值。</p>
+<h1>GPU</h1>
+<h2 id="GPU的特点">GPU的特点</h2>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/625896745">基于WebGL的GPGPU指南 - 概述 - 知乎 (zhihu.com)</a></p>
+</blockquote>
+<p>以图像显示为例，GPU上有许多着色器(shaders)，着色器用来计算屏幕每个像素点的颜色，而且它们是并行运行的。</p>
+<p>这种并行性的<strong>代价</strong>是，着色器之间没有通信，它的输出仅取决于事先的输入，与相邻着色器无关。在图像显示中，这无关紧要，但是如果要用于科学计算，必然要涉及到通信的问题。</p>
+<p>研究基于GPU的数值计算，其关键是将计算模型映射到图形硬件上，包括微分方程、金融建模、机器学习、图像处理，甚至数据库等领域。</p>
+<h2 id="GPU和CPU性能对比">GPU和CPU性能对比</h2>
+<p>对于流体实时渲染，GPU速度是CPU的86.422倍(数据来源<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=fE0P6H8eK4I">Real-Time Fluid Dynamics: CPU vs GPU - YouTube</a> [加州理工学院课件](<a target="_blank" rel="noopener" href="http://courses.cms.caltech.edu/cs179/2023_lectures/cs179_2023_lec01.pdf">PowerPoint Presentation (caltech.edu)</a>))</p>
+<h2 id="GPU和GPGPU？">GPU和GPGPU？</h2>
+<p>GPGPU(General-purpose computing on graphics processing units)，即“通用图形处理器”。</p>
+<p><code>GPGPU</code> = <code>General-purpose</code> + <code>GPU</code> ，目前市面上多数GPU都是GPGPU。</p>
+<h2 id="CUDA、ROCm还是OpenCL？">CUDA、ROCm还是OpenCL？</h2>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/360174784">opencl和cuda性能比较 - 知乎 (zhihu.com)</a></p>
+</blockquote>
+<p>CUDA是半开放的开发生态，NVIDIA没有完全依靠开源力量，而是花费大量精力制作工具包、计算库，例如TensorRT、离线产品渲染器、游戏物理加速等。</p>
+<p>ROCm是开源生态。它只支持linux，不支持windows和macOS，而且容易出现显卡兼容性问题。</p>
+<p>OpenCL (Open Compute Language) 是面向异构系统通用并行编程、可以在多个平台和设备上运行的开放标准。</p>
+<p>OpenCL的处理流程和OpenGL类似。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>CUDA</th>
+<th>ROCm</th>
+<th>OpenCL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>供应商</td>
+<td>NVIDIA</td>
+<td>AMD</td>
+<td>AMD, NVIDIA, Apple, Radeon等</td>
+</tr>
+<tr>
+<td>适用范围</td>
+<td>仅限NVIDIA硬件</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>性能</td>
+<td></td>
+<td></td>
+<td>为CUDA的1/4</td>
+</tr>
+<tr>
+<td>库</td>
+<td></td>
+<td></td>
+<td>不如CUDA广泛</td>
+</tr>
+<tr>
+<td>技术细节</td>
+<td>在C++上扩展， 使用CUDA关键字</td>
+<td></td>
+<td>C和CL脚本语言</td>
+</tr>
+</tbody>
+</table>
+<p>如果主要是学术研究发paper，那大部分的实验室会有N卡，基本上都是CUDA更加方便了。如果是给工业界正式的做项目，考虑到跨平台性，更多的还是openCL。</p>
+<p>因此<strong>选用CUDA</strong>。</p>
+<h2 id="CUDA">CUDA</h2>
+<p>CUDA(Compute Unified Device Architectecture)是 NVIDIA 于 2006 年推出的通用并行计算架构，包含 CUDA 指令集架构(ISA)和 GPU 内部的并行计算引擎。</p>
+<h3 id="CUDA的背景-NVIDIA的GPU架构">CUDA的背景 - NVIDIA的GPU架构</h3>
+<p>在讲解CUDA前，有必要了解其历史和背景。</p>
+<p>随着显卡的发展，GPU越来越强大，而且GPU为显示图像做了优化。在计算上已经超越了通用的CPU。如此强大的芯片如果只是作为显卡就太浪费了，因此NVIDIA推出CUDA，让显卡可以用于图像计算以外的目的。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/394352476?utm_id=0&amp;eqid=c04f0ee500024ebe00000005648ab7c3">NVIDIA GPU 架构梳理 - 知乎 (zhihu.com)</a></p>
+</blockquote>
+<p>截止2021年，发布时间离我们最近的8种NVIDIA GPU微架构是：</p>
+<ul>
+<li><strong>Tesla</strong>
+<ul>
+<li>第一个实现统一着色器模型的微架构</li>
+<li>G80
+<ul>
+<li>第一款支持C语言的GPU</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Fermi</strong>
+<ul>
+<li>共享内存和L1 cache</li>
+</ul>
+</li>
+<li><strong>Kepler</strong></li>
+<li><strong>Maxwell</strong></li>
+<li><strong>Pascal</strong></li>
+<li><strong>Volta</strong></li>
+<li><strong>Turing</strong></li>
+<li><strong>Ampere</strong></li>
+</ul>
+<p>NVIDIA一般以历史上一些著名科学家的名字命名自己的GPU微架构，上面8种微架构分别是：<strong>特斯拉</strong>，<strong>费米</strong>，<strong>开普勒</strong>，<strong>麦克斯韦</strong>，<strong>帕斯卡</strong>，<strong>伏打</strong>，<strong>图灵</strong>，<strong>安培</strong>。</p>
+<img src="/01-03-cfd-software/CFD02-CFD&GPU/Fermi.jpg" srcset="/img/loading.gif" lazyload class="" title="Fermi.jpg">
+<p>以Fermi架构的GPU为例，它共512 个 CUDA 内核，每个内核划分为 16 个 SM，每个 SM 是一个<strong>垂直的矩形条带</strong>(红框中的内容)，分别位于一个普通的 L2 cache周围，每个 SM 有32 个CUDA 内核。</p>
+<p>每个CUDA 内核为一个线程在每个时钟周期里执行一条浮点或整数指令。</p>
+<blockquote>
+<p>GDDR5：第五版图形用双倍数据传输率存储器<br>
+DRAM：动态随机存取存储器</p>
+</blockquote>
+<h3 id="CPU-GPU的异构计算">CPU&amp;GPU的异构计算</h3>
+<p>在CUDA编程模型中，主要有 Host（主机）和 Device（设备）两个概念，Host 包含 CPU 和主机内存，Device 包含 GPU 和显存，两者之间通过 PCI Express 总线进行数据传输。</p>
+<p>在具体的 CUDA 实现中，程序通常划分为两部分，在主机上运行的 Host 代码和在设备上运行的 Device 代码。Host 代码负责程序整体的流程控制和数据交换，而 Device 代码则负责执行具体的计算任务。</p>
+<p>主机和设备协同工作，即异构计算。</p>
+<h3 id="CUDA的函数">CUDA的函数</h3>
+<p>Host函数库</p>
+<ul>
+<li>Libraries
+<ul>
+<li>常见的数学和科学计算任务运算库</li>
+</ul>
+</li>
+<li>Runtime API
+<ul>
+<li>自动管理 GPU 资源</li>
+</ul>
+</li>
+<li>Driver API
+<ul>
+<li>C 函数库，能更底层、更高效地控制 GPU 资源，但相应的开发者需要手动管理模块编译等复杂任务</li>
+</ul>
+</li>
+</ul>
+<p>Device函数，又称内核函数(Kernel)</p>
+<ul>
+<li>并行部分由 K 个不同的 CUDA 线程并行执行 K 次</li>
+<li>一组线程被称为 CUDA 块(block)</li>
+<li>若干block组成一个grid，若干grid被一个Kernel调用</li>
+</ul>
+<p><strong>丰富而成熟的软件生态是 CUDA 被广泛使用的关键原因.</strong></p>
+<p>（1）编程语言：CUDA 12.0 支持 C、C++、Fortran、Python 等多种编程语言.此外，NVIDIA 还支持了如 PyCUDA、ltimesh Hybridizer、OpenACC 等众多第三方工具链，不断提升开发者的使用体验.</p>
+<p>（2）库：NVIDIA 在 CUDA 平台上提供了名为 CUDA-X 的集合层，开发人员可以通过 CUDA-X 快速部署如 cuBLA、NPP、NCCL、cuDNN、TensorRT、OpenCV 等多领域常用库.</p>
+<p>（3）其他：NVIDIA 还为 CUDA 开发人员提供了容器部署流程简化以及集群环境扩展应用程序的工具，让应用程序更易加速，使得CUDA 技术能够适用于更广泛的领域.</p>
+<h2 id="WebGPU与WebGL">WebGPU与WebGL</h2>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/625896745">基于WebGL的GPGPU指南 - 概述 - 知乎 (zhihu.com)</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.vizitsolutions.com/portfolio/webgl/gpgpu/index.html">Unleash Your Inner Supercomputer (vizitsolutions.com)</a></p>
+</blockquote>
+<p>新概念：</p>
+<ul>
+<li>帧缓冲对象(Framebuffer Object, FBO)</li>
+</ul>
+<h2 id="计算机图形学，GPU，OpenGL，Unity3D的关系">计算机图形学，GPU，OpenGL，Unity3D的关系</h2>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/66848391/answer/3050017678?utm_id=0">计算机图形学，GPU，OpenGL，Unity3D什么关系？ - 知乎 (zhihu.com)</a></p>
+</blockquote>
+<p>从顶层到底层可以理解为：</p>
+<p>“Unity”可以通过“OpenGL”告知“驱动”要做什么操作，“驱动”指挥“gpu”做计算并输出内容。</p>
+<p>计算机图形学提供了理论和算法支持，GPU提供了硬件加速，OpenGL提供了图形编程接口，Unity3D则将它们整合在一起，方便开发者进行游戏和虚拟现实应用的开发。</p>
+<p>OpenGL是一种跨平台的图形库。它本身并不是一个API，它仅仅是一个由Khronos组织制定并维护的规范(Specification)。API(Application Programming Interface, 应用程序编程接口)应当包含一系列可以操作图形、图像的函数。</p>
+<p>Unity3D是一个软件（开发平台/游戏引擎），它可以使用OpenGL的接口（不一定）。Unity3D不是对接口的封装，它有一系列完备的工具/部件，使得你只需要写少量的代码，方便而已。</p>
+<h1>GPU和CFD</h1>
+<h3 id="防止发散的措施">防止发散的措施</h3>
+<p>合适的初始条件。例如Fluent中先算10步是为了初始化。</p>
+<h2 id="用结构网格还是非结构网格？">用结构网格还是非结构网格？</h2>
+<p>结构网格</p>
+<ul>
+<li>优势
+<ul>
+<li>算法简单
+<ul>
+<li>数据结构简单，使得算法简单，且host(CPU)到device(GPU)的数据转移效率高</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>难点
+<ul>
+<li>负载平衡</li>
+<li>网格
+<ul>
+<li>自适应网格加密(adaptive mesh refinement, AMR)
+<ul>
+<li>类似碰撞检测算法中的八叉树。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>复杂外形
+<ul>
+<li>结构网格一般局限于笛卡尔坐标系或极坐标系<br>
+负载平衡。<br>
+非结构网格好处：复杂网格，自适应加密。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>非结构网格</p>
+<ul>
+<li>优势
+<ul>
+<li>处理复杂外形时，非结构网格可以耗费更少的人力资源。其本质是将人工时间成本转移到计算量上</li>
+</ul>
+</li>
+<li>难点
+<ul>
+<li>不规则的内存访问模式(Irregular memory access patterns)
+<ul>
+<li>单元数据通常是非连续的，而降低GPU性能
+<ul>
+<li>GPUs typically achieve optimal performance with regular memory access patterns</li>
+<li>通常，高速缓存中为了并行处理数据，要求数据连续存储</li>
+<li>对于不连续数据，需要拷贝，造成额外开销</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>负载均衡(Load balancing)
+<ul>
+<li>非结构网格的每个单元的计算量差异性更大</li>
+</ul>
+</li>
+<li>数据结构和算法(Data structures and algorithms)
+<ul>
+<li>网格的物理顺序和存储顺序不一致，导致需要增加额外映射</li>
+<li>表示和处理都更加复杂、耗时。需要额外优化
+<ul>
+<li>数据结构：邻接列表、八叉树(octrees)</li>
+<li>算法：邻居搜索，插值(interpolation)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>内存占用大
+<ul>
+<li>非结构网格除了存储节点坐标，还要存储节点邻接关系，内存占用更大</li>
+<li>GPU内存有限</li>
+<li>需要更精细的内存管理
+<ul>
+<li>数据压缩</li>
+<li>分级数据结构(hierarchical data structures)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="GPU求解中，矩阵求解为主要耗时部分">GPU求解中，矩阵求解为主要耗时部分</h2>
+<p>最主要耗时部分是矩阵求解，矩阵组装占比&lt;10%<sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="[(4 封私信 / 2 条消息) 写大规模三维并行计算流体力学(CFD)求解器时，有什么经验和心得？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/67619060/answer/2467792459)">[6]</span></a></sup></p>
+<p>就目前来讲，多快好省地调用GPU的办法，是考虑使用现成的基于GPU架构编写的矩阵解法器，在这些解法器的基础上进行CFD的算法开发。比如Nvidia家的AMGx,、Petsc、Taichi等。不过GPU比CPU计算快在CAE领域并不是恒成立的，这跟CFD算法的计算逻辑、网格域划分的均衡程度、核间通信开销、访存命中率等都有很大的关系。而基于CPU的并行求解，如果对内存机制有比较深入的了解，依然可以获得最高达数十倍的性能提升，某些情况下并不会太逊色于GPU。</p>
+<h2 id="提高网格生成效率的必要性">提高网格生成效率的必要性</h2>
+<p>减少人工时间也是需要考虑的重要因素。当性能提高到一定程度后，也要考虑网格生成。<br>
+It is especially important to address this problem because it takes engineering person-time to solve. This is different from other factors, like simulation run time, that leave the researcher free to concentrate on other tasks.<br>
+三种提高网格生成效率的方式：<a target="_blank" rel="noopener" href="https://www.engineering.com/story/cfd-mesh-generators-top-3-reasons-they-slow-analysis-and-how-to-fix-them">https://www.engineering.com/story/cfd-mesh-generators-top-3-reasons-they-slow-analysis-and-how-to-fix-them</a></p>
+<h3 id="ParMETIS">ParMETIS</h3>
+<p>ParMETIS(Parallel Graph Partitioning and Fill-reducing Matrix Ordering)</p>
+<ul>
+<li>简介
+<ul>
+<li>基于MPI的并行库</li>
+<li>是METIS的扩展</li>
+<li>特别适用于并行AMR计算和大规模数值模拟</li>
+<li>由ANSI C和MPI编写</li>
+</ul>
+</li>
+<li>特点
+<ul>
+<li>网址
+<ul>
+<li>源网址为 <a target="_blank" rel="noopener" href="http://glaros.dtc.umn.edu/gkhome/metis/parmetis/">http://glaros.dtc.umn.edu/gkhome/metis/parmetis/</a><br>
+Karypis Lab, University of Minnesota(美国明尼苏达大学)<br>
+wikipedia也是引用该网站的内容</li>
+<li>其github仓库为 <a target="_blank" rel="noopener" href="https://github.com/KarypisLab/ParMETIS">https://github.com/KarypisLab/ParMETIS</a><br>
+奇怪的是，仅有88stars</li>
+</ul>
+</li>
+<li>功能
+<ul>
+<li>Graph Partitioning</li>
+<li>Mesh Partitioning</li>
+<li>Graph Repartitioning</li>
+<li>Partitioning Refinement
+<ul>
+<li>improve the quality of partitions produced by other partition algorithms</li>
+</ul>
+</li>
+<li>Matrix Reordering</li>
+</ul>
+</li>
+<li>算法
+<ul>
+<li>稀疏矩阵求解</li>
+<li>非结构网格划分
+<ul>
+<li>multilevel k-way graph-partitioning</li>
+<li>adaptive repartitioning</li>
+<li>parallel multi-constrained partitioning</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="GPU在CFD中应用-需求">GPU在CFD中应用(需求)</h2>
+<p>以下领域的模拟需要高性能计算，常与GPU有关：<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://developer.nvidia.com/blog/computational-fluid-dynamics-revolution-driven-by-gpu-acceleration/">[1]</span></a></sup></p>
+<ul>
+<li>考虑热传递的湍流</li>
+<li>大涡和燃烧</li>
+<li>磁流体力学</li>
+<li>机器学习在CFD中的应用</li>
+</ul>
+<p>目前的需求有</p>
+<ul>
+<li>大规模并行(集群)</li>
+<li>并行效率</li>
+<li>非定常湍流</li>
+<li>多学科耦合的高精度预测问题(气动噪声、气动弹性)</li>
+</ul>
+<p>对于非定常湍流的直接数值模拟</p>
+<p>直接数值模拟不需要对湍流建立模型，对于流动的控制方程直接采用数值计算求解。由于湍流是多尺度的不规则流动，要获得所有尺度的流动信息，对于空间和时间分辨率需求很高，因而计算量大、耗时多、对于计算机内存依赖性强。直接数值模拟只能计算雷诺数较低的简单湍流运动，例如槽道或圆管湍流，现如今它还难以预测复杂湍流运动。</p>
+<h2 id="GPU在CFD中的发展历程">GPU在CFD中的发展历程</h2>
+<p>2021年末至2022年初，两大CFD软件供应商<em><strong>Ansys</strong></em>和Siemens(西门子)推出支持GPU加速的CFD工具旗舰版。<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://developer.nvidia.com/blog/computational-fluid-dynamics-revolution-driven-by-gpu-acceleration/">[1]</span></a></sup></p>
+<blockquote>
+<p>文章来源：GPU加速驱动的CFD革命 - The Computational Fluid Dynamics Revolution Driven by GPU Acceleration</p>
+</blockquote>
+<p>如今已经使用GPU加速的商业<strong>软件</strong>有：</p>
+<ul>
+<li>Altair CFD, nanoFluidX, ultraFluidX, and Acusolve</li>
+<li>Cascade Technologies, CharLES</li>
+<li>CPFD, Barracuda</li>
+<li>Dassault Systèmes, SIMULIA XFlow</li>
+<li>Numeric Systems, pacefish</li>
+<li>Prometec, Particleworks</li>
+<li>M-Star CFD</li>
+<li><em><strong>NASA, FUN3D</strong></em></li>
+</ul>
+<p>Resolved Analytics统计了当今CFD计算所用线程数量，其中以9~32线程(34.0%)、33~256线程(29.0%)居多，共占比63.0%。</p>
+<img src="/01-03-cfd-software/CFD02-CFD&GPU/1-survey.png" srcset="/img/loading.gif" lazyload class="" title="survey">
+<center style="font-size:14px;color:#C0C0C0;">
+Resolved Analytics survey of CFD users
+</center>
+<p>GPU和CPU效率对比(Ansys Fluent)</p>
+<img src="/01-03-cfd-software/CFD02-CFD&GPU/4-ansys.png" srcset="/img/loading.gif" lazyload class="" title="ansys">
+<center style="font-size:14px;color:#C0C0C0;">
+Performance of Ansys FLUENT 2022 beta1 for a 105M cell car model server vs. CPU-only servers
+</center>
+<p>GPU和CPU效率对比(FUN3D)</p>
+<img src="/01-03-cfd-software/CFD02-CFD&GPU/5-fun3d.png" srcset="/img/loading.gif" lazyload class="" title="fun3d">
+<center style="font-size:14px;color:#C0C0C0;">
+72-84x improvement shown for CPU vs. GPU performance of FUN3D version 14.0(unreleased), courtesy of the NASA FUN3D team.
+</center>
+使用GPU加速的开源软件有：***OpenFOAM***
+<p>目前正在研究的代码：Opencfd-SCU</p>
+<h1>HPC</h1>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/High-performance_computing">High-performance computing - Wikipedia</a></p>
+</blockquote>
+<p>HPC即高性能计算，它涵盖GPU、OpenMP、MPI等方面，其终极目标是提高计算效率，最大限度提高能够计算的问题规模。</p>
+<h2 id="OpenMP和MPI混合编程">OpenMP和MPI混合编程</h2>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/woshibutian/articles/4601551.html">MPI与OpenMP的混合编程模型介绍</a></p>
+<h3 id="OpenMP简介">OpenMP简介</h3>
+<p>OpenMP是用于<strong>共享内存</strong>并行<strong>多处理器</strong>程序设计的编译处理方案。</p>
+<p>通过调用OpenMP库，能够将程序并行化、多线程化。在最简单的情形，甚至可以只加一行指令，就可以将循环内的程序并行化处理。</p>
+<p>不适合需要复杂的线程间同步和互斥的场合<br>
+不能在非共享内存系统(如计算机集群)上使用。此时用MPI替代。</p>
+<h3 id="MPI简介">MPI简介</h3>
+<p>MPI (Massage Passing Interface) 是消息传递函数库的标准规范，是一种基于消息传递的编程模型，不同进程间通过消息交换数据。</p>
+<p>参考资料：</p>
+<ul>
+<li>书籍
+<ul>
+<li>《UNIX环境编程》</li>
+<li>《高性能计算并行编程技术》，都志辉，清华大学出版社</li>
+<li>《MPI并行程序设计实例》，清华大学出版社</li>
+</ul>
+</li>
+<li>网站
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.open-mpi.org/en/v5.0.x/index.html">官网</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="高精度多物理场流动模拟-sup-id-fnref-2-class-footnote-ref-a-href-fn-2-rel-footnote-span-class-hint-top-hint-rounded-aria-label-https-www-nvidia-com-en-us-on-demand-session-gtcspring22-s41452-2-span-a-sup">高精度多物理场流动模拟<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s41452/">[2]</span></a></sup></h2>
+<h2 id="Fluent的非结构隐式求解器-sup-id-fnref-3-class-footnote-ref-a-href-fn-3-rel-footnote-span-class-hint-top-hint-rounded-aria-label-https-www-nvidia-com-en-us-on-demand-session-gtcspring22-s41953-3-span-a-sup">Fluent的非结构隐式求解器<sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s41953/">[3]</span></a></sup></h2>
+<p>未完待续<br>
+无法直接查看，需要加入NVIDIA什么联盟。</p>
+<h2 id="外流气动模拟的GPGPU加速-sup-id-fnref-4-class-footnote-ref-a-href-fn-4-rel-footnote-span-class-hint-top-hint-rounded-aria-label-https-www-nvidia-com-en-us-on-demand-session-gtcspring22-s41849-4-span-a-sup">外流气动模拟的GPGPU加速<sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s41849/">[4]</span></a></sup></h2>
+<h2 id="NVIDIA创始人黄仁勋-Jensen-Huang">NVIDIA创始人黄仁勋(Jensen Huang)</h2>
+<p>美籍华人，1963年出生于台北。</p>
+<h1>编写代码注意事项<sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="[(4 封私信 / 2 条消息) 写大规模三维并行计算流体力学(CFD)求解器时，有什么经验和心得？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/67619060/answer/257847773)">[5]</span></a></sup></h1>
+<h2 id="编程准备">编程准备</h2>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/557675741/answer/3173033583">(5 封私信 / 10 条消息) 计算数学或者计算力学的研究生或博士生C++要学到什么程度（要搞高性能计算）？ - 知乎 (zhihu.com)</a></p>
+</blockquote>
+<h3 id="Level-1">Level 1</h3>
+<p>基本C++语法</p>
+<p>STL库</p>
+<p>基本OOP</p>
+<h2 id="编程准备1-待整理">编程准备1(待整理)</h2>
+<p>所有求解器的本质是计算方程组。通用求解器是非线性里面嵌套一个线性。<sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="[(4 封私信 / 2 条消息) 写大规模三维并行计算流体力学(CFD)求解器时，有什么经验和心得？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/67619060/answer/2467792459)">[6]</span></a></sup></p>
+<h3 id="学习路径">学习路径</h3>
+<ul>
+<li>CUDA</li>
+<li>FEM的matrix free + GPGPU相关论文</li>
+<li>从解Poisson方程练手，后面加dirichlet和neumann</li>
+<li>先做单GPU，然后是GPU集群，接着和底层GPU硬件和内存打交道。</li>
+</ul>
+<h3 id="是否有必要重构旧代码">是否有必要重构旧代码</h3>
+<p>要不要造轮子？先要想清楚是自己写还是在开源code上面<strong>二次开发</strong>，开源的openfoam蛮强大的，做很多科学问题完全可以在上面二次开发，毫不逊色。(身边有些组在上面做出很优秀的工作)</p>
+<p>每个人都觉得旧代码烂，但也许你见了别人的代码就不这么认为了。</p>
+<p>我觉得烂有几个级别：</p>
+<p>(a) 丑但能用 – 结构不清晰，代码重复，变量重复，几十个参数传来传去，但代码大体正确，数学上没问题；</p>
+<p>(b) 效率低下 – 在以上基础之上，在<strong>不影响正确性</strong>的地方有公式错误，收敛缓慢，在可接受的范围；</p>
+<p>© 充满苟且 – 出现<strong>神秘参数</strong>不能改动，数学公式明显和论文对不上，但运行熟悉的case的结果竟然是对的，换新的case就不一定了；</p>
+<p>(d) 忍无可忍 – 在以上基础上，有重大公式错误，造成求解不收敛，根本无法通过Benchmark测试，出于某种原因前人一直在拿这稀烂的结果忽悠人。</p>
+<p>如果代码的症状在a和b的范畴之内，只要你还看得懂就不要考虑重写了；到c这一步就慎重考虑；到d这一步，要么直接走人要么就<a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E5%A3%AE%E5%A3%AB%E6%96%AD%E8%85%95&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A256628270%7D">壮士断腕</a>。</p>
+<p>总之，重写的工作量十分巨大，<strong>吃力不讨好</strong>，在别人看来是“进度停滞”、没有产出；你写出的东西只有<strong>署名权</strong>，毕业后没有代码产权，除非你写自己的代码然后将其开源掉。</p>
+<p>如果你重写是为了提高CFD水平，不如直接读成熟的代码。 探索开源世界比自己造轮子要学起来<strong>快的多</strong>。</p>
+<h3 id="常见CFD开源软件">常见CFD开源软件</h3>
+<p>目前比较有名的CFD开源软件OpenFOAM，Su2，CFL3D, salome（<em>Code_Saturne</em> ）, coolfluid,moose,nektar++等。</p>
+<blockquote>
+<p>详见<a target="_blank" rel="noopener" href="https://www.cfd-online.com/Wiki/Codes">Codes – CFD-Wiki, the free CFD reference (cfd-online.com)</a></p>
+</blockquote>
+<h3 id="不要急于求成，从一维-二维到三维">不要急于求成，从一维/二维到三维</h3>
+<p>如果你必须算三维大规模<a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A255058565%7D">并行计算</a>，那也得把一二维的算好，一二维的benchmark能暴露很多问题的其实…</p>
+<h3 id="使用库">使用库</h3>
+<p>为了提高效率，不要重复造轮子，尽量用已有的库。</p>
+<p>有限元</p>
+<ul>
+<li>dealii(<a target="_blank" rel="noopener" href="http://www.dealii.org">www.dealii.org</a>)
+<ul>
+<li>提供shape function, gauss integration, dof renumbering, etc.</li>
+</ul>
+</li>
+</ul>
+<p>FDM</p>
+<ul>
+<li>PETSc
+<ul>
+<li>专注于大规模矩阵运算</li>
+<li>提供分布式存储的矩阵、并行求解器。</li>
+</ul>
+</li>
+<li>FEniCS
+<ul>
+<li>内部默认基于PETSc，也有Trilinos的接口</li>
+<li>适用于几百万自由度，几百万CPU并行</li>
+</ul>
+</li>
+</ul>
+<h3 id="选用合适的数值格式">选用合适的数值格式</h3>
+<p>CFD计算中最难的是对流项，因为它将矩阵变为非对称的，增加了求解难度，另外当它占主导地位时还经常需要额外的稳定项。但如果你把这一项做显式处理，把它挪到方程右边，那你的方程左边就跟stokes方程一样了。这样能降低求解的难度，但代价的CFL条件更苛刻。如果你要用纯隐式方法你就要正确地线性化NS方程再使用牛顿法求解，总之要选择并推导出合适的数值格式。</p>
+<h3 id="求解Ax-b">求解Ax=b</h3>
+<h3 id="湍流模式">湍流模式</h3>
+<p>大规模并行的目的之一就是计算带湍流的非定常问题，因此湍流必须加。目前主要是des，随着超算性能的提高，未来会加入les和dns</p>
+<h3 id="并行">并行</h3>
+<p>直接用PETSc，别傻乎乎用MPI造轮子，在2023年干1957年的活。</p>
+<h3 id="团队合作">团队合作</h3>
+<p>我觉得做大code的确需要良好的团队，大科学的时代即使数学家也需要更多的交流和刺激，何况这种妥妥的体力活。非数十年累计，数十人开发而不得，如NASA之流。我这方面没有太多经验，我的体会是如果蒙头写code改你们的code，我觉得毕业都是问题…当然如果完全没有后顾之忧，开着大奔玩<a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=cfd&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A255058565%7D">cfd</a>，那这类工作于课题组是很有益的。</p>
+<ul>
+<li>语言选择
+<ul>
+<li>初学原理MATLAB，正式编程C++
+<ul>
+<li>与Fortran相比，C++可以带来编程效率的大幅提高和计算性能的小幅提高</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数据类型
+<ul>
+<li>编写矩阵模板
+<ul>
+<li>重载基本矩阵运算操作符</li>
+<li>负指标</li>
+<li>越界检查</li>
+<li>矩阵输出</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="编程顺序">编程顺序</h2>
+<ul>
+<li>从无粘欧拉方程开始，再加粘性湍流等。</li>
+<li><strong>重要节点</strong>：完成欧拉方程求解器后，应仔细规划后续程序
+<ul>
+<li>若要做MPI并行，此时应加入，否则后续改起来很麻烦</li>
+<li>若要做动网格、ALE，此时应加入</li>
+</ul>
+</li>
+</ul>
+<p>注意</p>
+<ul>
+<li>复用性
+<ul>
+<li>用宏变量/模板实现编译时的兼容(模板可参见Deal.II)
+<ul>
+<li>尽可能兼容二维/三维</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>C++编程技巧
+<ul>
+<li>效率优化语法，例如<code>a=a+b</code>→<code>a+=b</code>(随时注意即可，编译器一般会做优化)</li>
+</ul>
+</li>
+<li>内存访问
+<ul>
+<li>float的必要性
+<ul>
+<li>对大矩阵的访问读取，float能大大加速内存的访问。</li>
+<li>对于精度要求不高的大矩阵，替换float对计算精度影响不大
+<ul>
+<li>例如，对于湍流模式的壁面距离矩阵、隐式迭代的对角矩阵、梯度算子矩阵等，用float后，计算精度并没有下降。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>堆和栈的区别
+<ul>
+<li>堆(new)的访问更慢
+<ul>
+<li>堆的访问的并行加速倍数有上限，最多3倍</li>
+<li>因为受限于内存带宽的限制</li>
+</ul>
+</li>
+<li>栈的访问更快
+<ul>
+<li>并行加速没有上限</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>磁盘访问
+<ul>
+<li>传输速度：二进制格式是文本格式的30倍</li>
+<li>大小：二进制是文本的1/2</li>
+<li>尽量输出plt而不是dat</li>
+</ul>
+</li>
+<li>续算
+<ul>
+<li>超算容易出问题，一定要做“保存断点+载入续算”的功能</li>
+</ul>
+</li>
+</ul>
+<h3 id="动网格">动网格</h3>
+<ul>
+<li>几何守恒(GCL)
+<ul>
+<li>显式时间推进才需要</li>
+<li>对于双时间步隐式推进不需要</li>
+</ul>
+</li>
+</ul>
+<h1>问题</h1>
+<p>非结构网格隐式算法<br>
+隐式并行(permetic)</p>
+<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://developer.nvidia.com/blog/computational-fluid-dynamics-revolution-driven-by-gpu-acceleration/">https://developer.nvidia.com/blog/computational-fluid-dynamics-revolution-driven-by-gpu-acceleration/</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s41452/">https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s41452/</a>
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s41953/">https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s41953/</a>
+<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s41849/">https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s41849/</a>
+<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/67619060/answer/257847773">(4 封私信 / 2 条消息) 写大规模三维并行计算流体力学(CFD)求解器时，有什么经验和心得？ - 知乎 (zhihu.com)</a>
+<a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:6" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/67619060/answer/2467792459">(4 封私信 / 2 条消息) 写大规模三维并行计算流体力学(CFD)求解器时，有什么经验和心得？ - 知乎 (zhihu.com)</a>
+<a href="#fnref:6" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/CFD/" class="print-no-link">#CFD</a>
+      
+        <a href="/tags/HPC/" class="print-no-link">#HPC</a>
+      
+        <a href="/tags/GPU/" class="print-no-link">#GPU</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>CFD02 CFD&amp;GPU&amp;HPC综述</div>
+      <div>http://olivetien.github.io/01-03-cfd-software/CFD02-CFD&amp;GPU/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Olive Tien</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年11月27日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"Ov23liAoGf9Wg7dmdfJ9","clientSecret":"095bbac5d8c8bd16890340765863219ab18b87fa","repo":"OliveTIen.github.io","owner":"OliveTIen","admin":["name"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {
+            id: 'f5df305f0e513dcf34129dad96473b9b'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
