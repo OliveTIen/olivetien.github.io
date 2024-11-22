@@ -24,7 +24,7 @@
 <meta property="og:description" content="用Hexo创建静态博客网站 简介 本网站是基于github-page，无需自建服务器[1]。  优点：  免费   缺点：  无法实现客户端到服务器的数据传输(?没试过) 网站代码公开    首次创建网站 直接参照网站1，它详细讲解了创建方法。它是基于hexo创建的，即将md文件转换为html网页。 如果想更换hexo主题，可以参照网站2 Markdown语法参见GitHub官方文档，或者菜鸟教程">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-11-23T03:16:50.000Z">
-<meta property="article:modified_time" content="2024-06-22T09:11:46.666Z">
+<meta property="article:modified_time" content="2024-11-22T09:02:22.297Z">
 <meta property="article:author" content="Olive Tien">
 <meta property="article:tag" content="web">
 <meta name="twitter:card" content="summary_large_image">
@@ -227,7 +227,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          5.1k 字
+          5.3k 字
         
       </span>
     
@@ -238,7 +238,7 @@
         
         
         
-          43 分钟
+          45 分钟
         
       </span>
     
@@ -301,7 +301,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年6月22日 下午
+                    本文最后更新于：2024年11月22日 下午
                   
                 
               </p>
@@ -354,9 +354,17 @@ Markdown语法参见<a target="_blank" rel="noopener" href="https://docs.github.
 </ol>
 <h3 id="图片">图片</h3>
 <p>插入图片可以用markdown格式，注意别忘记&quot;!&quot;(否则显示为超链接)</p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">![img](<span class="hljs-keyword">https</span>://olivetien.github.io/<span class="hljs-number">2023</span>/<span class="hljs-number">11</span>/<span class="hljs-number">23</span>/How-<span class="hljs-built_in">to</span>-<span class="hljs-built_in">create</span>-<span class="hljs-keyword">a</span>-personal-homepage/img.png)<br></code></pre></td></tr></table></figure>
-<p>也可以用hexo格式</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs awk">第一种方式：绝对路径<br>![img](https:<span class="hljs-regexp">//</span>olivetien.github.io<span class="hljs-regexp">/2023/</span><span class="hljs-number">11</span><span class="hljs-regexp">/23/</span>How-to-create-a-personal-homepage/img.png)<br>第二种方式：相对于source目录的路径（我将图片放在 .<span class="hljs-regexp">/source/img</span><span class="hljs-regexp">/posts/</span> 下）<br>![img](img<span class="hljs-regexp">/posts/img</span>.png)<br></code></pre></td></tr></table></figure>
+<p>也可以用hexo格式（仅对 material 主题有效？）</p>
 <figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs maxima">&#123;<span class="hljs-symbol">%</span> asset_img img.png This <span class="hljs-built_in">is</span> an <span class="hljs-built_in">example</span> <span class="hljs-built_in">image</span> <span class="hljs-symbol">%</span>&#125;<br></code></pre></td></tr></table></figure>
+<p>（2024年11月22日更新）<br>
+做出了如下修改：</p>
+<ul>
+<li>将主题从 material 切换成 fluid</li>
+<li>修改了<code>config.yml</code>中对博客的显示路径</li>
+</ul>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-comment"># permalink: :year/:month/:day/:title/</span><br><span class="hljs-symbol">permalink:</span> <span class="hljs-symbol">:title/</span><br></code></pre></td></tr></table></figure>
+<p>因此图片统一采用相对于source目录的路径</p>
 <h3 id="封面图">封面图</h3>
 <p>封面图（thumbnail）直接放在博客同名文件夹，命名为thumbnail.jpg即可</p>
 <p>如果thumbnail不显示，首先应检查是否在_config.yml中设置post_asset_folder为true，此外检查路径是否输入正确</p>
@@ -554,7 +562,7 @@ Markdown语法参见<a target="_blank" rel="noopener" href="https://docs.github.
       Fluid.utils.createCssLink('/css/gitalk.css')
       Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
         var options = Object.assign(
-          {"clientID":"Ov23liAoGf9Wg7dmdfJ9","clientSecret":"095bbac5d8c8bd16890340765863219ab18b87fa","repo":"OliveTIen.github.io","owner":"OliveTIen","admin":["name"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {"clientID":"Ov23liAoGf9Wg7dmdfJ9","clientSecret":"095bbac5d8c8bd16890340765863219ab18b87fa","repo":"OliveTIen.github.io","owner":"OliveTIen","admin":["OliveTIen"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
             id: '39ceb6873100799328a886dfb8f80122'
           }
